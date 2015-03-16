@@ -1,4 +1,5 @@
 [![Code Climate](https://codeclimate.com/github/josephyi/taric/badges/gpa.svg)](https://codeclimate.com/github/josephyi/taric)
+[![Build Status](https://travis-ci.org/josephyi/taric.svg?branch=master)](https://travis-ci.org/josephyi/taric)
 
 # Taric
 
