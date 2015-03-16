@@ -1,6 +1,19 @@
 $LOAD_PATH.unshift File.expand_path('../../lib', __FILE__)
+require 'simplecov'
+require 'coveralls'
+
+SimpleCov.formatters = [SimpleCov::Formatter::HTMLFormatter, Coveralls::SimpleCov::Formatter]
+
+SimpleCov.start do
+  add_filter '/spec/'
+  add_filter '/vendor/'
+  minimum_coverage(99.12)
+end
+
 require 'taric'
 require 'webmock/rspec'
+
+WebMock.disable_net_connect!(allow: 'coveralls.io')
 
 def stub_get(url)
   stub_request(:get, url)
