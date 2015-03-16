@@ -1,14 +1,14 @@
+# Taric
+
 [![Gem Version](https://badge.fury.io/rb/taric.svg)](http://badge.fury.io/rb/taric)
 [![Code Climate](https://codeclimate.com/github/josephyi/taric/badges/gpa.svg)](https://codeclimate.com/github/josephyi/taric)
 [![Build Status](https://travis-ci.org/josephyi/taric.svg?branch=master)](https://travis-ci.org/josephyi/taric)
-[![Coverage Status](https://coveralls.io/repos/josephyi/taric/badge.svg)](https://coveralls.io/r/josephyi/taric)
+[![Coverage Status](https://coveralls.io/repos/josephyi/taric/badge.svg?branch=master)](https://coveralls.io/r/josephyi/taric?branch=master)
 [![Inline docs](http://inch-ci.org/github/josephyi/taric.svg?branch=master)](http://inch-ci.org/github/josephyi/taric)
-
-# Taric
 
 > "Ruby for vigor."
 
-Taric is a wrapper client to Riot Games' League of Legends API.
+Taric is Ruby interface to Riot Games' League of Legends API.
 
 ## Prerequisite
 
