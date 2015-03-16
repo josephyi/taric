@@ -104,7 +104,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-> ""Brilliantly."
+> "Brilliantly."
 
 1. Fork it ( https://github.com/[my-github-username]/taric/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
