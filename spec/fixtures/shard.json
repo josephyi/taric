@@ -1,0 +1,33 @@
+{
+  "name": "North America",
+  "slug": "na",
+  "locales": ["en_US"],
+  "hostname": "prod.na1.lol.riotgames.com",
+  "region_tag": "na1",
+  "services": [
+    {
+      "name": "Boards",
+      "slug": "boards",
+      "status": "online",
+      "incidents": []
+    },
+    {
+      "name": "Game",
+      "slug": "game",
+      "status": "online",
+      "incidents": []
+    },
+    {
+      "name": "Store",
+      "slug": "store",
+      "status": "online",
+      "incidents": []
+    },
+    {
+      "name": "Website",
+      "slug": "web",
+      "status": "online",
+      "incidents": []
+    }
+  ]
+}

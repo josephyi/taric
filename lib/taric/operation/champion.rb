@@ -14,7 +14,7 @@ module Taric
       # Returns [Hash] embedding an [Array] of champion data.
       #
       # @see {https://developer.riotgames.com/api/methods#!/958/3290}
-      # @param free_to_play [Boolean] nil returns all, true or false to filter if they're free to play or not
+      # @param free_to_play [Boolean] optional, nil returns all, true or false to filter if they're free to play or not
       # @return [Hash] embedding [Array] of champions keyed off of "champions"
       #
       # @example

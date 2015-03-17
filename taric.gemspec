@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Joseph Yi"]
   spec.email         = ["dissonance@gmail.com"]
 
-  spec.summary       = %q{Riot Games LoL Api Client}
-  spec.description   = %q{Riot Games LoL Api Client.}
+  spec.summary       = %q{An outrageous Riot Games LoL API Client}
+  spec.description   = %q{An outrageous Riot Games LoL API Client}
   spec.homepage      = "http://github.com/josephyi/taric"
   spec.license       = "MIT"
 

@@ -3,6 +3,13 @@ module Taric
     module FeaturedGames
       FEATURED_GAMES = Addressable::Template.new 'https://{host}/observer-mode/rest/featured{?api_key}'
 
+      # Returns [Hash] of featured games in [Array] keyed by 'gameList'
+      #
+      # @see {https://developer.riotgames.com/api/methods#!/957/3288}
+      # @return [Hash] of featured games in [Array] keyed by 'gameList'
+      #
+      # @example
+      #   featured_games = client.featured_games['gameList']
       def featured_games
         response_for FEATURED_GAMES
       end
