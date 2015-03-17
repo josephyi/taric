@@ -36,7 +36,7 @@ module Taric
           pbe: {region: 'pbe'.freeze, platform_id: 'PBE1', host: 'pbe.api.pvp.net'}
       }.freeze
 
-      RESPONSE = -> url, requestor, response_handler {
+      API_CALL = -> (url:, requestor:, response_handler:) {
         response_handler.(requestor.(url))
       }.curry
 

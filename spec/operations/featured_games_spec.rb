@@ -4,9 +4,9 @@ describe Taric::Operation::FeaturedGames do
   let(:client) {Taric.client}
 
   describe '#featured_games' do
-    let (:url) {client.expand_template(Taric::Operation::FeaturedGames::FEATURED_GAMES).to_s}
+    let (:url) {expand_template(Taric::Operation::FeaturedGames::FEATURED_GAMES)}
 
-    before {stub_get(url).to_return(body: fixture('featured_games.json'), headers: {content_type: 'application/json; charset=utf-8'})}
+    before {stub_get_json(url, 'featured_games.json')}
 
     it 'requests the correct resource' do
       client.featured_games

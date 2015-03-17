@@ -4,7 +4,7 @@ describe Taric::Operation::Game do
   let(:client) {Taric.client}
 
   describe '#recent_games' do
-    let (:url) {client.expand_template(Taric::Operation::Game::RECENT, {summonerId: 21066}).to_s}
+    let (:url) {expand_template(Taric::Operation::Game::RECENT, {summonerId: 21066})}
 
     before {stub_get(url).to_return(body: fixture('recent_games.json'), headers: {content_type: 'application/json; charset=utf-8'})}
 

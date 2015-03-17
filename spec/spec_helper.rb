@@ -26,3 +26,11 @@ end
 def fixture(file)
   File.new("#{File.expand_path("../fixtures", __FILE__)}/#{file}")
 end
+
+def expand_template(operation, options = {})
+  Taric::Client.expand_template(api_key: 'KeyNotSetButUsingThisForTest', region: :na, operation: operation, options: options).to_s
+end
+
+def stub_get_json(url, fixture)
+  stub_request(:get, url).to_return(body: fixture(fixture), headers: {content_type: 'application/json; charset=utf-8'})
+end

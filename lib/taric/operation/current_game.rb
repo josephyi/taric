@@ -3,9 +3,9 @@ module Taric
     module CurrentGame
       GAME_INFO = Addressable::Template.new 'https://{host}/observer-mode/rest/consumer/getSpectatorGameInfo/{platform_id}/{summonerId}{?api_key}'
 
-      # Returns [Hash] of game data for summoner id
+      # Returns current game data for summoner id.
       #
-      # @see {https://developer.riotgames.com/api/methods#!/956/3287}
+      # @see https://developer.riotgames.com/api/methods#!/956/3287
       # @param summoner_id [Fixnum] required, id of summoner
       # @return [Hash] of game data for summoner id
       #

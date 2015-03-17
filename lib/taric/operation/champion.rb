@@ -11,9 +11,9 @@ module Taric
       CHAMPIONS =  Addressable::Template.new("#{CHAMPION_BASE_URL}{?api_key,freeToPlay}")
       CHAMPION_BY_ID = Addressable::Template.new("#{CHAMPION_BASE_URL}/{id}{?api_key}")
 
-      # Returns [Hash] embedding an [Array] of champion data.
+      # Returns champion data.
       #
-      # @see {https://developer.riotgames.com/api/methods#!/958/3290}
+      # @see https://developer.riotgames.com/api/methods#!/958/3290
       # @param free_to_play [Boolean] optional, nil returns all, true or false to filter if they're free to play or not
       # @return [Hash] embedding [Array] of champions keyed off of "champions"
       #
@@ -25,6 +25,14 @@ module Taric
         response_for CHAMPIONS, freeToPlay: free_to_play
       end
 
+      # Returns champion data by id.
+      #
+      # @see https://developer.riotgames.com/api/methods#!/958/3289
+      # @param id [Fixnum] id of champion
+      # @return [Hash] of champion data
+      #
+      # @example
+      #   champion = client.champion(id: 266)
       def champion(id:)
         response_for CHAMPION_BY_ID, id: id
       end

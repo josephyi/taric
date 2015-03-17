@@ -7,9 +7,9 @@ module Taric
       GAME_VERSION = 'v1.3'.freeze
       RECENT = Addressable::Template.new "#{BASE_URL_FN.(GAME_VERSION)}/game/by-summoner/{summonerId}/recent{?api_key}"
 
-      # Returns [Hash] of recent game data for summoner id in an [Array] keyed by 'games'
+      # Returns recent game data for summoner id.
       #
-      # @see {https://developer.riotgames.com/api/methods#!/959/3291}
+      # @see https://developer.riotgames.com/api/methods#!/959/3291
       # @param summoner_id [Fixnum] required, id of summoner
       # @return [Hash] of recent game data for summoner id
       #
