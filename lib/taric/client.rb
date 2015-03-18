@@ -27,11 +27,29 @@ module Taric
 
     class << self
       extend Memoist
+
+      # @note Memoized
+      #
+      # Sets up and returns hash of api key and region values.
+      #
+      # @params api_key [String] rito api key
+      # @params region [Symbol] key for region
+      # @return [Hash] of api_key and region info
       def operation_values(api_key:, region:)
         {api_key: api_key}.merge!(REGION_ENDPOINT_INFO[region])
       end
       memoize :operation_values
 
+      # Expands operation template with api_key, region, and option values.
+      #
+      # @param api_key [String] rito api key
+      # @param region [Symbol] key for region
+      # @param operation [Addressable::Template] URI template for operation
+      # @param options [Hash] optional, values for template
+      # @return [Addressable::URI] of expanded template
+      #
+      # @example
+      #   Taric::Client.expand_template(api_key: 'ritokey', region: :na, operation: Taric::Operation::Champion::CHAMPIONS)
       def expand_template(api_key:, region:, operation:, options: {})
         operation.expand(options.merge(operation_values(api_key: api_key, region: region)))
       end

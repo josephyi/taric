@@ -9,6 +9,7 @@ module Taric
 
       Faraday::Connection.new(options) do |conn|
         #conn.use FaradayMiddleware::Mashify
+        conn.response :raise_error
         conn.response :json, :content_type => /\bjson$/
         conn.adapter config.adapter
       end
