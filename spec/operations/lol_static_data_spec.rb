@@ -100,4 +100,152 @@ describe Taric::Operation::LolStaticData do
       expect(result.first).to be_a String
     end
   end
+
+  describe '#static_masteries' do
+    let (:url) {expand_template(Taric::Operation::LolStaticData::STATIC_MASTERIES)}
+    before {stub_get_json(url, 'static_masteries.json')}
+
+    it 'requests the correct resource' do
+      client.static_masteries
+      expect(a_get(url)).to have_been_made
+    end
+
+    it 'returns the requested result' do
+      result = client.static_masteries
+      expect(result).to be_a Hash
+      expect(result['data']).to be_a Hash
+    end
+  end
+
+  describe '#static_mastery' do
+    let (:url) {expand_template(Taric::Operation::LolStaticData::STATIC_MASTERY, {id: 4233})}
+    before {stub_get_json(url, 'static_mastery.json')}
+
+    it 'requests the correct resource' do
+      client.static_mastery(id: 4233)
+      expect(a_get(url)).to have_been_made
+    end
+
+    it 'returns the requested result' do
+      result = client.static_mastery(id: 4233)
+      expect(result).to be_a Hash
+      expect(result['name']).to eq('Hardiness')
+    end
+  end
+
+  describe '#static_map' do
+    let (:url) {expand_template(Taric::Operation::LolStaticData::STATIC_MAP)}
+    before {stub_get_json(url, 'static_map.json')}
+
+    it 'requests the correct resource' do
+      client.static_map
+      expect(a_get(url)).to have_been_made
+    end
+
+    it 'returns the requested result' do
+      pending('rito plz... waiting on fix')
+      result = client.static_map
+      expect(result).to be_a Hash
+    end
+  end
+
+  describe '#static_realm' do
+    let (:url) {expand_template(Taric::Operation::LolStaticData::STATIC_REALM)}
+    before {stub_get_json(url, 'static_realm.json')}
+
+    it 'requests the correct resource' do
+      client.static_realm
+      expect(a_get(url)).to have_been_made
+    end
+
+    it 'returns the requested result' do
+      result = client.static_realm
+      expect(result).to be_a Hash
+      expect(result['n']).to be_a Hash
+    end
+  end
+
+  describe '#static_runes' do
+    let (:url) {expand_template(Taric::Operation::LolStaticData::STATIC_RUNES)}
+    before {stub_get_json(url, 'static_runes.json')}
+
+    it 'requests the correct resource' do
+      client.static_runes
+      expect(a_get(url)).to have_been_made
+    end
+
+    it 'returns the requested result' do
+      result = client.static_runes
+      expect(result).to be_a Hash
+      expect(result['data']).to be_a Hash
+    end
+  end
+
+  describe '#static_rune' do
+    let (:id) {5235}
+    let (:url) {expand_template(Taric::Operation::LolStaticData::STATIC_RUNE, {id: id})}
+    before {stub_get_json(url, 'static_rune.json')}
+
+    it 'requests the correct resource' do
+      client.static_rune(id: id)
+      expect(a_get(url)).to have_been_made
+    end
+
+    it 'returns the requested result' do
+      result = client.static_rune(id: id)
+      expect(result).to be_a Hash
+      expect(result['id']).to eq(id)
+    end
+  end
+
+  describe '#static_summoner_spells' do
+    let (:url) {expand_template(Taric::Operation::LolStaticData::STATIC_SUMMONER_SPELLS)}
+    before {stub_get_json(url, 'static_summoner_spells.json')}
+
+    it 'requests the correct resource' do
+      client.static_summoner_spells
+      expect(a_get(url)).to have_been_made
+    end
+
+    it 'returns the requested result' do
+      result = client.static_summoner_spells
+      expect(result).to be_a Hash
+      expect(result['data']).to be_a Hash
+    end
+  end
+
+  describe '#static_summoner_spell' do
+    let (:id) {12}
+    let (:url) {expand_template(Taric::Operation::LolStaticData::STATIC_SUMMONER_SPELL, {id: id})}
+    before {stub_get_json(url, 'static_summoner_spell.json')}
+
+    it 'requests the correct resource' do
+      client.static_summoner_spell(id: id)
+      expect(a_get(url)).to have_been_made
+    end
+
+    it 'returns the requested result' do
+      result = client.static_summoner_spell(id: id)
+      expect(result).to be_a Hash
+      expect(result['id']).to eq(id)
+    end
+  end
+
+  describe '#static_versions' do
+    let (:url) {expand_template(Taric::Operation::LolStaticData::STATIC_VERSIONS)}
+    before {stub_get_json(url, 'static_versions.json')}
+
+    it 'requests the correct resource' do
+      client.static_versions
+      expect(a_get(url)).to have_been_made
+    end
+
+    it 'returns the requested result' do
+      result = client.static_versions
+      expect(result).to be_an Array
+      expect(result.first).to be_a String
+    end
+  end
+
+
 end

@@ -1,37 +1,37 @@
 {
-  "lzrface": {
-    "id": 39497114,
-    "name": "LZRFACE",
-    "profileIconId": 779,
-    "summonerLevel": 30,
-    "revisionDate": 1426559878000
-  },
-  "doodiediddle": {
-    "id": 35035046,
-    "name": "DOODIEDIDDLE",
-    "profileIconId": 536,
-    "summonerLevel": 30,
-    "revisionDate": 1426310961000
-  },
   "ipa": {
     "id": 38332778,
     "name": "IPA",
     "profileIconId": 781,
-    "summonerLevel": 30,
-    "revisionDate": 1425845618000
+    "revisionDate": 1425845618000,
+    "summonerLevel": 30
   },
   "orlyzomg": {
     "id": 21066,
     "name": "orlyzomg",
     "profileIconId": 779,
-    "summonerLevel": 30,
-    "revisionDate": 1426572023000
+    "revisionDate": 1426658908000,
+    "summonerLevel": 30
   },
   "dbanksdesign": {
     "id": 38877656,
     "name": "dbanksdesign",
     "profileIconId": 673,
-    "summonerLevel": 30,
-    "revisionDate": 1426572023000
+    "revisionDate": 1426658908000,
+    "summonerLevel": 30
+  },
+  "lzrface": {
+    "id": 39497114,
+    "name": "LZRFACE",
+    "profileIconId": 779,
+    "revisionDate": 1426559878000,
+    "summonerLevel": 30
+  },
+  "doodiediddle": {
+    "id": 35035046,
+    "name": "DOODIEDIDDLE",
+    "profileIconId": 536,
+    "revisionDate": 1426310961000,
+    "summonerLevel": 30
   }
 }

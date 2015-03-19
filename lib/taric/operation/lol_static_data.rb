@@ -220,38 +220,52 @@ module Taric
         response_for STATIC_LANGUAGES
       end
 
+      # @see https://developer.riotgames.com/api/methods#!/968/3328
       def static_map(locale: nil, version: nil)
         response_for STATIC_MAP, {locale: locale, version: version}
       end
 
+      # @see https://developer.riotgames.com/api/methods#!/968/3317
       def static_masteries(mastery_data_option: nil, locale: nil, version: nil)
         response_for STATIC_MASTERIES, {masteryListData: mastery_data_option, locale: locale, version: version}
       end
 
+      # @see https://developer.riotgames.com/api/methods#!/968/3318
       def static_mastery(id:, mastery_data_option: nil, locale: nil, version: nil)
         response_for STATIC_MASTERY, {id: id, masteryData: mastery_data_option, locale:locale, version: version}
       end
 
+      # @see https://developer.riotgames.com/api/methods#!/968/3325
       def static_realm
         response_for STATIC_REALM
       end
 
+      # @see https://developer.riotgames.com/api/methods#!/968/3315
       def static_runes(rune_data_option: nil, locale: nil, version: nil)
         response_for STATIC_RUNES, {runeListData: rune_data_option, locale: locale, version: version}
       end
 
+      # @see https://developer.riotgames.com/api/methods#!/968/3321
       def static_rune(id:, rune_data_option: nil, locale: nil, version: nil)
         response_for STATIC_RUNE, {id: id, runeData: rune_data_option, locale: locale, version: version}
       end
 
+      # @see https://developer.riotgames.com/api/methods#!/968/3327
       def static_summoner_spells(data_by_id: nil, spell_data_option: nil, locale: nil, version: nil)
         response_for STATIC_SUMMONER_SPELLS, {dataById: data_by_id, spellData: spell_data_option, locale: locale, version: version}
       end
 
+      # @see https://developer.riotgames.com/api/methods#!/968/3320
       def static_summoner_spell(id:, spell_data_option: nil, locale: nil, version: nil)
         response_for STATIC_SUMMONER_SPELL, {id: id, spellData: spell_data_option, locale: locale, version: version}
       end
 
+      # Returns [Array] of static data version numbers.
+      #
+      # @see https://developer.riotgames.com/api/methods#!/968/3323
+      # @return [Array] of version numbers
+      # @example
+      #   versions = client.static_versions
       def static_versions
         response_for STATIC_VERSIONS
       end

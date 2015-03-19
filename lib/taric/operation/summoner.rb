@@ -6,8 +6,9 @@ module Taric
       
       VERSION = 'v1.4'
       BASE_SUMMONER_URL = "#{BASE_URL_FN.(VERSION)}/summoner"
-      BY_NAMES =  Addressable::Template.new "#{BASE_SUMMONER_URL}/by-name/{summonerNames}{?api_key}"
       BASE_SUMMONERS_BY_IDS = "#{BASE_SUMMONER_URL}/{summonerIds}"
+
+      SUMMONERS_BY_NAMES =  Addressable::Template.new "#{BASE_SUMMONER_URL}/by-name/{summonerNames}{?api_key}"
       SUMMONERS_BY_IDS = Addressable::Template.new "#{BASE_SUMMONERS_BY_IDS}{?api_key}"
       MASTERIES = Addressable::Template.new "#{BASE_SUMMONERS_BY_IDS}/masteries{?api_key}"
       NAMES = Addressable::Template.new "#{BASE_SUMMONERS_BY_IDS}/name{?api_key}"
@@ -23,7 +24,7 @@ module Taric
       #   summoners = client.summoners_by_name(summoner_names: 'orlyzomg,ipa,dbanksdesign,lzrface,doodiediddle')
       #   summoner = summoners['orlyzomg']
       def summoners_by_names(summoner_names:)
-        response_for BY_NAMES, {summonerNames: summoner_names}
+        response_for SUMMONERS_BY_NAMES, {summonerNames: summoner_names}
       end
 
       # Returns [Hash] of summoner data hashes keyed by summoner ID

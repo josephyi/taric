@@ -1,0 +1,10 @@
+{
+  "id": 5235,
+  "description": "+3.85 ability power",
+  "name": "Quintessence of Ability Power",
+  "rune": {
+    "isRune": true,
+    "tier": "2",
+    "type": "black"
+  }
+}

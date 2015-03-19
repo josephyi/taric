@@ -1,0 +1,18 @@
+{
+  "v": "5.5.2",
+  "dd": "5.5.2",
+  "cdn": "http://ddragon.leagueoflegends.com/cdn",
+  "lg": "5.5.2",
+  "n": {
+    "champion": "5.5.2",
+    "profileicon": "5.5.2",
+    "item": "5.5.2",
+    "mastery": "5.5.2",
+    "language": "5.5.2",
+    "summoner": "5.5.2",
+    "rune": "5.5.2"
+  },
+  "profileiconmax": 28,
+  "l": "en_US",
+  "css": "5.5.2"
+}
