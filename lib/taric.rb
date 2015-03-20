@@ -7,30 +7,30 @@ require 'memoist'
 
 module Taric
   class << self
-    extend Memoist
     attr_accessor :configuration
 
-    def client(region = :na, config = @configuration ||= Taric::Configuration.new)
-      Taric::Client.new(config.api_key, region, config.requestor.(connection(config)), config.response_handler)
+    def client(region: :na, config: @configuration ||= Taric::Configuration.new)
+      Taric::Client.new(api_key: config.api_key,
+                        region: region,
+                        requestor: config.requestor.(connection(config)),
+                        response_handler: config.response_handler)
     end
-    memoize :client
 
+    # Sets global configuration.
+    #
+    # @example
+    #   Taric.configure! do |config|
+    #     config.api_key = 'your_api_key'
+    #   end
     def configure!
       reset!
       yield(configuration)
     end
 
+    # Resets global configuration.
+    #
     def reset!
       @configuration = Taric::Configuration.new
-    end
-
-    def method_missing(method, *args, &block)
-      return super unless client.respond_to?(method)
-      client.send(method, *args, &block)
-    end
-
-    def respond_to?(method, include_all=false)
-      client.respond_to?(method, include_all) || super
     end
 
     include Taric::Connection

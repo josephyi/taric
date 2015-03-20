@@ -18,7 +18,12 @@ module Taric
         pbe: {region: 'pbe'.freeze, platform_id: 'PBE1', host: 'pbe.api.pvp.net'}
     }.freeze
 
-    def initialize(api_key, region, requestor, response_handler)
+    # @param api_key [String] rito api key
+    # @param region [Symbol] region code
+    # @param requestor [Proc] lambda that will accept a url and return a [Faraday::Response]
+    # @param response_handler [Proc] lambda that accepts [Faraday::Response] and handles it
+    #
+    def initialize(api_key:, region:, requestor:, response_handler:)
       @api_key = api_key
       @region = region
       @requestor = requestor

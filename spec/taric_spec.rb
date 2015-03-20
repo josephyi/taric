@@ -5,18 +5,17 @@ describe Taric do
     expect(Taric::VERSION).not_to be nil
   end
 
-  context 'when delegating to client' do
-    before do
-      stub_get(Taric::Operation::LolStatus::SHARDS).to_return(body: fixture('shards.json'))
-    end
+  describe "#configure!" do
+    after {Taric.reset!}
 
-    it 'should get resource' do
-      Taric.shards
-      expect(a_get(Taric::Operation::LolStatus::SHARDS)).to have_been_made
-    end
+    it 'configures defined params' do
+      Taric.configure! do |config|
+        config.api_key = 'test'
+      end
 
-    it 'should be the same' do
-      expect(Taric.shards).to eq(Taric.client.shards)
+      client = Taric.client(region: :na)
+      expect(client.instance_variable_get '@api_key').to eq('test')
     end
   end
+
 end

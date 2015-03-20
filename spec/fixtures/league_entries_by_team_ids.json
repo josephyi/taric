@@ -1,0 +1,17 @@
+{"TEAM-fa073ee0-51ca-11e4-82cc-782bcb4d0bb2": [{
+  "queue": "RANKED_TEAM_5x5",
+  "name": "Nami's Enforcers",
+  "entries": [{
+    "leaguePoints": 0,
+    "isFreshBlood": true,
+    "isHotStreak": true,
+    "division": "I",
+    "isInactive": false,
+    "isVeteran": false,
+    "losses": 12,
+    "playerOrTeamName": "Ruby and Friends",
+    "playerOrTeamId": "TEAM-fa073ee0-51ca-11e4-82cc-782bcb4d0bb2",
+    "wins": 26
+  }],
+  "tier": "CHALLENGER"
+}]}

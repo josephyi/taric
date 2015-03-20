@@ -9,6 +9,7 @@ require_relative 'match'
 require_relative 'match_history'
 require_relative 'stats'
 require_relative 'summoner'
+require_relative 'team'
 module Taric
   module Operation
     module API
@@ -23,6 +24,7 @@ module Taric
       include Taric::Operation::MatchHistory
       include Taric::Operation::Stats
       include Taric::Operation::Summoner
+      include Taric::Operation::Team
 
       # Template for requesting the url and processing the response.
       #
