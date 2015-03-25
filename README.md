@@ -62,14 +62,14 @@ There are a couple of ways to set the API key:
 
 > "Functional and stylish."
 
-Once the key is set, you can use `Taric.client(:region)` to get a client instance for the specified region.
+Once the key is set, you can use `Taric.client(region: region_code)` to get a client instance for the specified region.
 
 ```ruby
 # North America
-client = Taric.client(:na)
+client = Taric.client(region: :na)
 
-# Korea
-client = Taric.client(:kr)
+# Korea, using String arg
+client = Taric.client(region: 'kr')
 ```
 
 ### Champion

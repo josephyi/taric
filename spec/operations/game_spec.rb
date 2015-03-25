@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe Taric::Operation::Game do
-  let(:client) {Taric.client}
+  let(:client) {Taric.client(api_key:'test')}
 
   describe '#recent_games' do
     let (:url) {expand_template(Taric::Operation::Game::RECENT, {summonerId: 21066})}

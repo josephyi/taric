@@ -30,7 +30,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'typhoeus', "~> 0.3"
   spec.add_runtime_dependency 'memoist', '~> 0.11'
   spec.add_runtime_dependency('addressable', '~> 2.3')
+  spec.add_runtime_dependency('oj', '~> 2.12')
   spec.add_runtime_dependency('faraday_middleware', '~> 0.9')
-  spec.add_runtime_dependency('hashie',  '~> 3.4')
-  spec.add_runtime_dependency('multi_json',  '~> 1.1')
+  spec.add_runtime_dependency('faraday_middleware-parse_oj', '~> 0.3.0')
 end

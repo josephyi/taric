@@ -28,7 +28,7 @@ def fixture(file)
 end
 
 def expand_template(operation, options = {})
-  Taric::Client.expand_template(api_key: 'KeyNotSetButUsingThisForTest', region: :na, operation: operation, options: options).to_s
+  Taric::Client.expand_template(api_key: 'test', region: :na, operation: operation, options: options).to_s
 end
 
 def stub_get_json(url, fixture)

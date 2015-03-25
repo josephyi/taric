@@ -18,12 +18,18 @@ module Taric
         pbe: {region: 'pbe'.freeze, platform_id: 'PBE1', host: 'pbe.api.pvp.net'}
     }.freeze
 
+    REGION_ENDPOINT_STRING_KEYS = REGION_ENDPOINT_INFO.keys.map(&:to_s).freeze
+
     # @param api_key [String] rito api key
     # @param region [Symbol] region code
     # @param requestor [Proc] lambda that will accept a url and return a [Faraday::Response]
     # @param response_handler [Proc] lambda that accepts [Faraday::Response] and handles it
     #
     def initialize(api_key:, region:, requestor:, response_handler:)
+      raise ArgumentError, 'api_key cannot be nil' if api_key.nil?
+      raise ArgumentError, 'region cannot be nil' if region.nil?
+      raise ArgumentError, "#{region} is not a valid region, #{REGION_ENDPOINT_STRING_KEYS}" if REGION_ENDPOINT_INFO[region].nil?
+
       @api_key = api_key
       @region = region
       @requestor = requestor

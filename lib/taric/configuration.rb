@@ -11,7 +11,7 @@ module Taric
     }
 
     def initialize(options = {})
-      @api_key = options.fetch(:api_key, ENV.fetch('RIOT_API_KEY'.freeze, 'KeyNotSetButUsingThisForTest'.freeze))
+      @api_key = options.fetch(:api_key, ENV.fetch('RIOT_API_KEY'.freeze, nil))
       @format = options.fetch(:format, :json)
       @user_agent = options.fetch(:user_agent, 'Taric Gem')
       @adapter = options.fetch(:adapter, :typhoeus)

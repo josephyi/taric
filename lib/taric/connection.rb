@@ -1,4 +1,4 @@
-require 'faraday_middleware'
+require 'faraday_middleware/parse_oj'
 
 module Taric
   module Connection
@@ -8,9 +8,7 @@ module Taric
       }.merge(config.connection_opts)
 
       Faraday::Connection.new(options) do |conn|
-        #conn.use FaradayMiddleware::Mashify
-        #conn.response :raise_error
-        conn.response :json, :content_type => /\bjson$/
+        conn.response :oj, :content_type => /\bjson$/
         conn.adapter config.adapter
       end
     end

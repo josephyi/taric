@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe Taric::Operation::FeaturedGames do
-  let(:client) {Taric.client}
+  let(:client) {Taric.client(api_key:'test')}
 
   describe '#featured_games' do
     let (:url) {expand_template(Taric::Operation::FeaturedGames::FEATURED_GAMES)}

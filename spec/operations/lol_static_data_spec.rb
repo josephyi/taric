@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe Taric::Operation::LolStaticData do
-  let(:client) {Taric.client}
+  let(:client) {Taric.client(api_key:'test')}
 
   describe '#static_champions' do
     let (:url) {expand_template(Taric::Operation::LolStaticData::STATIC_CHAMPIONS)}

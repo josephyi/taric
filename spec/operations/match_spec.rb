@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe Taric::Operation::Match do
-  let(:client) {Taric.client}
+  let(:client) {Taric.client(api_key:'test')}
 
   describe '#match' do
     let(:id) {1733750076}

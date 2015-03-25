@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe Taric::Operation::Summoner do
-  let(:client) {Taric.client}
+  let(:client) {Taric.client(api_key:'test')}
   let(:ids) {'35035046,39497114,38332778,38877656,21066'}
 
   describe '#summoners_by_names' do

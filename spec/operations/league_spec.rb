@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe Taric::Operation::League do
-  let(:client) {Taric.client}
+  let(:client) {Taric.client(api_key:'test')}
   let(:ids) {'21066,38877656,35035046'}
 
   describe '#leagues_by_summoner_ids' do

@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe Taric::Operation::Team do
-  let(:client) {Taric.client}
+  let(:client) {Taric.client(api_key:'test')}
 
   describe '#teams_by_summoner_ids' do
     let(:ids) {'21066'}

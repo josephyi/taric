@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe Taric::Operation::LolStatus do
-  let(:client) {Taric.client}
+  let(:client) {Taric.client(api_key:'test')}
 
   describe '#shards' do
     let (:url) {expand_template(Taric::Operation::LolStatus::SHARDS)}

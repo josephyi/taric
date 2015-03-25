@@ -5,7 +5,7 @@ describe Taric do
     expect(Taric::VERSION).not_to be nil
   end
 
-  describe "#configure!" do
+  describe ".configure!" do
     after {Taric.reset!}
 
     it 'configures defined params' do
@@ -18,4 +18,17 @@ describe Taric do
     end
   end
 
+  describe ".client" do
+     it 'raises when api_key is nil' do
+       expect{Taric.client(region: :na, api_key:nil)}.to raise_error(ArgumentError)
+     end
+
+     it 'raises when region is nil' do
+       expect{Taric.client(region: nil, api_key:'sdsdsdsds')}.to raise_error(ArgumentError)
+     end
+
+     it 'raises when region is invalid' do
+       expect{Taric.client(region: :not_a_region, api_key:'yay')}.to raise_error(ArgumentError)
+     end
+  end
 end

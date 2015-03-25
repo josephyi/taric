@@ -1,13 +1,13 @@
 require 'spec_helper'
 
 describe Taric::Operation::Champion do
-  let(:client){Taric.client}
+  let(:client){Taric.client(api_key:'test')}
 
   describe '#champions' do
     let (:url) {expand_template(Taric::Operation::Champion::CHAMPIONS)}
 
     it 'expanded template correctly' do
-      expect(url).to eq('https://na.api.pvp.net/api/lol/na/v1.2/champion?api_key=KeyNotSetButUsingThisForTest')
+      expect(url).to eq('https://na.api.pvp.net/api/lol/na/v1.2/champion?api_key=test')
     end
 
     context 'with no arguments' do

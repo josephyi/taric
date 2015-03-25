@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe Taric::Operation::Stats do
-  let(:client) {Taric.client}
+  let(:client) {Taric.client(api_key:'test')}
 
   describe '#ranked_stats' do
     let(:id) {21066}
