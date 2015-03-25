@@ -143,7 +143,6 @@ describe Taric::Operation::LolStaticData do
     end
 
     it 'returns the requested result' do
-      pending('rito plz... waiting on fix')
       result = client.static_map
       expect(result).to be_a Hash
     end
