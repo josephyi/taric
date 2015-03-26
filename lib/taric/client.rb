@@ -68,8 +68,9 @@ module Taric
 
     private
     def response_for(operation, options = {})
-      url = self.class.expand_template(api_key: @api_key, region: @region, operation: operation, options: options)
-      API_CALL.(url: url, requestor: @requestor, response_handler: @response_handler)
+      -> url {
+        API_CALL.(url: url, requestor: @requestor, response_handler: @response_handler)
+      }.(self.class.expand_template(api_key: @api_key, region: @region, operation: operation, options: options))
     end
   end
 end

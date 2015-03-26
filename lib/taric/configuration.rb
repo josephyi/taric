@@ -7,6 +7,7 @@ module Taric
     }.curry
 
     DEFAULT_RESPONSE_HANDLER = -> response {
+      raise "#{response.status}" if response.status >= 400
       response.body
     }
 

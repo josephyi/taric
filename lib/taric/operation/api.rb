@@ -33,7 +33,7 @@ module Taric
       # @param response_handler Proc (lambda)
       API_CALL = -> (url:, requestor:, response_handler:) {
         response_handler.(requestor.(url))
-      }.curry
+      }
 
     end
   end
