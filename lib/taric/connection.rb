@@ -1,4 +1,5 @@
 require 'faraday_middleware/parse_oj'
+require 'taric/faraday_middleware/http_exception'
 
 module Taric
   module Connection
@@ -8,6 +9,7 @@ module Taric
       }.merge(config.connection_opts)
 
       Faraday::Connection.new(options) do |conn|
+        conn.use Taric::FaradayMiddleware::HttpException
         conn.response :oj, :content_type => /\bjson$/
         conn.adapter config.adapter
       end

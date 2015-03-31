@@ -12,6 +12,7 @@ module Taric
       # @see https://developer.riotgames.com/api/methods#!/967/3313
       # @param id [Fixnum] id of match
       # @param include_timeline [Boolean] optional, true includes timestamps on events
+      # @return match data for id.
       def match(id:, include_timeline: nil)
         response_for MATCH, {matchId: id, includeTimeline: include_timeline}
       end
