@@ -1,3 +1,4 @@
+require_relative 'api_challenge'
 require_relative 'champion'
 require_relative 'current_game'
 require_relative 'featured_games'
@@ -13,6 +14,7 @@ require_relative 'team'
 module Taric
   module Operation
     module API
+      include Taric::Operation::ApiChallenge
       include Taric::Operation::Champion
       include Taric::Operation::CurrentGame
       include Taric::Operation::FeaturedGames
