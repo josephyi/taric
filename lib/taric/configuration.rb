@@ -3,7 +3,8 @@ module Taric
     attr_accessor :api_key, :format, :user_agent, :connection_opts, :adapter, :region, :requestor, :response_handler
 
     DEFAULT_REQUESTOR = -> connection, url {
-      connection.get url
+      connection.g
+      et url
     }.curry
 
     DEFAULT_RESPONSE_HANDLER = -> response {

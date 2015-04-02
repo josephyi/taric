@@ -2,7 +2,6 @@ require 'taric/client'
 require 'taric/configuration'
 require 'taric/connection'
 require 'taric/version'
-require 'typhoeus/adapters/faraday'
 require 'memoist'
 
 module Taric

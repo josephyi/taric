@@ -48,9 +48,13 @@ There are a couple of ways to set the API key:
 
     This approach is best if you don't care to configure anything else.
 
-2. Configure it once (e.g. Rails initializer):
+2. Configure it once (e.g. Rails initializer). An example with typhoeus:
 
     ```ruby
+    require 'faraday'
+    require 'typhoeus'
+    require 'typhoeus/adapters/faraday'
+
     Taric.configure! do |config|
       config.api_key = 'whatever_key_rito_assigned_you'
       c.adapter = :typhoeus # default is Faraday.default_adapter
@@ -58,6 +62,8 @@ There are a couple of ways to set the API key:
     ```
 
     This approach is best if you want to configure other things (documentation to come)
+
+
 
 ## Usage
 
