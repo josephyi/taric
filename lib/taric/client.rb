@@ -5,7 +5,7 @@ module Taric
   class Client
     include Taric::Connection
     include Taric::Operation::API
-    attr_reader :api_key, :region, :conn
+    attr_reader :api_key, :region, :conn, :config
 
     REGION_ENDPOINT_INFO = {
         br: {region: 'br'.freeze, platform_id: 'BR1'.freeze, host: 'br.api.pvp.net'},
@@ -80,7 +80,7 @@ module Taric
     private
     def response_for(operation, options = {})
       -> url {
-        API_CALL.(url: url, requestor: @config.requestor.(@connection), response_handler: @config.response_handler)
+        API_CALL.(url: url, requestor: @config.requestor.(@conn), response_handler: @config.response_handler)
       }.(self.class.expand_template(api_key: @api_key, region: @region, operation: operation, options: options))
     end
 
@@ -97,11 +97,7 @@ module Taric
       end
 
       def execute!
-        responses = []
-        @parent.conn.in_parallel do
-          @operations.each_with_object([]){|op, arr| responses << @parent.conn.get(op)}
-        end
-        responses
+        API_CALL.(url: @operations, requestor: @parent.config.parallel_requestor.(@parent.conn), response_handler: @parent.config.parallel_response_handler)
       end
     end
   end

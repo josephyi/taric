@@ -1,6 +1,6 @@
 module Taric
   class Configuration
-    attr_accessor :api_key, :format, :user_agent, :connection_opts, :adapter, :region, :requestor, :response_handler
+    attr_accessor :api_key, :format, :user_agent, :connection_opts, :adapter, :region, :requestor, :response_handler, :parallel_requestor, :parallel_response_handler
 
     DEFAULT_REQUESTOR = -> connection, url {
       connection.get url
@@ -8,6 +8,14 @@ module Taric
 
     DEFAULT_RESPONSE_HANDLER = -> response {
       response.body
+    }
+
+    PARALLEL_REQUESTOR = -> connection, urls {
+      urls.map{|url| connection.get url}
+    }.curry
+
+    PARALLEL_RESPONSE_HANDLER = -> responses {
+      responses.map{|response| {body: response.body, status: response.status}}
     }
 
     def initialize(options = {})
@@ -19,6 +27,8 @@ module Taric
       @connection_opts = options.fetch(:connection_opts, {})
       @requestor = options.fetch(:requestor, DEFAULT_REQUESTOR)
       @response_handler = options.fetch(:response_handler, DEFAULT_RESPONSE_HANDLER)
+      @parallel_requestor = options.fetch(:parallel_requestor, PARALLEL_REQUESTOR)
+      @parallel_response_handler = options.fetch(:parallel_response_handler, PARALLEL_RESPONSE_HANDLER)
     end
   end
 end
