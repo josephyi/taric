@@ -1,6 +1,6 @@
 module Taric
   class Configuration
-    attr_accessor :api_key, :format, :user_agent, :connection_opts, :adapter, :region, :requestor, :response_handler, :parallel_requestor, :parallel_response_handler
+    attr_accessor :api_key, :format, :user_agent, :connection_opts, :adapter, :region, :requestor, :response_handler, :parallel_requestor, :parallel_response_handler, :raw
 
     DEFAULT_REQUESTOR = -> connection, url {
       connection.get url
@@ -29,6 +29,7 @@ module Taric
       @response_handler = options.fetch(:response_handler, DEFAULT_RESPONSE_HANDLER)
       @parallel_requestor = options.fetch(:parallel_requestor, PARALLEL_REQUESTOR)
       @parallel_response_handler = options.fetch(:parallel_response_handler, PARALLEL_RESPONSE_HANDLER)
+      @raw = options.fetch(:raw, false)
     end
   end
 end

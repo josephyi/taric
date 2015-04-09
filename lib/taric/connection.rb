@@ -10,7 +10,7 @@ module Taric
 
       Faraday::Connection.new(options) do |conn|
         conn.use Taric::FaradayMiddleware::HttpException
-        conn.response :oj, :content_type => /\bjson$/
+        conn.response :oj, :content_type => /\bjson$/ unless config.raw
         conn.adapter config.adapter
       end
     end
