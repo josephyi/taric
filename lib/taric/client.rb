@@ -25,14 +25,11 @@ module Taric
 
     # @param api_key [String] rito api key
     # @param region [Symbol] region code
-    # @param requestor [Proc] lambda that will accept a url and return a [Faraday::Response]
-    # @param response_handler [Proc] lambda that accepts [Faraday::Response] and handles it
-    #
+    # @param config [Configuration] configuration
     def initialize(api_key:, region:, config:) #requestor:, response_handler:)
       raise ArgumentError, 'api_key cannot be nil' if api_key.nil?
       raise ArgumentError, 'region cannot be nil' if region.nil?
       raise ArgumentError, "#{region} is not a valid region, #{REGION_ENDPOINT_STRING_KEYS}" if REGION_ENDPOINT_INFO[region].nil?
-
       @api_key = api_key
       @region = region
       @config = config
@@ -91,14 +88,27 @@ module Taric
         @operations = []
       end
 
+      # Processes all chained requests, clears operations, and returns responses with respect to the operations.
+      #
+      # @return [Array] of operation responses, default is hash with response status and body.
+      #
+      # @example
+      #   client.in_parallel.match(id: 1).match(id: 42).featured_games.execute!
+      #
+      def execute!
+        -> responses {
+          @operations.clear
+          responses
+        }.(API_CALL.(url: @operations, requestor: @parent.config.parallel_requestor.(@parent.conn), response_handler: @parent.config.parallel_response_handler))
+      end
+
+      private
+
       def response_for(operation, options = {})
         @operations << @parent.class.expand_template(api_key: @parent.api_key, region: @parent.region, operation: operation, options: options)
         self
       end
 
-      def execute!
-        API_CALL.(url: @operations, requestor: @parent.config.parallel_requestor.(@parent.conn), response_handler: @parent.config.parallel_response_handler)
-      end
     end
   end
 end
