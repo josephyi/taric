@@ -13,6 +13,10 @@ module Taric
 
     class HttpException < Faraday::Response::Middleware
       def call(env)
+        default_request(env) if env.parallel_manager.nil? # might need a better way of detecting this
+      end
+
+      def default_request(env)
         @app.call(env).on_complete do |response|
           case response[:status]
             when 400
@@ -33,7 +37,7 @@ module Taric
               raise Taric::FaradayMiddleware::GatewayTimeout, 'Gateway timeout'
           end
         end
+      end
     end
   end
-end
 end

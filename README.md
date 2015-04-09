@@ -79,6 +79,24 @@ client = Taric.client(region: :na)
 client = Taric.client(region: 'kr')
 ```
 
+Taric also supports parallel HTTP requests via Typhoeus.
+
+```ruby
+# Be sure to include the adapter
+require 'typhoeus/adapters/faraday'
+
+# from regular client...
+client = Taric.client(region: :na)
+
+# ...to parallel mode. Just chain the operation methods
+parallel_client = client.in_parallel.match(id: 1).match(id: 42)
+
+# When you're ready, execute! Note, this clears the operations.
+# By default each response returns a hash with HTTP status
+# and body e.g. {status: 200, body: [1778689691]}
+responses = parallel_client.execute!
+```
+
 ### Champion
 
 ```ruby

@@ -1,6 +1,6 @@
 require 'taric/client'
 require 'taric/configuration'
-require 'taric/connection'
+
 require 'taric/version'
 require 'memoist'
 
@@ -32,8 +32,7 @@ module Taric
     def client(region: :na, api_key: nil, config: @configuration ||= Taric::Configuration.new)
       Taric::Client.new(api_key: api_key || config.api_key,
                         region: region.is_a?(String) ? region.to_sym : region,
-                        requestor: config.requestor.(connection(config)),
-                        response_handler: config.response_handler)
+                        config: config)
     end
 
     # Sets global configuration. Should only be called once in a process (e.g. Rails initializer)
@@ -55,7 +54,7 @@ module Taric
       @configuration = Taric::Configuration.new
     end
 
-    include Taric::Connection
+
   end
 
 end
