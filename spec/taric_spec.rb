@@ -20,6 +20,9 @@ describe Taric do
 
   describe ".client" do
      it 'raises when api_key is nil' do
+       Taric.configure! do |config|
+         config.api_key = nil
+       end
        expect{Taric.client(region: :na, api_key:nil)}.to raise_error(ArgumentError)
      end
 
