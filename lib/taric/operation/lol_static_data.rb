@@ -6,7 +6,7 @@ module Taric
       VERSION = 'v1.2'
       BASE_STATIC_URL = "https://global.api.pvp.net/api/lol/static-data/{region}/#{VERSION}"
 
-      STATIC_CHAMPIONS = Addressable::Template.new "#{BASE_STATIC_URL}/champion{?api_key,dataById,locale,version}"
+      STATIC_CHAMPIONS = Addressable::Template.new "#{BASE_STATIC_URL}/champion{?api_key,dataById,champData,locale,version}"
       STATIC_CHAMPION = Addressable::Template.new "#{BASE_STATIC_URL}/champion/{id}{?api_key,locale,version}"
       STATIC_ITEMS = Addressable::Template.new "#{BASE_STATIC_URL}/item{?api_key,itemListData,locale,version}"
       STATIC_ITEM = Addressable::Template.new "#{BASE_STATIC_URL}/item/{id}{?api_key,itemData,locale,version}"
