@@ -16,7 +16,7 @@ module Taric
 
       # Returns [Hash] of summoner data hashes keyed by summoner name
       #
-      # @see {https://developer.riotgames.com/api/methods#!/960/3292}
+      # @see https://developer.riotgames.com/api/methods#!/960/3292
       # @param summoner_names [String] required, summoner names separated by commas
       # @return [Hash] of summoner data hashes keyed by summoner name
       #
@@ -29,7 +29,7 @@ module Taric
 
       # Returns [Hash] of summoner data hashes keyed by summoner ID
       #
-      # @see {https://developer.riotgames.com/api/methods#!/960/3293}
+      # @see https://developer.riotgames.com/api/methods#!/960/3293
       # @param summoner_ids [String] required, summoner IDs separated by commas
       # @return [Hash] of summoner data hashes keyed by summoner ID
       #
