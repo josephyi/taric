@@ -57,7 +57,7 @@ There are a couple of ways to set the API key:
 
     Taric.configure! do |config|
       config.api_key = 'whatever_key_rito_assigned_you'
-      c.adapter = :typhoeus # default is Faraday.default_adapter
+      config.adapter = :typhoeus # default is Faraday.default_adapter
     end
     ```
 
