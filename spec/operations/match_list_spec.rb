@@ -1,4 +1,4 @@
-describe Taric::Operation::MatchHistory do
+describe Taric::Operation::MatchList do
   let(:client) {Taric.client(api_key:'test')}
 
   describe '#match_list' do
