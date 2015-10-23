@@ -10,6 +10,8 @@ require_relative 'match_list'
 require_relative 'stats'
 require_relative 'summoner'
 require_relative 'team'
+
+# Combines operations of LoL API.
 module Taric
   module Operation
     module API

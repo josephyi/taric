@@ -1,6 +1,6 @@
 require 'taric/client'
 require 'taric/configuration'
-
+require 'taric/constants'
 require 'taric/version'
 require 'memoist'
 

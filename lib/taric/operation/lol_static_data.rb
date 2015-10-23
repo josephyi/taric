@@ -220,7 +220,11 @@ module Taric
         response_for STATIC_LANGUAGES
       end
 
+      # Maps availalble.
       # @see https://developer.riotgames.com/api/methods#!/968/3328
+      # @param locale [String] filter by locale
+      # @param version [String] patch version
+      # @return [Hash] of maps available.
       def static_map(locale: nil, version: nil)
         response_for STATIC_MAP, {locale: locale, version: version}
       end

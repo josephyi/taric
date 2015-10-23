@@ -23,6 +23,8 @@ module Taric
 
     REGION_ENDPOINT_STRING_KEYS = REGION_ENDPOINT_INFO.keys.map(&:to_s).freeze
 
+    # New instance of Taric::Client.
+    #
     # @param api_key [String] rito api key
     # @param region [Symbol] region code
     # @param config [Configuration] configuration
