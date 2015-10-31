@@ -114,4 +114,25 @@ describe Taric::Operation::League do
     end
   end
 
+  describe '#master' do
+    context 'solo queue' do
+      let(:type) {'RANKED_SOLO_5x5'}
+      let(:url) {expand_template(Taric::Operation::League::MASTER, {type: type})}
+
+      before {stub_get(url).to_return(body: fixture('master_solo_queue.json'), headers: {content_type: 'application/json; charset=utf-8'})}
+
+      it 'requests the correct resource' do
+        client.master(type: type)
+        expect(a_get(url)).to have_been_made
+      end
+
+      it 'returns the requested result' do
+        result = client.master(type: type)
+        expect(result).to be_a Hash
+        expect(result['queue']).to eq('RANKED_SOLO_5x5')
+        expect(result['entries']).to be_an Array
+      end
+    end
+  end
+
 end
