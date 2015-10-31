@@ -18,7 +18,7 @@ module Taric
       # @param end_time [Fixnum or Time] Optional - The end time to use for fetching games.
       def match_list(summoner_id:, champion_ids: nil, ranked_queues: nil, seasons: nil, begin_time: nil, end_time: nil, begin_index: nil, end_index: nil)
         response_for MATCH_LIST,
-                     {summonerId: summoner_id, championIds: champion_ids, rankedQueues: ranked_queues, seasons: seasons, beginTime: epoch_time(begin_time), endTime: epoch_time(end_time), beginIndex: begin_index, endIndex: end_index}
+                     {summonerId: summoner_id, championIds: champion_ids, rankedQueues: ranked_queues, seasons: seasons, beginTime: epoch_milliseconds(begin_time), endTime: epoch_milliseconds(end_time), beginIndex: begin_index, endIndex: end_index}
       end
 
     end
