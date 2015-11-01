@@ -40,14 +40,26 @@ module Taric
         response_for SUMMONERS_BY_IDS, {summonerIds: summoner_ids}
       end
 
+      # Masteries keyed by summoner ID.
+      #
+      # @param summoner_ids [String] comma separated list of Summoner IDs
+      # @return [Hash] masteries by Summoner ID
       def summoner_masteries(summoner_ids:)
         response_for MASTERIES, {summonerIds: summoner_ids}
       end
 
+      # Summoner names keyed by ID.
+      #
+      # @param summoner_ids [String] comma separated list of Summoner IDs
+      # @return [Hash] id to name mapping
       def summoner_ids_to_names(summoner_ids:)
         response_for NAMES, {summonerIds: summoner_ids}
       end
 
+      # Runes keyed by summoner ID.
+      #
+      # @param summoner_ids [String] comma separated list of Summoner IDs
+      # @return [Hash] runes by Summoner ID
       def summoner_runes(summoner_ids:)
         response_for RUNES, {summonerIds: summoner_ids}
       end

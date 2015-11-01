@@ -10,12 +10,20 @@ module Taric
       TEAMS_BY_SUMMONER_IDS = Addressable::Template.new "#{BASE_TEAM_URL}/by-summoner/{summonerIds}"
       TEAMS_BY_TEAM_IDS = Addressable::Template.new "#{BASE_TEAM_URL}/{teamIds}"
 
-      # @see https://developer.riotgames.com/api/methods#!/937/3247
+      # Teams by summoner ids.
+      #
+      # @param summoner_ids [String] comma separated list of summoner ids
+      # @return [Hash] team info by summoner id
+      # @see https://developer.riotgames.com/api/methods#!/986/3358
       def teams_by_summoner_ids(summoner_ids:)
         response_for TEAMS_BY_SUMMONER_IDS, {summonerIds: summoner_ids}
       end
 
-      # @see https://developer.riotgames.com/api/methods#!/937/3246
+      # Teams by team ids.
+      #
+      # @param team_ids [String] comma separated list of team ids
+      # @return [Hash] team info by team IDs
+      # @see https://developer.riotgames.com/api/methods#!/986/3357
       def teams(team_ids:)
         response_for TEAMS_BY_TEAM_IDS, {teamIds: team_ids}
       end
