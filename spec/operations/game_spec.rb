@@ -14,7 +14,7 @@ describe Taric::Operation::Game do
     end
 
     it 'returns the requested result' do
-      recent_games = client.recent_games(summoner_id: 21066)
+      recent_games = client.recent_games(summoner_id: 21066).body
       expect(recent_games).to be_a Hash
       expect(recent_games['games']).to be_an Array
       expect(recent_games['summonerId']).to eq(21066)

@@ -15,7 +15,7 @@ describe Taric::Operation::Match do
     end
 
     it 'returns the requested result' do
-      result = client.match(id: id)
+      result = client.match(id: id).body
       expect(result).to be_a Hash
       expect(result['matchId']).to eq(id)
     end

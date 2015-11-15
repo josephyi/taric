@@ -15,7 +15,7 @@ describe Taric::Operation::Stats do
     end
 
     it 'returns the requested result' do
-      result = client.ranked_stats(summoner_id: id)
+      result = client.ranked_stats(summoner_id: id).body
       expect(result).to be_a Hash
       expect(result['summonerId']).to eq(id)
     end
@@ -33,7 +33,7 @@ describe Taric::Operation::Stats do
     end
 
     it 'returns the requested result' do
-      result = client.summary_stats(summoner_id: id)
+      result = client.summary_stats(summoner_id: id).body
       expect(result).to be_a Hash
       expect(result['summonerId']).to eq(id)
     end

@@ -16,7 +16,7 @@ describe Taric::Operation::Team do
     end
 
     it 'returns the requested result' do
-      result = client.teams_by_summoner_ids(summoner_ids: ids)
+      result = client.teams_by_summoner_ids(summoner_ids: ids).body
       expect(result).to be_a Hash
       expect(result['21066']).to be_an Array
     end
@@ -35,7 +35,7 @@ describe Taric::Operation::Team do
     end
 
     it 'returns the requested result' do
-      result = client.teams(team_ids: ids)
+      result = client.teams(team_ids: ids).body
       expect(result).to be_a Hash
       expect(result['TEAM-fa073ee0-51ca-11e4-82cc-782bcb4d0bb2']).to be_a Hash
     end

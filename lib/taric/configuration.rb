@@ -7,7 +7,7 @@ module Taric
     }.curry
 
     DEFAULT_RESPONSE_HANDLER = -> response {
-      response.body
+      response
     }
 
     PARALLEL_REQUESTOR = -> connection, urls {
@@ -15,7 +15,7 @@ module Taric
     }.curry
 
     PARALLEL_RESPONSE_HANDLER = -> responses {
-      responses.map{|response| {body: response.body, status: response.status}}
+      responses.map{|response| response}
     }
 
     def initialize(options = {})

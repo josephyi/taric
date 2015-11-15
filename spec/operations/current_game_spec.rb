@@ -14,7 +14,7 @@ describe Taric::Operation::CurrentGame do
     end
 
     it 'returns the requested result' do
-      current_game = client.current_game(summoner_id: 37480768)
+      current_game = client.current_game(summoner_id: 37480768).body
       expect(current_game).to be_a Hash
       expect(current_game['participants']).to be_an Array
       expect(current_game['gameId']).to eq(1763258300)
