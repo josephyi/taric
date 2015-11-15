@@ -27,10 +27,11 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'webmock', '~> 1.20'
   spec.add_development_dependency 'rspec', '~> 3.2'
   spec.add_development_dependency 'coveralls', '~> 0.7'
+  spec.add_development_dependency 'typhoeus', '~> 0.8.0'
 
   spec.add_runtime_dependency 'memoist', '~> 0.11'
-  spec.add_runtime_dependency('addressable', '~> 2.3')
-  spec.add_runtime_dependency('oj', '~> 2.12')
-  spec.add_runtime_dependency('faraday_middleware', '~> 0.9')
-  spec.add_runtime_dependency('faraday_middleware-parse_oj', '~> 0.3.0')
+  spec.add_runtime_dependency 'addressable', '~> 2.3'
+  spec.add_runtime_dependency 'oj', '~> 2.12'
+  spec.add_runtime_dependency 'faraday_middleware', '~> 0.9'
+  spec.add_runtime_dependency 'faraday_middleware-parse_oj', '~> 0.3.0'
 end

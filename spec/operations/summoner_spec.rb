@@ -16,7 +16,7 @@ describe Taric::Operation::Summoner do
     end
 
     it 'returns the requested result' do
-      result = client.summoners_by_names(summoner_names: names)
+      result = client.summoners_by_names(summoner_names: names).body
       expect(result).to be_a Hash
     end
   end
@@ -32,7 +32,7 @@ describe Taric::Operation::Summoner do
     end
 
     it 'returns the requested result' do
-      result = client.summoners_by_ids(summoner_ids: ids)
+      result = client.summoners_by_ids(summoner_ids: ids).body
       expect(result).to be_a Hash
     end
   end
@@ -48,7 +48,7 @@ describe Taric::Operation::Summoner do
     end
 
     it 'returns the requested result' do
-      result = client.summoner_masteries(summoner_ids: ids)
+      result = client.summoner_masteries(summoner_ids: ids).body
       expect(result).to be_a Hash
     end
   end
@@ -64,7 +64,7 @@ describe Taric::Operation::Summoner do
     end
 
     it 'returns the requested result' do
-      result = client.summoner_runes(summoner_ids: ids)
+      result = client.summoner_runes(summoner_ids: ids).body
       expect(result).to be_a Hash
     end
   end
@@ -80,7 +80,7 @@ describe Taric::Operation::Summoner do
     end
 
     it 'returns the requested result' do
-      result = client.summoner_ids_to_names(summoner_ids: ids)
+      result = client.summoner_ids_to_names(summoner_ids: ids).body
       expect(result).to be_a Hash
     end
   end

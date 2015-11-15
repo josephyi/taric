@@ -14,7 +14,7 @@ describe Taric::Operation::FeaturedGames do
     end
 
     it 'returns the requested result' do
-      featured_games = client.featured_games
+      featured_games = client.featured_games.body
       expect(featured_games).to be_a Hash
       expect(featured_games['gameList']).to be_an Array
       expect(featured_games['gameList'].first).to be_a Hash

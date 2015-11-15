@@ -13,7 +13,7 @@ describe Taric::Operation::LolStaticData do
     end
 
     it 'returns the requested result' do
-      static_champions = client.static_champions
+      static_champions = client.static_champions.body
       expect(static_champions).to be_a Hash
       expect(static_champions['data']).to be_a Hash
       expect(static_champions['data']['Taric']).to be_a Hash
@@ -30,7 +30,7 @@ describe Taric::Operation::LolStaticData do
     end
 
     it 'returns the requested result' do
-      static_champion = client.static_champion(id: 44)
+      static_champion = client.static_champion(id: 44).body
       expect(static_champion).to be_a Hash
       expect(static_champion['key']).to eq('Taric')
     end
@@ -46,7 +46,7 @@ describe Taric::Operation::LolStaticData do
     end
 
     it 'returns the requested result' do
-      result = client.static_items
+      result = client.static_items.body
       expect(result).to be_a Hash
       expect(result['data']).to be_a Hash
       expect(result['data']['2049']).to be_a Hash
@@ -63,7 +63,7 @@ describe Taric::Operation::LolStaticData do
     end
 
     it 'returns the requested result' do
-      result = client.static_item(id: 2049)
+      result = client.static_item(id: 2049).body
       expect(result).to be_a Hash
       expect(result['name']).to eq('Sightstone')
     end
@@ -79,7 +79,7 @@ describe Taric::Operation::LolStaticData do
     end
 
     it 'returns the requested result' do
-      result = client.static_language_strings
+      result = client.static_language_strings.body
       expect(result).to be_a Hash
       expect(result['data']).to be_a Hash
     end
@@ -95,7 +95,7 @@ describe Taric::Operation::LolStaticData do
     end
 
     it 'returns the requested result' do
-      result = client.static_languages
+      result = client.static_languages.body
       expect(result).to be_an Array
       expect(result.first).to be_a String
     end
@@ -111,7 +111,7 @@ describe Taric::Operation::LolStaticData do
     end
 
     it 'returns the requested result' do
-      result = client.static_masteries
+      result = client.static_masteries.body
       expect(result).to be_a Hash
       expect(result['data']).to be_a Hash
     end
@@ -127,7 +127,7 @@ describe Taric::Operation::LolStaticData do
     end
 
     it 'returns the requested result' do
-      result = client.static_mastery(id: 4233)
+      result = client.static_mastery(id: 4233).body
       expect(result).to be_a Hash
       expect(result['name']).to eq('Hardiness')
     end
@@ -143,7 +143,7 @@ describe Taric::Operation::LolStaticData do
     end
 
     it 'returns the requested result' do
-      result = client.static_map
+      result = client.static_map.body
       expect(result).to be_a Hash
     end
   end
@@ -158,7 +158,7 @@ describe Taric::Operation::LolStaticData do
     end
 
     it 'returns the requested result' do
-      result = client.static_realm
+      result = client.static_realm.body
       expect(result).to be_a Hash
       expect(result['n']).to be_a Hash
     end
@@ -174,7 +174,7 @@ describe Taric::Operation::LolStaticData do
     end
 
     it 'returns the requested result' do
-      result = client.static_runes
+      result = client.static_runes.body
       expect(result).to be_a Hash
       expect(result['data']).to be_a Hash
     end
@@ -191,7 +191,7 @@ describe Taric::Operation::LolStaticData do
     end
 
     it 'returns the requested result' do
-      result = client.static_rune(id: id)
+      result = client.static_rune(id: id).body
       expect(result).to be_a Hash
       expect(result['id']).to eq(id)
     end
@@ -207,7 +207,7 @@ describe Taric::Operation::LolStaticData do
     end
 
     it 'returns the requested result' do
-      result = client.static_summoner_spells
+      result = client.static_summoner_spells.body
       expect(result).to be_a Hash
       expect(result['data']).to be_a Hash
     end
@@ -224,7 +224,7 @@ describe Taric::Operation::LolStaticData do
     end
 
     it 'returns the requested result' do
-      result = client.static_summoner_spell(id: id)
+      result = client.static_summoner_spell(id: id).body
       expect(result).to be_a Hash
       expect(result['id']).to eq(id)
     end
@@ -240,7 +240,7 @@ describe Taric::Operation::LolStaticData do
     end
 
     it 'returns the requested result' do
-      result = client.static_versions
+      result = client.static_versions.body
       expect(result).to be_an Array
       expect(result.first).to be_a String
     end

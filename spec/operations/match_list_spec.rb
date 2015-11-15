@@ -13,7 +13,7 @@ describe Taric::Operation::MatchList do
     end
 
     it 'returns the requested result' do
-      result = client.match_list(summoner_id: id)
+      result = client.match_list(summoner_id: id).body
       expect(result).to be_a Hash
       expect(result['matches']).to be_an Array
       expect(result['matches'].first).to be_a Hash
