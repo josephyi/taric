@@ -4,12 +4,11 @@ module Taric
     module ChampionMastery
       include Taric::Operation::Base
 
-      PLATFORM_ID = 'NA1'
-      BASE_MASTERY_URL = "https://global.api.pvp.net/championmastery/location/#{PLATFORM_ID}/player"
-      MASTERY_BY_CHAMPION_ID = Addressable::Template.new "#{BASE_MASTERY_URL}/{summonerId}/champion/{championId}{?api_key}"
-      MASTERY_ALL_CHAMPIONS = Addressable::Template.new "#{BASE_MASTERY_URL}/{summonerId}/champions{?api_key}"
-      MASTERY_SCORE = Addressable::Template.new "#{BASE_MASTERY_URL}/{summonerId}/score{?api_key}"
-      MASTERY_TOP_CHAMPIONS = Addressable::Template.new "#{BASE_MASTERY_URL}/{summonerId}/topchampions{?api_key,count}"
+      BASE_MASTERY_URL = "https://{host}/championmastery/location/{platform_id}/player"
+      MASTERY_BY_CHAMPION_ID = EndpointTemplate.new(template_url: "#{BASE_MASTERY_URL}/{summonerId}/champion/{championId}{?api_key}")
+      MASTERY_ALL_CHAMPIONS = EndpointTemplate.new(template_url: "#{BASE_MASTERY_URL}/{summonerId}/champions{?api_key}")
+      MASTERY_SCORE = EndpointTemplate.new(template_url: "#{BASE_MASTERY_URL}/{summonerId}/score{?api_key}")
+      MASTERY_TOP_CHAMPIONS = EndpointTemplate.new(template_url: "#{BASE_MASTERY_URL}/{summonerId}/topchampions{?api_key,count}")
 
       def champion_mastery(summoner_id: , champion_id:)
         response_for MASTERY_BY_CHAMPION_ID, {summonerId: summoner_id, championId: champion_id}
