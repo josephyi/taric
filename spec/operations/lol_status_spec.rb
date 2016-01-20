@@ -13,7 +13,7 @@ describe Taric::Operation::LolStatus do
     end
 
     it 'returns the requested result' do
-      shards = client.shards
+      shards = client.shards.body
       expect(shards).to be_an Array
       expect(shards.first['name']).to eq('North America')
     end
@@ -29,7 +29,7 @@ describe Taric::Operation::LolStatus do
     end
 
     it 'returns the requested result' do
-      shard = client.shard(region: 'na')
+      shard = client.shard(region: 'na').body
       expect(shard).to be_a Hash
       expect(shard['name']).to eq('North America')
     end

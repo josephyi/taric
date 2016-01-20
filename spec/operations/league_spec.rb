@@ -15,7 +15,7 @@ describe Taric::Operation::League do
     end
 
     it 'returns the requested result' do
-      result = client.leagues_by_summoner_ids(summoner_ids: ids)
+      result = client.leagues_by_summoner_ids(summoner_ids: ids).body
       expect(result).to be_a Hash
       expect(result['21066']).to be_an Array
       expect(result['38877656']).to be_an Array
@@ -34,7 +34,7 @@ describe Taric::Operation::League do
     end
 
     it 'returns the requested result' do
-      result = client.league_entries_by_summoner_ids(summoner_ids: ids)
+      result = client.league_entries_by_summoner_ids(summoner_ids: ids).body
       expect(result).to be_a Hash
       expect(result['21066']).to be_an Array
       expect(result['38877656']).to be_an Array
@@ -55,7 +55,7 @@ describe Taric::Operation::League do
     end
 
     it 'returns the requested result' do
-      result = client.leagues_by_team_ids(team_ids: ids)
+      result = client.leagues_by_team_ids(team_ids: ids).body
       expect(result).to be_a Hash
       expect(result['TEAM-fa073ee0-51ca-11e4-82cc-782bcb4d0bb2']).to be_an Array
     end
@@ -74,7 +74,7 @@ describe Taric::Operation::League do
     end
 
     it 'returns the requested result' do
-      result = client.league_entries_by_team_ids(team_ids: ids)
+      result = client.league_entries_by_team_ids(team_ids: ids).body
       expect(result).to be_a Hash
       expect(result['TEAM-fa073ee0-51ca-11e4-82cc-782bcb4d0bb2']).to be_an Array
     end
@@ -93,7 +93,7 @@ describe Taric::Operation::League do
       end
 
       it 'returns the requested result' do
-        result = client.challenger(type: type)
+        result = client.challenger(type: type).body
         expect(result).to be_a Hash
         expect(result['queue']).to eq('RANKED_SOLO_5x5')
         expect(result['entries']).to be_an Array
@@ -107,7 +107,7 @@ describe Taric::Operation::League do
       before {stub_get(url).to_return(body: fixture('challenger_team_queue.json'), headers: {content_type: 'application/json; charset=utf-8'})}
 
       it 'requests the correct resource' do
-        result = client.challenger(type: type)
+        result = client.challenger(type: type).body
         expect(result['queue']).to eq('RANKED_TEAM_5x5')
         expect(result['entries']).to be_an Array
       end
@@ -127,7 +127,7 @@ describe Taric::Operation::League do
       end
 
       it 'returns the requested result' do
-        result = client.master(type: type)
+        result = client.master(type: type).body
         expect(result).to be_a Hash
         expect(result['queue']).to eq('RANKED_SOLO_5x5')
         expect(result['entries']).to be_an Array

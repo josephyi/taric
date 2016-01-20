@@ -58,7 +58,7 @@ describe Taric::Client do
       it 'returns an array of hashes' do
         responses = parallel_client.shard(region: 'na').static_versions.execute!
         expect(responses).to be_an Array
-        expect(responses.first).to be_a Hash
+        expect(responses.first.body).to be_a Hash
       end
 
       it 'clears operations after being called' do

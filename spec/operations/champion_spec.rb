@@ -19,7 +19,7 @@ describe Taric::Operation::Champion do
       end
 
       it 'returns the requested result' do
-        champions = client.champions
+        champions = client.champions.body
         expect(champions).to be_a Hash
         expect(champions['champions']).to be_an Array
         expect(champions['champions'].first['id']).to eq(266)
@@ -37,7 +37,7 @@ describe Taric::Operation::Champion do
           end
 
           it 'returns the requested result' do
-            champions = client.champions(free_to_play: test)
+            champions = client.champions(free_to_play: test).body
             expect(champions).to be_a Hash
             expect(champions['champions']).to be_an Array
             expect(champions['champions'].all?{|champion| champion['freeToPlay']}).to eq(test)
@@ -57,7 +57,7 @@ describe Taric::Operation::Champion do
     end
 
     it 'returns the requested result' do
-      champion = client.champion(id: 7)
+      champion = client.champion(id: 7).body
       expect(champion).to be_a Hash
       expect(champion['id']).to eq(7)
     end
