@@ -4,7 +4,7 @@ describe Taric::Operation::FeaturedGames do
   let(:client) {Taric.client(api_key:'test')}
 
   describe '#featured_games' do
-    let (:url) {expand_template(Taric::Operation::FeaturedGames::FEATURED_GAMES)}
+    let (:url) {expand_template(Taric::Operation::FeaturedGames::FEATURED_GAMES.template_url)}
 
     before {stub_get_json(url, 'featured_games.json')}
 

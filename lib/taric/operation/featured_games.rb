@@ -1,7 +1,8 @@
+require_relative 'endpoint_template'
 module Taric
   module Operation
     module FeaturedGames
-      FEATURED_GAMES = Addressable::Template.new 'https://{host}/observer-mode/rest/featured{?api_key}'
+      FEATURED_GAMES = EndpointTemplate.new(template_url:'https://{host}/observer-mode/rest/featured{?api_key}')
 
       # Returns featured games.
       #

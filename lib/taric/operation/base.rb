@@ -1,6 +1,7 @@
 module Taric
   module Operation
     module Base
+
       BASE_URL_FN = -> version {"https://{host}/api/lol/{region}/#{version}"}
 
       # Converts [Time] to [Fixnum], or returns argument.

@@ -3,7 +3,7 @@ describe Taric::Operation::MatchList do
 
   describe '#match_list' do
     let (:id) {21066}
-    let (:url) {expand_template(Taric::Operation::MatchList::MATCH_LIST, {summonerId: id})}
+    let (:url) {expand_template(Taric::Operation::MatchList::MATCH_LIST.template_url, {summonerId: id})}
 
     before {stub_get(url).to_return(body: fixture('match_list.json'), headers: {content_type: 'application/json; charset=utf-8'})}
 

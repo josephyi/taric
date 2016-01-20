@@ -5,7 +5,7 @@ describe Taric::Operation::League do
   let(:ids) {'21066,38877656,35035046'}
 
   describe '#leagues_by_summoner_ids' do
-    let(:url) {expand_template(Taric::Operation::League::LEAGUES_BY_SUMMONER_IDS, {summonerIds: ids})}
+    let(:url) {expand_template(Taric::Operation::League::LEAGUES_BY_SUMMONER_IDS.template_url, {summonerIds: ids})}
 
     before {stub_get(url).to_return(body: fixture('leagues_by_summoner_ids.json'), headers: {content_type: 'application/json; charset=utf-8'})}
 
@@ -24,7 +24,7 @@ describe Taric::Operation::League do
   end
 
   describe '#league_entries_by_summoner_ids' do
-    let(:url) {expand_template(Taric::Operation::League::ENTRIES_BY_SUMMONER_IDS, {summonerIds: ids})}
+    let(:url) {expand_template(Taric::Operation::League::ENTRIES_BY_SUMMONER_IDS.template_url, {summonerIds: ids})}
 
     before {stub_get(url).to_return(body: fixture('league_entries_by_summoner_ids.json'), headers: {content_type: 'application/json; charset=utf-8'})}
 
@@ -45,7 +45,7 @@ describe Taric::Operation::League do
   describe '#leagues_by_team_ids' do
     let(:ids) {'TEAM-fa073ee0-51ca-11e4-82cc-782bcb4d0bb2'}
 
-    let(:url) {expand_template(Taric::Operation::League::LEAGUES_BY_TEAM_IDS, {teamIds: ids})}
+    let(:url) {expand_template(Taric::Operation::League::LEAGUES_BY_TEAM_IDS.template_url, {teamIds: ids})}
 
     before {stub_get(url).to_return(body: fixture('leagues_by_team_ids.json'), headers: {content_type: 'application/json; charset=utf-8'})}
 
@@ -64,7 +64,7 @@ describe Taric::Operation::League do
   describe '#league_entries_by_team_ids' do
     let(:ids) {'TEAM-fa073ee0-51ca-11e4-82cc-782bcb4d0bb2'}
 
-    let(:url) {expand_template(Taric::Operation::League::ENTRIES_BY_TEAM_IDS, {teamIds: ids})}
+    let(:url) {expand_template(Taric::Operation::League::ENTRIES_BY_TEAM_IDS.template_url, {teamIds: ids})}
 
     before {stub_get(url).to_return(body: fixture('league_entries_by_team_ids.json'), headers: {content_type: 'application/json; charset=utf-8'})}
 
@@ -83,7 +83,7 @@ describe Taric::Operation::League do
   describe '#challenger' do
     context 'solo queue' do
       let(:type) {'RANKED_SOLO_5x5'}
-      let(:url) {expand_template(Taric::Operation::League::CHALLENGER, {type: type})}
+      let(:url) {expand_template(Taric::Operation::League::CHALLENGER.template_url, {type: type})}
 
       before {stub_get(url).to_return(body: fixture('challenger_solo_queue.json'), headers: {content_type: 'application/json; charset=utf-8'})}
 
@@ -102,7 +102,7 @@ describe Taric::Operation::League do
 
     context 'team queue' do
       let(:type) {'RANKED_TEAM_5x5'}
-      let(:url) {expand_template(Taric::Operation::League::CHALLENGER, {type: type})}
+      let(:url) {expand_template(Taric::Operation::League::CHALLENGER.template_url, {type: type})}
 
       before {stub_get(url).to_return(body: fixture('challenger_team_queue.json'), headers: {content_type: 'application/json; charset=utf-8'})}
 
@@ -117,7 +117,7 @@ describe Taric::Operation::League do
   describe '#master' do
     context 'solo queue' do
       let(:type) {'RANKED_SOLO_5x5'}
-      let(:url) {expand_template(Taric::Operation::League::MASTER, {type: type})}
+      let(:url) {expand_template(Taric::Operation::League::MASTER.template_url, {type: type})}
 
       before {stub_get(url).to_return(body: fixture('master_solo_queue.json'), headers: {content_type: 'application/json; charset=utf-8'})}
 

@@ -1,4 +1,5 @@
 require_relative 'base'
+require_relative 'endpoint_template'
 module Taric
   module Operation
     module LolStaticData
@@ -6,21 +7,21 @@ module Taric
       VERSION = 'v1.2'
       BASE_STATIC_URL = "https://global.api.pvp.net/api/lol/static-data/{region}/#{VERSION}"
 
-      STATIC_CHAMPIONS = Addressable::Template.new "#{BASE_STATIC_URL}/champion{?api_key,dataById,champData,locale,version}"
-      STATIC_CHAMPION = Addressable::Template.new "#{BASE_STATIC_URL}/champion/{id}{?api_key,locale,version}"
-      STATIC_ITEMS = Addressable::Template.new "#{BASE_STATIC_URL}/item{?api_key,itemListData,locale,version}"
-      STATIC_ITEM = Addressable::Template.new "#{BASE_STATIC_URL}/item/{id}{?api_key,itemData,locale,version}"
-      STATIC_LANGUAGE_STRINGS = Addressable::Template.new "#{BASE_STATIC_URL}/language-strings{?api_key,locale,version}"
-      STATIC_LANGUAGES = Addressable::Template.new "#{BASE_STATIC_URL}/languages{?api_key}"
-      STATIC_MAP = Addressable::Template.new "#{BASE_STATIC_URL}/map{?api_key}"
-      STATIC_MASTERIES = Addressable::Template.new "#{BASE_STATIC_URL}/mastery{?api_key,masteryListData,locale,version}"
-      STATIC_MASTERY = Addressable::Template.new "#{BASE_STATIC_URL}/mastery/{id}{?api_key,masteryData,locale,version}"
-      STATIC_REALM = Addressable::Template.new "#{BASE_STATIC_URL}/realm{?api_key}"
-      STATIC_RUNES = Addressable::Template.new "#{BASE_STATIC_URL}/rune{?api_key,runeListData,locale,version}"
-      STATIC_RUNE = Addressable::Template.new "#{BASE_STATIC_URL}/rune/{id}{?api_key,runeData,locale,version}"
-      STATIC_SUMMONER_SPELLS = Addressable::Template.new "#{BASE_STATIC_URL}/summoner-spell{?api_key,spellData,locale,version}"
-      STATIC_SUMMONER_SPELL = Addressable::Template.new "#{BASE_STATIC_URL}/summoner-spell/{id}{?api_key,spellData,locale,version}"
-      STATIC_VERSIONS = Addressable::Template.new "#{BASE_STATIC_URL}/versions{?api_key}"
+      STATIC_CHAMPIONS =  EndpointTemplate.new(template_url: "#{BASE_STATIC_URL}/champion{?api_key,dataById,champData,locale,version}")
+      STATIC_CHAMPION =  EndpointTemplate.new(template_url: "#{BASE_STATIC_URL}/champion/{id}{?api_key,locale,version}")
+      STATIC_ITEMS =  EndpointTemplate.new(template_url: "#{BASE_STATIC_URL}/item{?api_key,itemListData,locale,version}")
+      STATIC_ITEM =  EndpointTemplate.new(template_url: "#{BASE_STATIC_URL}/item/{id}{?api_key,itemData,locale,version}")
+      STATIC_LANGUAGE_STRINGS =  EndpointTemplate.new(template_url: "#{BASE_STATIC_URL}/language-strings{?api_key,locale,version}")
+      STATIC_LANGUAGES =  EndpointTemplate.new(template_url: "#{BASE_STATIC_URL}/languages{?api_key}")
+      STATIC_MAP =  EndpointTemplate.new(template_url: "#{BASE_STATIC_URL}/map{?api_key}")
+      STATIC_MASTERIES =  EndpointTemplate.new(template_url: "#{BASE_STATIC_URL}/mastery{?api_key,masteryListData,locale,version}")
+      STATIC_MASTERY =  EndpointTemplate.new(template_url: "#{BASE_STATIC_URL}/mastery/{id}{?api_key,masteryData,locale,version}")
+      STATIC_REALM =  EndpointTemplate.new(template_url: "#{BASE_STATIC_URL}/realm{?api_key}")
+      STATIC_RUNES =  EndpointTemplate.new(template_url: "#{BASE_STATIC_URL}/rune{?api_key,runeListData,locale,version}")
+      STATIC_RUNE =  EndpointTemplate.new(template_url: "#{BASE_STATIC_URL}/rune/{id}{?api_key,runeData,locale,version}")
+      STATIC_SUMMONER_SPELLS =  EndpointTemplate.new(template_url: "#{BASE_STATIC_URL}/summoner-spell{?api_key,spellData,locale,version}")
+      STATIC_SUMMONER_SPELL =  EndpointTemplate.new(template_url: "#{BASE_STATIC_URL}/summoner-spell/{id}{?api_key,spellData,locale,version}")
+      STATIC_VERSIONS =  EndpointTemplate.new(template_url: "#{BASE_STATIC_URL}/versions{?api_key}")
 
       CHAMP_DATA_OPTIONS = [
           'all'.freeze,

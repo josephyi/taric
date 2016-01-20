@@ -1,5 +1,5 @@
 require_relative 'base'
-require 'addressable/template'
+require_relative 'endpoint_template'
 module Taric
   module Operation
     module Champion
@@ -8,8 +8,8 @@ module Taric
       CHAMPION_VERSION = 'v1.2'.freeze
       CHAMPION_BASE_URL = "#{BASE_URL_FN.(CHAMPION_VERSION)}/champion"
 
-      CHAMPIONS =  Addressable::Template.new("#{CHAMPION_BASE_URL}{?api_key,freeToPlay}")
-      CHAMPION_BY_ID = Addressable::Template.new("#{CHAMPION_BASE_URL}/{id}{?api_key}")
+      CHAMPIONS =  EndpointTemplate.new(template_url: "#{CHAMPION_BASE_URL}{?api_key,freeToPlay}")
+      CHAMPION_BY_ID = EndpointTemplate.new(template_url: "#{CHAMPION_BASE_URL}/{id}{?api_key}")
 
       # Returns champion data.
       #

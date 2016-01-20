@@ -17,7 +17,7 @@ describe Taric::Client do
 
   describe '.expand_template' do
     it 'returns an expanded Addressable template' do
-      template = Taric::Client.expand_template(api_key: 'test', region: :na, operation: Taric::Operation::Champion::CHAMPIONS)
+      template = Taric::Client.expand_template(api_key: 'test', region: :na, operation: Taric::Operation::Champion::CHAMPIONS.template_url)
       expect(template).to be_an Addressable::URI
       expect(template.to_s).to eq('https://na.api.pvp.net/api/lol/na/v1.2/champion?api_key=test')
     end
@@ -40,9 +40,9 @@ describe Taric::Client do
     end
 
     describe '#execute!' do
-      let (:url) {expand_template(Taric::Operation::LolStatus::SHARD, region: 'na')}
+      let (:url) {expand_template(Taric::Operation::LolStatus::SHARD.template_url, region: 'na')}
       before {stub_get(url).to_return(body: fixture('shard.json'), headers: {content_type: 'application/json; charset=utf-8'})}
-      let (:url2) {expand_template(Taric::Operation::LolStaticData::STATIC_VERSIONS)}
+      let (:url2) {expand_template(Taric::Operation::LolStaticData::STATIC_VERSIONS.template_url)}
       before {stub_get_json(url2, 'static_versions.json')}
 
       it 'returns empty array for no operations' do

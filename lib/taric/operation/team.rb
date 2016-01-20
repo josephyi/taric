@@ -1,4 +1,5 @@
 require_relative 'base'
+require_relative 'endpoint_template'
 module Taric
   module Operation
     module Team
@@ -7,8 +8,8 @@ module Taric
       TEAM_VERSION = 'v2.4'.freeze
       BASE_TEAM_URL = "#{BASE_URL_FN.(TEAM_VERSION)}/team"
 
-      TEAMS_BY_SUMMONER_IDS = Addressable::Template.new "#{BASE_TEAM_URL}/by-summoner/{summonerIds}"
-      TEAMS_BY_TEAM_IDS = Addressable::Template.new "#{BASE_TEAM_URL}/{teamIds}"
+      TEAMS_BY_SUMMONER_IDS =  EndpointTemplate.new(template_url: "#{BASE_TEAM_URL}/by-summoner/{summonerIds}")
+      TEAMS_BY_TEAM_IDS =  EndpointTemplate.new(template_url: "#{BASE_TEAM_URL}/{teamIds}")
 
       # Teams by summoner ids.
       #

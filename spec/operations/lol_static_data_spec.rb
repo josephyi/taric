@@ -4,7 +4,7 @@ describe Taric::Operation::LolStaticData do
   let(:client) {Taric.client(api_key:'test')}
 
   describe '#static_champions' do
-    let (:url) {expand_template(Taric::Operation::LolStaticData::STATIC_CHAMPIONS)}
+    let (:url) {expand_template(Taric::Operation::LolStaticData::STATIC_CHAMPIONS.template_url)}
     before {stub_get_json(url, 'static_champions.json')}
 
     it 'requests the correct resource' do
@@ -21,7 +21,7 @@ describe Taric::Operation::LolStaticData do
   end
 
   describe '#static_champion' do
-    let (:url) {expand_template(Taric::Operation::LolStaticData::STATIC_CHAMPION, {id: 44})}
+    let (:url) {expand_template(Taric::Operation::LolStaticData::STATIC_CHAMPION.template_url, {id: 44})}
     before {stub_get_json(url, 'static_champion.json')}
 
     it 'requests the correct resource' do
@@ -37,7 +37,7 @@ describe Taric::Operation::LolStaticData do
   end
 
   describe '#static_items' do
-    let (:url) {expand_template(Taric::Operation::LolStaticData::STATIC_ITEMS)}
+    let (:url) {expand_template(Taric::Operation::LolStaticData::STATIC_ITEMS.template_url)}
     before {stub_get_json(url, 'static_items.json')}
 
     it 'requests the correct resource' do
@@ -54,7 +54,7 @@ describe Taric::Operation::LolStaticData do
   end
 
   describe '#static_item' do
-    let (:url) {expand_template(Taric::Operation::LolStaticData::STATIC_ITEM, {id: 2049})}
+    let (:url) {expand_template(Taric::Operation::LolStaticData::STATIC_ITEM.template_url, {id: 2049})}
     before {stub_get_json(url, 'static_item.json')}
 
     it 'requests the correct resource' do
@@ -70,7 +70,7 @@ describe Taric::Operation::LolStaticData do
   end
 
   describe '#static_language_strings' do
-    let (:url) {expand_template(Taric::Operation::LolStaticData::STATIC_LANGUAGE_STRINGS)}
+    let (:url) {expand_template(Taric::Operation::LolStaticData::STATIC_LANGUAGE_STRINGS.template_url)}
     before {stub_get_json(url, 'static_language_strings.json')}
 
     it 'requests the correct resource' do
@@ -86,7 +86,7 @@ describe Taric::Operation::LolStaticData do
   end
 
   describe '#static_languages' do
-    let (:url) {expand_template(Taric::Operation::LolStaticData::STATIC_LANGUAGES)}
+    let (:url) {expand_template(Taric::Operation::LolStaticData::STATIC_LANGUAGES.template_url)}
     before {stub_get_json(url, 'static_languages.json')}
 
     it 'requests the correct resource' do
@@ -102,7 +102,7 @@ describe Taric::Operation::LolStaticData do
   end
 
   describe '#static_masteries' do
-    let (:url) {expand_template(Taric::Operation::LolStaticData::STATIC_MASTERIES)}
+    let (:url) {expand_template(Taric::Operation::LolStaticData::STATIC_MASTERIES.template_url)}
     before {stub_get_json(url, 'static_masteries.json')}
 
     it 'requests the correct resource' do
@@ -118,7 +118,7 @@ describe Taric::Operation::LolStaticData do
   end
 
   describe '#static_mastery' do
-    let (:url) {expand_template(Taric::Operation::LolStaticData::STATIC_MASTERY, {id: 4233})}
+    let (:url) {expand_template(Taric::Operation::LolStaticData::STATIC_MASTERY.template_url, {id: 4233})}
     before {stub_get_json(url, 'static_mastery.json')}
 
     it 'requests the correct resource' do
@@ -134,7 +134,7 @@ describe Taric::Operation::LolStaticData do
   end
 
   describe '#static_map' do
-    let (:url) {expand_template(Taric::Operation::LolStaticData::STATIC_MAP)}
+    let (:url) {expand_template(Taric::Operation::LolStaticData::STATIC_MAP.template_url)}
     before {stub_get_json(url, 'static_map.json')}
 
     it 'requests the correct resource' do
@@ -149,7 +149,7 @@ describe Taric::Operation::LolStaticData do
   end
 
   describe '#static_realm' do
-    let (:url) {expand_template(Taric::Operation::LolStaticData::STATIC_REALM)}
+    let (:url) {expand_template(Taric::Operation::LolStaticData::STATIC_REALM.template_url)}
     before {stub_get_json(url, 'static_realm.json')}
 
     it 'requests the correct resource' do
@@ -165,7 +165,7 @@ describe Taric::Operation::LolStaticData do
   end
 
   describe '#static_runes' do
-    let (:url) {expand_template(Taric::Operation::LolStaticData::STATIC_RUNES)}
+    let (:url) {expand_template(Taric::Operation::LolStaticData::STATIC_RUNES.template_url)}
     before {stub_get_json(url, 'static_runes.json')}
 
     it 'requests the correct resource' do
@@ -182,7 +182,7 @@ describe Taric::Operation::LolStaticData do
 
   describe '#static_rune' do
     let (:id) {5235}
-    let (:url) {expand_template(Taric::Operation::LolStaticData::STATIC_RUNE, {id: id})}
+    let (:url) {expand_template(Taric::Operation::LolStaticData::STATIC_RUNE.template_url, {id: id})}
     before {stub_get_json(url, 'static_rune.json')}
 
     it 'requests the correct resource' do
@@ -198,7 +198,7 @@ describe Taric::Operation::LolStaticData do
   end
 
   describe '#static_summoner_spells' do
-    let (:url) {expand_template(Taric::Operation::LolStaticData::STATIC_SUMMONER_SPELLS)}
+    let (:url) {expand_template(Taric::Operation::LolStaticData::STATIC_SUMMONER_SPELLS.template_url)}
     before {stub_get_json(url, 'static_summoner_spells.json')}
 
     it 'requests the correct resource' do
@@ -215,7 +215,7 @@ describe Taric::Operation::LolStaticData do
 
   describe '#static_summoner_spell' do
     let (:id) {12}
-    let (:url) {expand_template(Taric::Operation::LolStaticData::STATIC_SUMMONER_SPELL, {id: id})}
+    let (:url) {expand_template(Taric::Operation::LolStaticData::STATIC_SUMMONER_SPELL.template_url, {id: id})}
     before {stub_get_json(url, 'static_summoner_spell.json')}
 
     it 'requests the correct resource' do
@@ -231,7 +231,7 @@ describe Taric::Operation::LolStaticData do
   end
 
   describe '#static_versions' do
-    let (:url) {expand_template(Taric::Operation::LolStaticData::STATIC_VERSIONS)}
+    let (:url) {expand_template(Taric::Operation::LolStaticData::STATIC_VERSIONS.template_url)}
     before {stub_get_json(url, 'static_versions.json')}
 
     it 'requests the correct resource' do

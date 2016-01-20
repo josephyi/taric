@@ -1,5 +1,5 @@
 require_relative 'base'
-require 'addressable/template'
+require_relative 'endpoint_template'
 module Taric
   module Operation
     module League
@@ -8,12 +8,12 @@ module Taric
       LEAGUE_VERSION = 'v2.5'
       BASE_LEAGUE_URL = "#{BASE_URL_FN.(LEAGUE_VERSION)}/league"
 
-      LEAGUES_BY_SUMMONER_IDS = Addressable::Template.new "#{BASE_LEAGUE_URL}/by-summoner/{summonerIds}{?api_key}"
-      ENTRIES_BY_SUMMONER_IDS = Addressable::Template.new "#{BASE_LEAGUE_URL}/by-summoner/{summonerIds}/entry{?api_key}"
-      LEAGUES_BY_TEAM_IDS = Addressable::Template.new "#{BASE_LEAGUE_URL}/by-team/{teamIds}{?api_key}"
-      ENTRIES_BY_TEAM_IDS = Addressable::Template.new "#{BASE_LEAGUE_URL}/by-team/{teamIds}/entry{?api_key}"
-      CHALLENGER = Addressable::Template.new "#{BASE_LEAGUE_URL}/challenger{?api_key,type}"
-      MASTER = Addressable::Template.new "#{BASE_LEAGUE_URL}/master{?api_key,type}"
+      LEAGUES_BY_SUMMONER_IDS = EndpointTemplate.new(template_url: "#{BASE_LEAGUE_URL}/by-summoner/{summonerIds}{?api_key}")
+      ENTRIES_BY_SUMMONER_IDS = EndpointTemplate.new(template_url: "#{BASE_LEAGUE_URL}/by-summoner/{summonerIds}/entry{?api_key}")
+      LEAGUES_BY_TEAM_IDS = EndpointTemplate.new(template_url: "#{BASE_LEAGUE_URL}/by-team/{teamIds}{?api_key}")
+      ENTRIES_BY_TEAM_IDS = EndpointTemplate.new(template_url: "#{BASE_LEAGUE_URL}/by-team/{teamIds}/entry{?api_key}")
+      CHALLENGER = EndpointTemplate.new(template_url: "#{BASE_LEAGUE_URL}/challenger{?api_key,type}")
+      MASTER = EndpointTemplate.new(template_url: "#{BASE_LEAGUE_URL}/master{?api_key,type}")
 
       CHALLENGER_QUEUE_TYPES = ['RANKED_SOLO_5x5'.freeze, 'RANKED_TEAM_3x3'.freeze, 'RANKED_TEAM_5x5'.freeze].freeze
       MASTER_QUEUE_TYPES = CHALLENGER_QUEUE_TYPES

@@ -1,8 +1,9 @@
+require_relative 'endpoint_template'
 module Taric
   module Operation
     module LolStatus
-      SHARDS = Addressable::Template.new 'http://status.leagueoflegends.com/shards'
-      SHARD = Addressable::Template.new 'http://status.leagueoflegends.com/shards/{region}'
+      SHARDS =  EndpointTemplate.new(template_url: 'http://status.leagueoflegends.com/shards')
+      SHARD =  EndpointTemplate.new(template_url: 'http://status.leagueoflegends.com/shards/{region}')
 
       # Region metadata.
       #

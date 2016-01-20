@@ -1,4 +1,5 @@
 require_relative 'base'
+require_relative 'endpoint_template'
 module Taric
   module Operation
     module Stats
@@ -6,8 +7,8 @@ module Taric
 
       STATS_VERSION = 'v1.3'.freeze
       BASE_STATS_URL = "#{BASE_URL_FN.(STATS_VERSION)}/stats/by-summoner/{summonerId}"
-      RANKED = Addressable::Template.new "#{BASE_STATS_URL}/ranked{?api_key,season}"
-      SUMMARY = Addressable::Template.new "#{BASE_STATS_URL}/summary{?api_key,season}"
+      RANKED =  EndpointTemplate.new(template_url: "#{BASE_STATS_URL}/ranked{?api_key,season}")
+      SUMMARY =  EndpointTemplate.new(template_url: "#{BASE_STATS_URL}/summary{?api_key,season}")
 
       # Ranked stats for summoner.
       #

@@ -6,7 +6,7 @@ describe Taric::Operation::Summoner do
 
   describe '#summoners_by_names' do
     let(:names) {'orlyzomg,ipa,doodiediddle,lzrface,dbanksdesign'}
-    let(:url) {expand_template(Taric::Operation::Summoner::SUMMONERS_BY_NAMES, {summonerNames: names})}
+    let(:url) {expand_template(Taric::Operation::Summoner::SUMMONERS_BY_NAMES.template_url, {summonerNames: names})}
 
     before {stub_get(url).to_return(body: fixture('summoners_by_names.json'), headers: {content_type: 'application/json; charset=utf-8'})}
 
@@ -22,7 +22,7 @@ describe Taric::Operation::Summoner do
   end
 
   describe '#summoners_by_ids' do
-    let(:url) {expand_template(Taric::Operation::Summoner::SUMMONERS_BY_IDS, {summonerIds: ids})}
+    let(:url) {expand_template(Taric::Operation::Summoner::SUMMONERS_BY_IDS.template_url, {summonerIds: ids})}
 
     before {stub_get(url).to_return(body: fixture('summoners_by_ids.json'), headers: {content_type: 'application/json; charset=utf-8'})}
 
@@ -38,7 +38,7 @@ describe Taric::Operation::Summoner do
   end
 
   describe '#summoner_masteries' do
-    let(:url) {expand_template(Taric::Operation::Summoner::MASTERIES, {summonerIds: ids})}
+    let(:url) {expand_template(Taric::Operation::Summoner::MASTERIES.template_url, {summonerIds: ids})}
 
     before {stub_get(url).to_return(body: fixture('summoner_masteries.json'), headers: {content_type: 'application/json; charset=utf-8'})}
 
@@ -54,7 +54,7 @@ describe Taric::Operation::Summoner do
   end
 
   describe '#summoner_runes' do
-    let(:url) {expand_template(Taric::Operation::Summoner::RUNES, {summonerIds: ids})}
+    let(:url) {expand_template(Taric::Operation::Summoner::RUNES.template_url, {summonerIds: ids})}
 
     before {stub_get(url).to_return(body: fixture('summoner_runes.json'), headers: {content_type: 'application/json; charset=utf-8'})}
 
@@ -70,7 +70,7 @@ describe Taric::Operation::Summoner do
   end
 
   describe '#summoner_ids_to_names' do
-    let(:url) {expand_template(Taric::Operation::Summoner::NAMES, {summonerIds: ids})}
+    let(:url) {expand_template(Taric::Operation::Summoner::NAMES.template_url, {summonerIds: ids})}
 
     before {stub_get(url).to_return(body: fixture('summoner_ids_to_names.json'), headers: {content_type: 'application/json; charset=utf-8'})}
 

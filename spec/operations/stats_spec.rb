@@ -5,7 +5,7 @@ describe Taric::Operation::Stats do
 
   describe '#ranked_stats' do
     let(:id) {21066}
-    let(:url) {expand_template(Taric::Operation::Stats::RANKED, {summonerId: 21066})}
+    let(:url) {expand_template(Taric::Operation::Stats::RANKED.template_url, {summonerId: 21066})}
 
     before {stub_get(url).to_return(body: fixture('ranked_stats.json'), headers: {content_type: 'application/json; charset=utf-8'})}
 
@@ -23,7 +23,7 @@ describe Taric::Operation::Stats do
 
   describe '#summary_stats' do
     let(:id) {21066}
-    let(:url) {expand_template(Taric::Operation::Stats::SUMMARY, {summonerId: 21066})}
+    let(:url) {expand_template(Taric::Operation::Stats::SUMMARY.template_url, {summonerId: 21066})}
 
     before {stub_get(url).to_return(body: fixture('summary_stats.json'), headers: {content_type: 'application/json; charset=utf-8'})}
 

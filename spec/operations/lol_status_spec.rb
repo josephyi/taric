@@ -4,7 +4,7 @@ describe Taric::Operation::LolStatus do
   let(:client) {Taric.client(api_key:'test')}
 
   describe '#shards' do
-    let (:url) {expand_template(Taric::Operation::LolStatus::SHARDS)}
+    let (:url) {expand_template(Taric::Operation::LolStatus::SHARDS.template_url)}
     before {stub_get(url).to_return(body: fixture('shards.json'), headers: {content_type: 'application/json; charset=utf-8'})}
 
     it 'requests the correct resource' do
@@ -20,7 +20,7 @@ describe Taric::Operation::LolStatus do
   end
 
   describe '#shard' do
-    let (:url) {expand_template(Taric::Operation::LolStatus::SHARD, region: 'na')}
+    let (:url) {expand_template(Taric::Operation::LolStatus::SHARD.template_url, region: 'na')}
     before {stub_get(url).to_return(body: fixture('shard.json'), headers: {content_type: 'application/json; charset=utf-8'})}
 
     it 'requests the correct resource' do

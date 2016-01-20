@@ -1,4 +1,5 @@
 require_relative 'base'
+require_relative 'endpoint_template'
 module Taric
   module Operation
     module Summoner
@@ -8,11 +9,11 @@ module Taric
       BASE_SUMMONER_URL = "#{BASE_URL_FN.(VERSION)}/summoner"
       BASE_SUMMONERS_BY_IDS = "#{BASE_SUMMONER_URL}/{summonerIds}"
 
-      SUMMONERS_BY_NAMES =  Addressable::Template.new "#{BASE_SUMMONER_URL}/by-name/{summonerNames}{?api_key}"
-      SUMMONERS_BY_IDS = Addressable::Template.new "#{BASE_SUMMONERS_BY_IDS}{?api_key}"
-      MASTERIES = Addressable::Template.new "#{BASE_SUMMONERS_BY_IDS}/masteries{?api_key}"
-      NAMES = Addressable::Template.new "#{BASE_SUMMONERS_BY_IDS}/name{?api_key}"
-      RUNES = Addressable::Template.new "#{BASE_SUMMONERS_BY_IDS}/runes{?api_key}"
+      SUMMONERS_BY_NAMES =   EndpointTemplate.new(template_url: "#{BASE_SUMMONER_URL}/by-name/{summonerNames}{?api_key}")
+      SUMMONERS_BY_IDS =  EndpointTemplate.new(template_url: "#{BASE_SUMMONERS_BY_IDS}{?api_key}")
+      MASTERIES =  EndpointTemplate.new(template_url: "#{BASE_SUMMONERS_BY_IDS}/masteries{?api_key}")
+      NAMES =  EndpointTemplate.new(template_url: "#{BASE_SUMMONERS_BY_IDS}/name{?api_key}")
+      RUNES =  EndpointTemplate.new(template_url: "#{BASE_SUMMONERS_BY_IDS}/runes{?api_key}")
 
       # Returns [Hash] of summoner data hashes keyed by summoner name
       #

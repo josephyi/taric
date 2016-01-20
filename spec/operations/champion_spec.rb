@@ -4,7 +4,7 @@ describe Taric::Operation::Champion do
   let(:client){Taric.client(api_key:'test')}
 
   describe '#champions' do
-    let (:url) {expand_template(Taric::Operation::Champion::CHAMPIONS)}
+    let (:url) {expand_template(Taric::Operation::Champion::CHAMPIONS.template_url)}
 
     it 'expanded template correctly' do
       expect(url).to eq('https://na.api.pvp.net/api/lol/na/v1.2/champion?api_key=test')
@@ -48,7 +48,7 @@ describe Taric::Operation::Champion do
   end
   
   describe '#champion' do
-    let (:url) {expand_template(Taric::Operation::Champion::CHAMPION_BY_ID, {id: 7})}
+    let (:url) {expand_template(Taric::Operation::Champion::CHAMPION_BY_ID.template_url, {id: 7})}
     before {stub_get(url).to_return(body: fixture('champion.json'), headers: {content_type: 'application/json; charset=utf-8'})}
 
     it 'requests the correct resource' do

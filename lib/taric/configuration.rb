@@ -2,16 +2,16 @@ module Taric
   class Configuration
     attr_accessor :api_key, :format, :user_agent, :connection_opts, :adapter, :region, :requestor, :response_handler, :parallel_requestor, :parallel_response_handler, :raw
 
-    DEFAULT_REQUESTOR = -> connection, url {
-      connection.get url
+    DEFAULT_REQUESTOR = -> (connection, method, url, body, headers) {
+      connection.send(method, url, body, headers)
     }.curry
 
     DEFAULT_RESPONSE_HANDLER = -> response {
       response
     }
 
-    PARALLEL_REQUESTOR = -> connection, urls {
-      urls.map{|url| connection.get url}
+    PARALLEL_REQUESTOR = -> connection, operations {
+      operations.map{|operation| connection.send(operation[:method], operation[:url], operation[:body], operation[:headers])}
     }.curry
 
     PARALLEL_RESPONSE_HANDLER = -> responses {

@@ -1,11 +1,12 @@
 require_relative 'base'
+require_relative 'endpoint_template'
 module Taric
   module Operation
     module Game
       include Taric::Operation::Base
 
       GAME_VERSION = 'v1.3'.freeze
-      RECENT = Addressable::Template.new "#{BASE_URL_FN.(GAME_VERSION)}/game/by-summoner/{summonerId}/recent{?api_key}"
+      RECENT = EndpointTemplate.new(template_url:"#{BASE_URL_FN.(GAME_VERSION)}/game/by-summoner/{summonerId}/recent{?api_key}")
 
       # Returns recent game data for summoner id.
       #

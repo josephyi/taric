@@ -1,7 +1,8 @@
+require_relative 'endpoint_template'
 module Taric
   module Operation
     module CurrentGame
-      GAME_INFO = Addressable::Template.new 'https://{host}/observer-mode/rest/consumer/getSpectatorGameInfo/{platform_id}/{summonerId}{?api_key}'
+      GAME_INFO = EndpointTemplate.new(template_url: 'https://{host}/observer-mode/rest/consumer/getSpectatorGameInfo/{platform_id}/{summonerId}{?api_key}')
 
       # Returns current game data for summoner id.
       #

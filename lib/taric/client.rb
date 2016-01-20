@@ -67,7 +67,7 @@ module Taric
       # @param region [Symbol] key for region
       # @param operation [Addressable::Template] URI template for operation
       # @param options [Hash] optional, values for template
-      # @return [Addressable::URI] of expanded template
+      # @return [String] of expanded template
       #
       # @example
       #   Taric::Client.expand_template(api_key: 'ritokey', region: :na, operation: Taric::Operation::Champion::CHAMPIONS)
@@ -78,9 +78,9 @@ module Taric
 
     private
     def response_for(operation, options = {})
-      -> url {
-        API_CALL.(url: url, requestor: @config.requestor.(@conn), response_handler: @config.response_handler)
-      }.(self.class.expand_template(api_key: @api_key, region: @region, operation: operation, options: options))
+      -> (method, url, body, headers) {
+        API_CALL.(method, url, body, headers, @config.requestor.(@conn), @config.response_handler)
+      }.(operation.method, self.class.expand_template(api_key: @api_key, region: @region, operation: operation.template_url, options: options), operation.body, operation.headers)
     end
 
     class ParallelClient
@@ -101,13 +101,13 @@ module Taric
         -> responses {
           @operations.clear
           responses
-        }.(API_CALL.(url: @operations, requestor: @parent.config.parallel_requestor.(@parent.conn), response_handler: @parent.config.parallel_response_handler))
+        }.(@parent.config.parallel_response_handler.(@parent.config.parallel_requestor.(@parent.conn, @operations)))
       end
 
       private
 
       def response_for(operation, options = {})
-        @operations << @parent.class.expand_template(api_key: @parent.api_key, region: @parent.region, operation: operation, options: options)
+        @operations << {url: @parent.class.expand_template(api_key: @parent.api_key, region: @parent.region, operation: operation.template_url, options: options), method: operation.method, body: operation.body, headers: operation.headers}
         self
       end
 

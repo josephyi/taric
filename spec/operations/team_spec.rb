@@ -6,7 +6,7 @@ describe Taric::Operation::Team do
   describe '#teams_by_summoner_ids' do
     let(:ids) {'21066'}
 
-    let(:url) {expand_template(Taric::Operation::Team::TEAMS_BY_SUMMONER_IDS, {summonerIds: ids})}
+    let(:url) {expand_template(Taric::Operation::Team::TEAMS_BY_SUMMONER_IDS.template_url, {summonerIds: ids})}
 
     before {stub_get(url).to_return(body: fixture('teams_by_summoner_ids.json'), headers: {content_type: 'application/json; charset=utf-8'})}
 
@@ -25,7 +25,7 @@ describe Taric::Operation::Team do
   describe '#teams' do
     let(:ids) {'TEAM-fa073ee0-51ca-11e4-82cc-782bcb4d0bb2'}
 
-    let(:url) {expand_template(Taric::Operation::Team::TEAMS_BY_TEAM_IDS, {teamIds: ids})}
+    let(:url) {expand_template(Taric::Operation::Team::TEAMS_BY_TEAM_IDS.template_url, {teamIds: ids})}
 
     before {stub_get(url).to_return(body: fixture('teams_by_team_ids.json'), headers: {content_type: 'application/json; charset=utf-8'})}
 

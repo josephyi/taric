@@ -1,11 +1,12 @@
 require_relative 'base'
+require_relative 'endpoint_template'
 module Taric
   module Operation
     module MatchList
       include Taric::Operation::Base
 
       MATCH_LIST_VERSION = 'v2.2'.freeze
-      MATCH_LIST = Addressable::Template.new "#{BASE_URL_FN.(MATCH_LIST_VERSION)}/matchlist/by-summoner/{summonerId}{?api_key,championIds,rankedQueues,seasons,beginTime,endTime,beginIndex,endIndex}"
+      MATCH_LIST =  EndpointTemplate.new(template_url: "#{BASE_URL_FN.(MATCH_LIST_VERSION)}/matchlist/by-summoner/{summonerId}{?api_key,championIds,rankedQueues,seasons,beginTime,endTime,beginIndex,endIndex}")
 
       # Returns match list for summoner.
       #
