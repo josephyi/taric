@@ -28,6 +28,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'rspec', '~> 3.2'
   spec.add_development_dependency 'coveralls', '~> 0.7'
   spec.add_development_dependency 'typhoeus', '~> 0.8.0'
+  spec.add_development_dependency 'codeclimate-test-reporter'
 
   spec.add_runtime_dependency 'memoist', '~> 0.11'
   spec.add_runtime_dependency 'addressable', '~> 2.3'
