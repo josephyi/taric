@@ -19,8 +19,24 @@ def stub_get(url)
   stub_request(:get, url)
 end
 
+def stub_post(url)
+  stub_request(:post, url)
+end
+
+def stub_put(url)
+  stub_request(:put, url)
+end
+
 def a_get(url)
   a_request(:get, url)
+end
+
+def a_post(url, headers = {})
+  a_request(:post, url)
+end
+
+def a_put(url)
+  a_request(:put, url)
 end
 
 def fixture(file)

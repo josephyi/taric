@@ -1,0 +1,36 @@
+{
+  "eventList": [
+    {
+      "timestamp": "1234567890000",
+      "eventType": "PracticeGameCreatedEvent", //Lobby Created
+      "summonerId": "12345678"
+    },
+    {
+      "timestamp": "1234567890000",
+      "eventType": "PlayerJoinedGameEvent", //Player Joins Lobby
+      "summonerId": "12345678"
+    },
+    {
+      "timestamp": "1234567890000",
+      "eventType": "PlayerSwitchedTeamEvent", //Player Switches Teams
+      "summonerId": "12345678"
+    },
+    {
+      "timestamp": "1234567890000",
+      "eventType": "PlayerQuitGameEvent", //Player Leaves Lobby
+      "summonerId": "12345678"
+    },
+    {
+      "timestamp": "1234567890000",
+      "eventType": "ChampSelectStartedEvent" //Champ Select Begins
+    },
+    {
+      "timestamp": "1234567890000",
+      "eventType": "GameAllocationStartedEvent" //Loading Screen Begins
+    },
+    {
+      "timestamp": "1234567890000",
+      "eventType": "GameAllocatedToLsmEvent" //Game Begins
+    }
+  ]
+}

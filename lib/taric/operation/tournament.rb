@@ -17,15 +17,18 @@ module Taric
       # Creates a tournament provider and returns its ID.
       #
       def create_provider(region:, url: )
-         response_for EndpointTemplate.new(template_url: PROVIDER_URL, method: :post, headers: {"X-Riot-Token" => @api_key, "Content-Type" => 'application/json'}, body: "{\"region\": \"#{region}\", \"url\": \"#{url}\"}")
+         body = {'region'.freeze => region, 'url'.freeze => url}
+         response_for EndpointTemplate.new(template_url: PROVIDER_URL, method: :post, headers: {'X-Riot-Token'.freeze => @api_key, 'Content-Type'.freeze => 'application/json'}, body: Oj.dump(body))
       end
 
       # Creates a tournament and returns its ID.
       #
       def create_tournament(name: '', provider_id: )
-        response_for EndpointTemplate.new(template_url: TOURNAMENT_URL, method: :post, headers: {"X-Riot-Token" => @api_key, "Content-Type" => 'application/json'}, body: "{\"name\": \"#{name}\", \"providerId\": #{provider_id}}")
+        body = {'name'.freeze => name, 'providerId'.freeze => provider_id}
+        response_for EndpointTemplate.new(template_url: TOURNAMENT_URL, method: :post, headers: {'X-Riot-Token'.freeze => @api_key, 'Content-Type'.freeze => 'application/json'}, body: Oj.dump(body))
       end
 
+      # Create a tournament code for the given tournament.
       def create_tournament_codes(tournament_id: , count:, allowed_summoner_ids: [], map_type:, metadata: nil, pick_type:,  spectator_type:, team_size: )
         body = {'mapType'.freeze => map_type, 'teamSize'.freeze => team_size, 'pickType'.freeze => pick_type, 'spectatorType'.freeze => spectator_type}
         body.merge!('metadata'.freeze => metadata) unless metadata.nil?
@@ -34,8 +37,9 @@ module Taric
                                           body: Oj.dump(body)), tournamentId: tournament_id, count: count)
       end
 
+
       def tournament_by_code(tournament_code: )
-        response_for EndpointTemplate.new(template_url: TOURNAMENT_BY_CODE_URL, headers: {'X-Riot-Token'.freeze => @api_key, 'Content-Type'.freeze => 'application/json'.freeze}), tournamentCode: tournament_code
+        response_for EndpointTemplate.new(template_url: TOURNAMENT_BY_CODE_URL, headers: {'X-Riot-Token'.freeze => @api_key}), tournamentCode: tournament_code
       end
 
       # Update the pick type, map, spectator type, or allowed summoners for a code

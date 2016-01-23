@@ -20,4 +20,10 @@ describe Taric::Operation::Match do
       expect(result['matchId']).to eq(id)
     end
   end
+
+  describe '#match_ids_by_tournament' do
+
+    let(:url) {expand_template(Taric::Operation::Match::MATCH_IDS_BY_TOURNAMENT, {tournamentCode: code})}
+  end
+
 end
