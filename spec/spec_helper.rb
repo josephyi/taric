@@ -17,6 +17,7 @@ require 'taric'
 require 'webmock/rspec'
 
 WebMock.disable_net_connect!(allow: 'coveralls.io')
+WebMock.disable_net_connect!(allow: 'codeclimate.com')
 
 def stub_get(url)
   stub_request(:get, url)
