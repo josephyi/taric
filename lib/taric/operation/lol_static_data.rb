@@ -256,8 +256,8 @@ module Taric
       end
 
       # @see https://developer.riotgames.com/api/methods#!/968/3327
-      def static_summoner_spells(data_by_id: nil, spell_data_option: nil, locale: nil, version: nil)
-        response_for STATIC_SUMMONER_SPELLS, {dataById: data_by_id, spellData: spell_data_option, locale: locale, version: version}
+      def static_summoner_spells(spell_data_option: nil, locale: nil, version: nil, data_by_id: nil)
+        response_for STATIC_SUMMONER_SPELLS, {spellData: spell_data_option, locale: locale, version: version, dataById: data_by_id}
       end
 
       # @see https://developer.riotgames.com/api/methods#!/968/3320
