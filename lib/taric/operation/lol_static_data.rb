@@ -147,8 +147,8 @@ module Taric
       #   champions = client.static_champions
       #   # Mapped by IDs
       #   champions = client.static_champions(data_by_id: true)
-      def static_champions(data_by_id: nil, champ_data_option: nil, locale: nil, version: nil)
-        response_for STATIC_CHAMPIONS, {dataById: data_by_id, champData: champ_data_option, locale: locale, version: version}
+      def static_champions(data_by_id: nil, locale: nil, champ_data_option: nil, version: nil)
+        response_for STATIC_CHAMPIONS, {locale: locale, dataById: data_by_id, champData: champ_data_option, version: version}
       end
 
       # Static data for champion by id
