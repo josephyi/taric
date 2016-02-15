@@ -8,7 +8,7 @@
 
 > "Ruby for vigor."
 
-Taric is Ruby interface to Riot Games' League of Legends API.
+Taric is a Ruby interface to Riot Games' League of Legends API.
 
 ## Prerequisite
 
