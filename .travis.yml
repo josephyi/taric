@@ -3,3 +3,5 @@ rvm:
   - 2.1.5
   - 2.2.1
   - 2.3.0
+after_success:
+  - bundle exec codeclimate-test-reporter
