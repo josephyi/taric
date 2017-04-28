@@ -5,8 +5,7 @@ module Taric
     module Champion
       include Taric::Operation::Base
 
-      CHAMPION_VERSION = 'v1.2'.freeze
-      CHAMPION_BASE_URL = "#{BASE_URL_FN.(CHAMPION_VERSION)}/champion"
+      CHAMPION_BASE_URL = "https://{host}/lol/platform/v3/champions"
 
       CHAMPIONS =  EndpointTemplate.new(template_url: "#{CHAMPION_BASE_URL}{?api_key,freeToPlay}")
       CHAMPION_BY_ID = EndpointTemplate.new(template_url: "#{CHAMPION_BASE_URL}/{id}{?api_key}")
