@@ -1,33 +1,51 @@
 {
   "name": "North America",
   "slug": "na",
-  "locales": ["en_US"],
+  "locales": [
+    "en_US"
+  ],
   "hostname": "prod.na1.lol.riotgames.com",
   "region_tag": "na1",
   "services": [
     {
-      "name": "Boards",
-      "slug": "boards",
-      "status": "online",
-      "incidents": []
-    },
-    {
       "name": "Game",
       "slug": "game",
       "status": "online",
-      "incidents": []
+      "incidents": [
+
+      ]
     },
     {
       "name": "Store",
       "slug": "store",
       "status": "online",
-      "incidents": []
+      "incidents": [
+
+      ]
     },
     {
       "name": "Website",
-      "slug": "web",
+      "slug": "website",
       "status": "online",
-      "incidents": []
+      "incidents": [
+
+      ]
+    },
+    {
+      "name": "Client",
+      "slug": "client",
+      "status": "online",
+      "incidents": [
+
+      ]
+    },
+    {
+      "name": "League client update",
+      "slug": "league client update",
+      "status": "online",
+      "incidents": [
+
+      ]
     }
   ]
 }

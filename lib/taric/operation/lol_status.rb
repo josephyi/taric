@@ -2,21 +2,13 @@ require_relative 'endpoint_template'
 module Taric
   module Operation
     module LolStatus
-      SHARDS =  EndpointTemplate.new(template_url: 'http://status.leagueoflegends.com/shards')
-      SHARD =  EndpointTemplate.new(template_url: 'http://status.leagueoflegends.com/shards/{region}')
+      SHARD =  EndpointTemplate.new(template_url: 'https://{host}/lol/status/v3/shard-data{?api_key}')
 
-      # Region metadata.
+      # Region metadata, implicitly uses endpoint host to determine which region.
       #
-      # @return [Array] of region metadata in hashes
-      def shards
-        response_for SHARDS
-      end
-
-      # Region metadata by region.
-      # @param region [String] region to load
       # @return [Hash] region info
-      def shard(region:)
-        response_for SHARD, {region: region}
+      def shard_data
+        response_for SHARD
       end
     end
   end

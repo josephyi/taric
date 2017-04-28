@@ -50,19 +50,19 @@ describe Taric::Client do
       end
 
       it 'makes multiple calls' do
-        parallel_client.shard(region: 'na').static_versions.execute!
+        parallel_client.shard_data.static_versions.execute!
         expect(a_get(url)).to have_been_made
         expect(a_get(url2)).to have_been_made
       end
 
       it 'returns an array of hashes' do
-        responses = parallel_client.shard(region: 'na').static_versions.execute!
+        responses = parallel_client.shard_data.static_versions.execute!
         expect(responses).to be_an Array
         expect(responses.first.body).to be_a Hash
       end
 
       it 'clears operations after being called' do
-        parallel_client.shard(region: 'na').static_versions.execute!
+        parallel_client.shard_data.static_versions.execute!
         expect(parallel_client.execute!).to eq []
       end
     end

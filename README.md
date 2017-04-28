@@ -41,7 +41,7 @@ Or install it yourself as:
 - [x] CHAMPION-V3
 - [x] CHAMPION-MASTERY-V3
 - [x] LEAGUE-V2.5
-- [ ] LOL-STATUS-V3
+- [x] LOL-STATUS-V3
 - [ ] MASTERIES-V3
 - [ ] RUNES-V3
 - [ ] SPECTATOR-V3
