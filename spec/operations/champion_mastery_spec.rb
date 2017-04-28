@@ -14,13 +14,13 @@ describe Taric::Operation::ChampionMastery do
     end
   end
 
-  describe '#champion_mastery_all' do
+  describe '#champion_masteries' do
     let(:url) {expand_template(Taric::Operation::ChampionMastery::MASTERY_ALL_CHAMPIONS.template_url, {summonerId: summoner_id})}
 
-    before{ stub_get_json(url, 'champion_mastery_all.json') }
+    before{ stub_get_json(url, 'champion_masteries.json') }
 
     it 'requests the correct resource' do
-      client.champion_mastery_all(summoner_id: summoner_id)
+      client.champion_masteries(summoner_id: summoner_id)
       expect(a_get(url)).to have_been_made
     end
   end
@@ -36,14 +36,4 @@ describe Taric::Operation::ChampionMastery do
     end
   end
 
-  describe '#top_champions' do
-    let(:url) {expand_template(Taric::Operation::ChampionMastery::MASTERY_TOP_CHAMPIONS.template_url, {summonerId: summoner_id, count: 3})}
-
-    before{ stub_get_json(url, 'champion_mastery_top.json') }
-
-    it 'requests the correct resource' do
-      client.top_champions(summoner_id: summoner_id)
-      expect(a_get(url)).to have_been_made
-    end
-  end
 end

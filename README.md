@@ -34,6 +34,32 @@ Or install it yourself as:
 
     $ gem install taric
 
+## API Support
+
+> "What did I see upon the mountain? Rocks. Lots of rocks."
+
+- [x] ~~CHAMPION-V1.2~~ replaced by CHAMPION-V3
+- [ ] CHAMPION-V3
+- [x] ~~CHAMPIONMASTERY~~ replaced by CHAMPION-MASTERY-V3
+- [x] CHAMPION-MASTERY-V3
+- [x] ~~CURRENT-GAME-V1.0~~ replaced by SPECTATOR-V3
+- [x] ~~FEATURED-GAMES-V1.0~~ replaced by SPECTATOR-V3
+- [x] ~~GAME-V1.3~~ replaced by MATCH-V3
+- [x] LEAGUE-V2.5
+- [x] ~~LOL-STATIC-DATA-V1.2~~ replaced by STATIC-DATA-V3
+- [x] ~~LOL-STATUS-V1.0~~ replaced by LOL-STATUS-V3
+- [ ] LOL-STATUS-V3
+- [ ] MASTERIES-V3
+- [x] ~~MATCH-V2.2~~ replaced by MATCH-V3
+- [x] ~~MATCHLIST-V2.2~~ replaced by MATCH-V3
+- [x] ~~RUNES-MASTERIES-V1.4~~ replaced by RUNES-V3 AND MASTERIES-V3
+- [ ] RUNES-V3
+- [ ] SPECTATOR-V3
+- [ ] STATIC-DATA-V3
+- [x] ~~STATS-V1.3~~ no replacement
+- [x] ~~SUMMONER-V1.4~~ replaced by SUMMONER-V3
+- [x] SUMMONER-V3
+
 ## Configuration
 
 > "With clarity."
