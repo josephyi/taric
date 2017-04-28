@@ -19,7 +19,7 @@ describe Taric::Client do
     it 'returns an expanded Addressable template' do
       template = Taric::Client.expand_template(api_key: 'test', region: :na, operation: Taric::Operation::Champion::CHAMPIONS.template_url)
       expect(template).to be_an Addressable::URI
-      expect(template.to_s).to eq('https://na.api.pvp.net/api/lol/na/v1.2/champion?api_key=test')
+      expect(template.to_s).to eq('https://na1.api.riotgames.com/api/lol/na/v1.2/champion?api_key=test')
     end
   end
 

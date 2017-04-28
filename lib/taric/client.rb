@@ -8,17 +8,18 @@ module Taric
     attr_reader :api_key, :region, :conn, :config
 
     REGION_ENDPOINT_INFO = {
-        br: {region: 'br'.freeze, platform_id: 'BR1'.freeze, host: 'br.api.pvp.net'},
-        eune: {region: 'eune'.freeze, platform_id: 'EUN1'.freeze, host: 'eune.api.pvp.net'},
-        euw: {region: 'euw'.freeze, platform_id: 'EUW1', host: 'euw.api.pvp.net'},
-        kr: {region: 'kr'.freeze, platform_id: 'KR', host: 'kr.api.pvp.net'},
-        lan: {region: 'lan'.freeze, platform_id: 'LA1', host: 'lan.api.pvp.net'},
-        las: {region: 'las'.freeze, platform_id: 'LA2', host: 'las.api.pvp.net'},
-        na: {region: 'na'.freeze, platform_id: 'NA1', host: 'na.api.pvp.net'},
-        oce: {region: 'oce'.freeze, platform_id: 'OC1', host: 'oce.api.pvp.net'},
-        tr: {region: 'tr'.freeze, platform_id: 'TR1', host: 'tr.api.pvp.net'},
-        ru: {region: 'ru'.freeze, platform_id: 'RU', host: 'ru.api.pvp.net'},
-        pbe: {region: 'pbe'.freeze, platform_id: 'PBE1', host: 'pbe.api.pvp.net'}
+        br: {region: 'br'.freeze, platform_id: 'BR1'.freeze, host: 'br1.api.riotgames.com'.freeze},
+        eune: {region: 'eune'.freeze, platform_id: 'EUN1'.freeze, host: 'eun1.api.riotgames.com'.freeze},
+        euw: {region: 'euw'.freeze, platform_id: 'EUW1'.freeze, host: 'euw1.api.riotgames.com'.freeze},
+        jp: {region: 'jp'.freeze, platform_id: 'JP1'.freeze, host: 'jp1.api.riotgames.com'.freeze},
+        kr: {region: 'kr'.freeze, platform_id: 'KR'.freeze, host: 'kr.api.riotgames.com'.freeze},
+        lan: {region: 'lan'.freeze, platform_id: 'LA1'.freeze, host: 'la1.api.riotgames.com'.freeze},
+        las: {region: 'las'.freeze, platform_id: 'LA2'.freeze, host: 'la2.api.riotgames.com'.freeze},
+        na: {region: 'na'.freeze, platform_id: 'NA1'.freeze, host: 'na1.api.riotgames.com'.freeze},
+        oce: {region: 'oce'.freeze, platform_id: 'OC1'.freeze, host: 'oc1.api.riotgames.com'.freeze},
+        tr: {region: 'tr'.freeze, platform_id: 'TR1'.freeze, host: 'tr1.api.riotgames.com'.freeze},
+        ru: {region: 'ru'.freeze, platform_id: 'RU'.freeze, host: 'ru.api.riotgames.com'.freeze},
+        pbe: {region: 'pbe'.freeze, platform_id: 'PBE1'.freeze, host: 'pbe1.api.riotgames.com'.freeze}
     }.freeze
 
     REGION_ENDPOINT_STRING_KEYS = REGION_ENDPOINT_INFO.keys.map(&:to_s).freeze
