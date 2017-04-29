@@ -6,6 +6,7 @@ require_relative 'game'
 require_relative 'league'
 require_relative 'lol_static_data'
 require_relative 'lol_status'
+require_relative 'masteries'
 require_relative 'match'
 require_relative 'match_list'
 require_relative 'stats'
@@ -25,6 +26,7 @@ module Taric
       include Taric::Operation::League
       include Taric::Operation::LolStaticData
       include Taric::Operation::LolStatus
+      include Taric::Operation::Masteries
       include Taric::Operation::Match
       include Taric::Operation::MatchList
       include Taric::Operation::Stats

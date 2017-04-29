@@ -55,22 +55,6 @@ describe Taric::Operation::Summoner do
     end
   end
 
-  describe '#summoner_masteries' do
-    let(:url) {expand_template(Taric::Operation::Summoner::MASTERIES.template_url, {summonerIds: ids})}
-
-    before {stub_get(url).to_return(body: fixture('summoner_masteries.json'), headers: {content_type: 'application/json; charset=utf-8'})}
-
-    it 'requests the correct resource' do
-      client.summoner_masteries(summoner_ids: ids)
-      expect(a_get(url)).to have_been_made
-    end
-
-    it 'returns the requested result' do
-      result = client.summoner_masteries(summoner_ids: ids).body
-      expect(result).to be_a Hash
-    end
-  end
-
   describe '#summoner_runes' do
     let(:url) {expand_template(Taric::Operation::Summoner::RUNES.template_url, {summonerIds: ids})}
 

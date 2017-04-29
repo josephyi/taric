@@ -6,16 +6,7 @@ module Taric
       include Taric::Operation::Base
 
       RUNES_AND_MASTERIES_BASE = "https://{host}/api/lol/{region}/v1.4/summoner/{summonerIds}"
-      MASTERIES =  EndpointTemplate.new(template_url: "#{RUNES_AND_MASTERIES_BASE}/masteries{?api_key}")
       RUNES =  EndpointTemplate.new(template_url: "#{RUNES_AND_MASTERIES_BASE}/runes{?api_key}")
-
-      # Masteries keyed by summoner ID.
-      #
-      # @param summoner_ids [String] comma separated list of Summoner IDs
-      # @return [Hash] masteries by Summoner ID
-      def summoner_masteries(summoner_ids:)
-        response_for MASTERIES, {summonerIds: summoner_ids}
-      end
 
       # Runes keyed by summoner ID.
       #
