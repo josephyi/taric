@@ -1,0 +1,1656 @@
+{
+  "summonerId": 21066,
+  "pages": [
+    {
+      "current": false,
+      "slots": [
+        {
+          "runeSlotId": 1,
+          "runeId": 5245
+        },
+        {
+          "runeSlotId": 2,
+          "runeId": 5245
+        },
+        {
+          "runeSlotId": 3,
+          "runeId": 5245
+        },
+        {
+          "runeSlotId": 4,
+          "runeId": 5245
+        },
+        {
+          "runeSlotId": 5,
+          "runeId": 5245
+        },
+        {
+          "runeSlotId": 6,
+          "runeId": 5245
+        },
+        {
+          "runeSlotId": 7,
+          "runeId": 5245
+        },
+        {
+          "runeSlotId": 8,
+          "runeId": 5245
+        },
+        {
+          "runeSlotId": 9,
+          "runeId": 5245
+        },
+        {
+          "runeSlotId": 10,
+          "runeId": 5315
+        },
+        {
+          "runeSlotId": 11,
+          "runeId": 5315
+        },
+        {
+          "runeSlotId": 12,
+          "runeId": 5315
+        },
+        {
+          "runeSlotId": 13,
+          "runeId": 5315
+        },
+        {
+          "runeSlotId": 14,
+          "runeId": 5315
+        },
+        {
+          "runeSlotId": 15,
+          "runeId": 5317
+        },
+        {
+          "runeSlotId": 16,
+          "runeId": 5317
+        },
+        {
+          "runeSlotId": 17,
+          "runeId": 5317
+        },
+        {
+          "runeSlotId": 18,
+          "runeId": 5317
+        },
+        {
+          "runeSlotId": 19,
+          "runeId": 5289
+        },
+        {
+          "runeSlotId": 20,
+          "runeId": 5289
+        },
+        {
+          "runeSlotId": 21,
+          "runeId": 5289
+        },
+        {
+          "runeSlotId": 22,
+          "runeId": 5289
+        },
+        {
+          "runeSlotId": 23,
+          "runeId": 5289
+        },
+        {
+          "runeSlotId": 24,
+          "runeId": 5289
+        },
+        {
+          "runeSlotId": 25,
+          "runeId": 5289
+        },
+        {
+          "runeSlotId": 26,
+          "runeId": 5289
+        },
+        {
+          "runeSlotId": 27,
+          "runeId": 5289
+        },
+        {
+          "runeSlotId": 28,
+          "runeId": 5412
+        },
+        {
+          "runeSlotId": 29,
+          "runeId": 5412
+        },
+        {
+          "runeSlotId": 30,
+          "runeId": 5335
+        }
+      ],
+      "id": 2075276,
+      "name": "Caster ADC (EZ, Lucian)"
+    },
+    {
+      "current": false,
+      "slots": [
+        {
+          "runeSlotId": 1,
+          "runeId": 5247
+        },
+        {
+          "runeSlotId": 2,
+          "runeId": 5245
+        },
+        {
+          "runeSlotId": 3,
+          "runeId": 5245
+        },
+        {
+          "runeSlotId": 4,
+          "runeId": 5245
+        },
+        {
+          "runeSlotId": 5,
+          "runeId": 5245
+        },
+        {
+          "runeSlotId": 6,
+          "runeId": 5245
+        },
+        {
+          "runeSlotId": 7,
+          "runeId": 5245
+        },
+        {
+          "runeSlotId": 8,
+          "runeId": 5245
+        },
+        {
+          "runeSlotId": 9,
+          "runeId": 5245
+        },
+        {
+          "runeSlotId": 10,
+          "runeId": 5315
+        },
+        {
+          "runeSlotId": 11,
+          "runeId": 5315
+        },
+        {
+          "runeSlotId": 12,
+          "runeId": 5315
+        },
+        {
+          "runeSlotId": 13,
+          "runeId": 5315
+        },
+        {
+          "runeSlotId": 14,
+          "runeId": 5315
+        },
+        {
+          "runeSlotId": 15,
+          "runeId": 5317
+        },
+        {
+          "runeSlotId": 16,
+          "runeId": 5317
+        },
+        {
+          "runeSlotId": 17,
+          "runeId": 5317
+        },
+        {
+          "runeSlotId": 18,
+          "runeId": 5317
+        },
+        {
+          "runeSlotId": 19,
+          "runeId": 5289
+        },
+        {
+          "runeSlotId": 20,
+          "runeId": 5289
+        },
+        {
+          "runeSlotId": 21,
+          "runeId": 5289
+        },
+        {
+          "runeSlotId": 22,
+          "runeId": 5289
+        },
+        {
+          "runeSlotId": 23,
+          "runeId": 5289
+        },
+        {
+          "runeSlotId": 24,
+          "runeId": 5289
+        },
+        {
+          "runeSlotId": 25,
+          "runeId": 5289
+        },
+        {
+          "runeSlotId": 26,
+          "runeId": 5289
+        },
+        {
+          "runeSlotId": 27,
+          "runeId": 5289
+        },
+        {
+          "runeSlotId": 28,
+          "runeId": 5412
+        },
+        {
+          "runeSlotId": 29,
+          "runeId": 5412
+        },
+        {
+          "runeSlotId": 30,
+          "runeId": 5335
+        }
+      ],
+      "id": 2075277,
+      "name": "AA ADC"
+    },
+    {
+      "current": false,
+      "slots": [
+        {
+          "runeSlotId": 1,
+          "runeId": 5402
+        },
+        {
+          "runeSlotId": 2,
+          "runeId": 5402
+        },
+        {
+          "runeSlotId": 3,
+          "runeId": 5402
+        },
+        {
+          "runeSlotId": 4,
+          "runeId": 5402
+        },
+        {
+          "runeSlotId": 5,
+          "runeId": 5402
+        },
+        {
+          "runeSlotId": 6,
+          "runeId": 5402
+        },
+        {
+          "runeSlotId": 7,
+          "runeId": 5402
+        },
+        {
+          "runeSlotId": 8,
+          "runeId": 5402
+        },
+        {
+          "runeSlotId": 9,
+          "runeId": 5402
+        },
+        {
+          "runeSlotId": 10,
+          "runeId": 5315
+        },
+        {
+          "runeSlotId": 11,
+          "runeId": 5315
+        },
+        {
+          "runeSlotId": 12,
+          "runeId": 5315
+        },
+        {
+          "runeSlotId": 13,
+          "runeId": 5315
+        },
+        {
+          "runeSlotId": 14,
+          "runeId": 5315
+        },
+        {
+          "runeSlotId": 15,
+          "runeId": 5317
+        },
+        {
+          "runeSlotId": 16,
+          "runeId": 5317
+        },
+        {
+          "runeSlotId": 17,
+          "runeId": 5317
+        },
+        {
+          "runeSlotId": 18,
+          "runeId": 5317
+        },
+        {
+          "runeSlotId": 19,
+          "runeId": 5289
+        },
+        {
+          "runeSlotId": 20,
+          "runeId": 5289
+        },
+        {
+          "runeSlotId": 21,
+          "runeId": 5289
+        },
+        {
+          "runeSlotId": 22,
+          "runeId": 5289
+        },
+        {
+          "runeSlotId": 23,
+          "runeId": 5289
+        },
+        {
+          "runeSlotId": 24,
+          "runeId": 5289
+        },
+        {
+          "runeSlotId": 25,
+          "runeId": 5289
+        },
+        {
+          "runeSlotId": 26,
+          "runeId": 5289
+        },
+        {
+          "runeSlotId": 27,
+          "runeId": 5289
+        },
+        {
+          "runeSlotId": 28,
+          "runeId": 5347
+        },
+        {
+          "runeSlotId": 29,
+          "runeId": 5347
+        },
+        {
+          "runeSlotId": 30,
+          "runeId": 5347
+        }
+      ],
+      "id": 44957316,
+      "name": "AP Support"
+    },
+    {
+      "current": false,
+      "slots": [
+        {
+          "runeSlotId": 1,
+          "runeId": 5253
+        },
+        {
+          "runeSlotId": 2,
+          "runeId": 5245
+        },
+        {
+          "runeSlotId": 3,
+          "runeId": 5245
+        },
+        {
+          "runeSlotId": 4,
+          "runeId": 5245
+        },
+        {
+          "runeSlotId": 5,
+          "runeId": 5245
+        },
+        {
+          "runeSlotId": 6,
+          "runeId": 5245
+        },
+        {
+          "runeSlotId": 7,
+          "runeId": 5245
+        },
+        {
+          "runeSlotId": 8,
+          "runeId": 5245
+        },
+        {
+          "runeSlotId": 9,
+          "runeId": 5245
+        },
+        {
+          "runeSlotId": 10,
+          "runeId": 5317
+        },
+        {
+          "runeSlotId": 11,
+          "runeId": 5317
+        },
+        {
+          "runeSlotId": 12,
+          "runeId": 5317
+        },
+        {
+          "runeSlotId": 13,
+          "runeId": 5317
+        },
+        {
+          "runeSlotId": 14,
+          "runeId": 5317
+        },
+        {
+          "runeSlotId": 15,
+          "runeId": 5317
+        },
+        {
+          "runeSlotId": 16,
+          "runeId": 5317
+        },
+        {
+          "runeSlotId": 17,
+          "runeId": 5317
+        },
+        {
+          "runeSlotId": 18,
+          "runeId": 5317
+        },
+        {
+          "runeSlotId": 19,
+          "runeId": 5290
+        },
+        {
+          "runeSlotId": 20,
+          "runeId": 5290
+        },
+        {
+          "runeSlotId": 21,
+          "runeId": 5290
+        },
+        {
+          "runeSlotId": 22,
+          "runeId": 5290
+        },
+        {
+          "runeSlotId": 23,
+          "runeId": 5290
+        },
+        {
+          "runeSlotId": 24,
+          "runeId": 5290
+        },
+        {
+          "runeSlotId": 25,
+          "runeId": 5290
+        },
+        {
+          "runeSlotId": 26,
+          "runeId": 5290
+        },
+        {
+          "runeSlotId": 27,
+          "runeId": 5290
+        },
+        {
+          "runeSlotId": 28,
+          "runeId": 5412
+        },
+        {
+          "runeSlotId": 29,
+          "runeId": 5412
+        },
+        {
+          "runeSlotId": 30,
+          "runeId": 5335
+        }
+      ],
+      "id": 46472099,
+      "name": "Blue EZ"
+    },
+    {
+      "current": true,
+      "slots": [
+        {
+          "runeSlotId": 1,
+          "runeId": 5257
+        },
+        {
+          "runeSlotId": 2,
+          "runeId": 5257
+        },
+        {
+          "runeSlotId": 3,
+          "runeId": 5257
+        },
+        {
+          "runeSlotId": 4,
+          "runeId": 5257
+        },
+        {
+          "runeSlotId": 5,
+          "runeId": 5257
+        },
+        {
+          "runeSlotId": 6,
+          "runeId": 5257
+        },
+        {
+          "runeSlotId": 7,
+          "runeId": 5257
+        },
+        {
+          "runeSlotId": 8,
+          "runeId": 5257
+        },
+        {
+          "runeSlotId": 9,
+          "runeId": 5257
+        },
+        {
+          "runeSlotId": 10,
+          "runeId": 5317
+        },
+        {
+          "runeSlotId": 11,
+          "runeId": 5317
+        },
+        {
+          "runeSlotId": 12,
+          "runeId": 5317
+        },
+        {
+          "runeSlotId": 13,
+          "runeId": 5315
+        },
+        {
+          "runeSlotId": 14,
+          "runeId": 5315
+        },
+        {
+          "runeSlotId": 15,
+          "runeId": 5315
+        },
+        {
+          "runeSlotId": 16,
+          "runeId": 5315
+        },
+        {
+          "runeSlotId": 17,
+          "runeId": 5315
+        },
+        {
+          "runeSlotId": 18,
+          "runeId": 5317
+        },
+        {
+          "runeSlotId": 19,
+          "runeId": 5289
+        },
+        {
+          "runeSlotId": 20,
+          "runeId": 5289
+        },
+        {
+          "runeSlotId": 21,
+          "runeId": 5289
+        },
+        {
+          "runeSlotId": 22,
+          "runeId": 5289
+        },
+        {
+          "runeSlotId": 23,
+          "runeId": 5289
+        },
+        {
+          "runeSlotId": 24,
+          "runeId": 5289
+        },
+        {
+          "runeSlotId": 25,
+          "runeId": 5289
+        },
+        {
+          "runeSlotId": 26,
+          "runeId": 5289
+        },
+        {
+          "runeSlotId": 27,
+          "runeId": 5289
+        },
+        {
+          "runeSlotId": 28,
+          "runeId": 5347
+        },
+        {
+          "runeSlotId": 29,
+          "runeId": 5347
+        },
+        {
+          "runeSlotId": 30,
+          "runeId": 5347
+        }
+      ],
+      "id": 46472100,
+      "name": "Full Def Supp"
+    },
+    {
+      "current": false,
+      "slots": [
+        {
+          "runeSlotId": 1,
+          "runeId": 5273
+        },
+        {
+          "runeSlotId": 2,
+          "runeId": 5273
+        },
+        {
+          "runeSlotId": 3,
+          "runeId": 5273
+        },
+        {
+          "runeSlotId": 4,
+          "runeId": 5273
+        },
+        {
+          "runeSlotId": 5,
+          "runeId": 5273
+        },
+        {
+          "runeSlotId": 6,
+          "runeId": 5273
+        },
+        {
+          "runeSlotId": 7,
+          "runeId": 5273
+        },
+        {
+          "runeSlotId": 8,
+          "runeId": 5273
+        },
+        {
+          "runeSlotId": 9,
+          "runeId": 5273
+        },
+        {
+          "runeSlotId": 10,
+          "runeId": 5317
+        },
+        {
+          "runeSlotId": 11,
+          "runeId": 5317
+        },
+        {
+          "runeSlotId": 12,
+          "runeId": 5317
+        },
+        {
+          "runeSlotId": 13,
+          "runeId": 5317
+        },
+        {
+          "runeSlotId": 14,
+          "runeId": 5317
+        },
+        {
+          "runeSlotId": 15,
+          "runeId": 5317
+        },
+        {
+          "runeSlotId": 16,
+          "runeId": 5317
+        },
+        {
+          "runeSlotId": 17,
+          "runeId": 5317
+        },
+        {
+          "runeSlotId": 18,
+          "runeId": 5317
+        },
+        {
+          "runeSlotId": 19,
+          "runeId": 5297
+        },
+        {
+          "runeSlotId": 20,
+          "runeId": 5297
+        },
+        {
+          "runeSlotId": 21,
+          "runeId": 5297
+        },
+        {
+          "runeSlotId": 22,
+          "runeId": 5297
+        },
+        {
+          "runeSlotId": 23,
+          "runeId": 5297
+        },
+        {
+          "runeSlotId": 24,
+          "runeId": 5297
+        },
+        {
+          "runeSlotId": 25,
+          "runeId": 5297
+        },
+        {
+          "runeSlotId": 26,
+          "runeId": 5297
+        },
+        {
+          "runeSlotId": 27,
+          "runeId": 5297
+        },
+        {
+          "runeSlotId": 28,
+          "runeId": 5357
+        },
+        {
+          "runeSlotId": 29,
+          "runeId": 5357
+        },
+        {
+          "runeSlotId": 30,
+          "runeId": 5357
+        }
+      ],
+      "id": 46472101,
+      "name": "AP Mid vs AD"
+    },
+    {
+      "current": false,
+      "slots": [
+        {
+          "runeSlotId": 1,
+          "runeId": 5273
+        },
+        {
+          "runeSlotId": 2,
+          "runeId": 5273
+        },
+        {
+          "runeSlotId": 3,
+          "runeId": 5273
+        },
+        {
+          "runeSlotId": 4,
+          "runeId": 5273
+        },
+        {
+          "runeSlotId": 5,
+          "runeId": 5273
+        },
+        {
+          "runeSlotId": 6,
+          "runeId": 5273
+        },
+        {
+          "runeSlotId": 7,
+          "runeId": 5273
+        },
+        {
+          "runeSlotId": 8,
+          "runeId": 5273
+        },
+        {
+          "runeSlotId": 9,
+          "runeId": 5273
+        },
+        {
+          "runeSlotId": 10,
+          "runeId": 5316
+        },
+        {
+          "runeSlotId": 11,
+          "runeId": 5316
+        },
+        {
+          "runeSlotId": 12,
+          "runeId": 5316
+        },
+        {
+          "runeSlotId": 13,
+          "runeId": 5316
+        },
+        {
+          "runeSlotId": 14,
+          "runeId": 5316
+        },
+        {
+          "runeSlotId": 15,
+          "runeId": 5316
+        },
+        {
+          "runeSlotId": 16,
+          "runeId": 5316
+        },
+        {
+          "runeSlotId": 17,
+          "runeId": 5316
+        },
+        {
+          "runeSlotId": 18,
+          "runeId": 5316
+        },
+        {
+          "runeSlotId": 19,
+          "runeId": 5289
+        },
+        {
+          "runeSlotId": 20,
+          "runeId": 5289
+        },
+        {
+          "runeSlotId": 21,
+          "runeId": 5289
+        },
+        {
+          "runeSlotId": 22,
+          "runeId": 5289
+        },
+        {
+          "runeSlotId": 23,
+          "runeId": 5289
+        },
+        {
+          "runeSlotId": 24,
+          "runeId": 5289
+        },
+        {
+          "runeSlotId": 25,
+          "runeId": 5298
+        },
+        {
+          "runeSlotId": 26,
+          "runeId": 5298
+        },
+        {
+          "runeSlotId": 27,
+          "runeId": 5298
+        },
+        {
+          "runeSlotId": 28,
+          "runeId": 5357
+        },
+        {
+          "runeSlotId": 29,
+          "runeId": 5357
+        },
+        {
+          "runeSlotId": 30,
+          "runeId": 5357
+        }
+      ],
+      "id": 46472102,
+      "name": "AP Mid vs AP"
+    },
+    {
+      "current": false,
+      "slots": [
+        {
+          "runeSlotId": 1,
+          "runeId": 5402
+        },
+        {
+          "runeSlotId": 2,
+          "runeId": 5402
+        },
+        {
+          "runeSlotId": 3,
+          "runeId": 5402
+        },
+        {
+          "runeSlotId": 4,
+          "runeId": 5402
+        },
+        {
+          "runeSlotId": 5,
+          "runeId": 5402
+        },
+        {
+          "runeSlotId": 6,
+          "runeId": 5402
+        },
+        {
+          "runeSlotId": 7,
+          "runeId": 5402
+        },
+        {
+          "runeSlotId": 8,
+          "runeId": 5402
+        },
+        {
+          "runeSlotId": 9,
+          "runeId": 5402
+        },
+        {
+          "runeSlotId": 10,
+          "runeId": 5317
+        },
+        {
+          "runeSlotId": 11,
+          "runeId": 5317
+        },
+        {
+          "runeSlotId": 12,
+          "runeId": 5317
+        },
+        {
+          "runeSlotId": 13,
+          "runeId": 5317
+        },
+        {
+          "runeSlotId": 14,
+          "runeId": 5317
+        },
+        {
+          "runeSlotId": 15,
+          "runeId": 5317
+        },
+        {
+          "runeSlotId": 16,
+          "runeId": 5317
+        },
+        {
+          "runeSlotId": 17,
+          "runeId": 5317
+        },
+        {
+          "runeSlotId": 18,
+          "runeId": 5317
+        },
+        {
+          "runeSlotId": 19,
+          "runeId": 5295
+        },
+        {
+          "runeSlotId": 20,
+          "runeId": 5295
+        },
+        {
+          "runeSlotId": 21,
+          "runeId": 5295
+        },
+        {
+          "runeSlotId": 22,
+          "runeId": 5295
+        },
+        {
+          "runeSlotId": 23,
+          "runeId": 5295
+        },
+        {
+          "runeSlotId": 24,
+          "runeId": 5295
+        },
+        {
+          "runeSlotId": 25,
+          "runeId": 5296
+        },
+        {
+          "runeSlotId": 26,
+          "runeId": 5296
+        },
+        {
+          "runeSlotId": 27,
+          "runeId": 5296
+        },
+        {
+          "runeSlotId": 28,
+          "runeId": 5347
+        },
+        {
+          "runeSlotId": 29,
+          "runeId": 5347
+        },
+        {
+          "runeSlotId": 30,
+          "runeId": 5347
+        }
+      ],
+      "id": 46472103,
+      "name": "Hybrid vs AD"
+    },
+    {
+      "current": false,
+      "slots": [
+        {
+          "runeSlotId": 1,
+          "runeId": 5402
+        },
+        {
+          "runeSlotId": 2,
+          "runeId": 5402
+        },
+        {
+          "runeSlotId": 3,
+          "runeId": 5402
+        },
+        {
+          "runeSlotId": 4,
+          "runeId": 5402
+        },
+        {
+          "runeSlotId": 5,
+          "runeId": 5402
+        },
+        {
+          "runeSlotId": 6,
+          "runeId": 5402
+        },
+        {
+          "runeSlotId": 7,
+          "runeId": 5402
+        },
+        {
+          "runeSlotId": 8,
+          "runeId": 5402
+        },
+        {
+          "runeSlotId": 9,
+          "runeId": 5402
+        },
+        {
+          "runeSlotId": 10,
+          "runeId": 5316
+        },
+        {
+          "runeSlotId": 11,
+          "runeId": 5316
+        },
+        {
+          "runeSlotId": 12,
+          "runeId": 5316
+        },
+        {
+          "runeSlotId": 13,
+          "runeId": 5316
+        },
+        {
+          "runeSlotId": 14,
+          "runeId": 5316
+        },
+        {
+          "runeSlotId": 15,
+          "runeId": 5316
+        },
+        {
+          "runeSlotId": 16,
+          "runeId": 5316
+        },
+        {
+          "runeSlotId": 17,
+          "runeId": 5316
+        },
+        {
+          "runeSlotId": 18,
+          "runeId": 5316
+        },
+        {
+          "runeSlotId": 19,
+          "runeId": 5296
+        },
+        {
+          "runeSlotId": 20,
+          "runeId": 5296
+        },
+        {
+          "runeSlotId": 21,
+          "runeId": 5296
+        },
+        {
+          "runeSlotId": 22,
+          "runeId": 5290
+        },
+        {
+          "runeSlotId": 23,
+          "runeId": 5290
+        },
+        {
+          "runeSlotId": 24,
+          "runeId": 5290
+        },
+        {
+          "runeSlotId": 25,
+          "runeId": 5290
+        },
+        {
+          "runeSlotId": 26,
+          "runeId": 5290
+        },
+        {
+          "runeSlotId": 27,
+          "runeId": 5290
+        },
+        {
+          "runeSlotId": 28,
+          "runeId": 5357
+        },
+        {
+          "runeSlotId": 29,
+          "runeId": 5357
+        },
+        {
+          "runeSlotId": 30,
+          "runeId": 5357
+        }
+      ],
+      "id": 46472104,
+      "name": "Bruiser Hybrid vs AP"
+    },
+    {
+      "current": false,
+      "slots": [
+        {
+          "runeSlotId": 1,
+          "runeId": 5245
+        },
+        {
+          "runeSlotId": 2,
+          "runeId": 5245
+        },
+        {
+          "runeSlotId": 3,
+          "runeId": 5245
+        },
+        {
+          "runeSlotId": 4,
+          "runeId": 5245
+        },
+        {
+          "runeSlotId": 5,
+          "runeId": 5245
+        },
+        {
+          "runeSlotId": 6,
+          "runeId": 5245
+        },
+        {
+          "runeSlotId": 7,
+          "runeId": 5245
+        },
+        {
+          "runeSlotId": 8,
+          "runeId": 5245
+        },
+        {
+          "runeSlotId": 9,
+          "runeId": 5245
+        },
+        {
+          "runeSlotId": 10,
+          "runeId": 5317
+        },
+        {
+          "runeSlotId": 11,
+          "runeId": 5317
+        },
+        {
+          "runeSlotId": 12,
+          "runeId": 5317
+        },
+        {
+          "runeSlotId": 13,
+          "runeId": 5317
+        },
+        {
+          "runeSlotId": 14,
+          "runeId": 5315
+        },
+        {
+          "runeSlotId": 15,
+          "runeId": 5315
+        },
+        {
+          "runeSlotId": 16,
+          "runeId": 5315
+        },
+        {
+          "runeSlotId": 17,
+          "runeId": 5315
+        },
+        {
+          "runeSlotId": 18,
+          "runeId": 5315
+        },
+        {
+          "runeSlotId": 19,
+          "runeId": 5295
+        },
+        {
+          "runeSlotId": 20,
+          "runeId": 5295
+        },
+        {
+          "runeSlotId": 21,
+          "runeId": 5295
+        },
+        {
+          "runeSlotId": 22,
+          "runeId": 5295
+        },
+        {
+          "runeSlotId": 23,
+          "runeId": 5295
+        },
+        {
+          "runeSlotId": 24,
+          "runeId": 5295
+        },
+        {
+          "runeSlotId": 25,
+          "runeId": 5289
+        },
+        {
+          "runeSlotId": 26,
+          "runeId": 5289
+        },
+        {
+          "runeSlotId": 27,
+          "runeId": 5289
+        },
+        {
+          "runeSlotId": 28,
+          "runeId": 5335
+        },
+        {
+          "runeSlotId": 29,
+          "runeId": 5335
+        },
+        {
+          "runeSlotId": 30,
+          "runeId": 5335
+        }
+      ],
+      "id": 46472105,
+      "name": "AD Top vs AD"
+    },
+    {
+      "current": false,
+      "slots": [
+        {
+          "runeSlotId": 1,
+          "runeId": 5245
+        },
+        {
+          "runeSlotId": 2,
+          "runeId": 5245
+        },
+        {
+          "runeSlotId": 3,
+          "runeId": 5245
+        },
+        {
+          "runeSlotId": 4,
+          "runeId": 5245
+        },
+        {
+          "runeSlotId": 5,
+          "runeId": 5245
+        },
+        {
+          "runeSlotId": 6,
+          "runeId": 5245
+        },
+        {
+          "runeSlotId": 7,
+          "runeId": 5245
+        },
+        {
+          "runeSlotId": 8,
+          "runeId": 5245
+        },
+        {
+          "runeSlotId": 9,
+          "runeId": 5245
+        },
+        {
+          "runeSlotId": 10,
+          "runeId": 5316
+        },
+        {
+          "runeSlotId": 11,
+          "runeId": 5316
+        },
+        {
+          "runeSlotId": 12,
+          "runeId": 5316
+        },
+        {
+          "runeSlotId": 13,
+          "runeId": 5316
+        },
+        {
+          "runeSlotId": 14,
+          "runeId": 5315
+        },
+        {
+          "runeSlotId": 15,
+          "runeId": 5315
+        },
+        {
+          "runeSlotId": 16,
+          "runeId": 5315
+        },
+        {
+          "runeSlotId": 17,
+          "runeId": 5315
+        },
+        {
+          "runeSlotId": 18,
+          "runeId": 5315
+        },
+        {
+          "runeSlotId": 19,
+          "runeId": 5296
+        },
+        {
+          "runeSlotId": 20,
+          "runeId": 5296
+        },
+        {
+          "runeSlotId": 21,
+          "runeId": 5296
+        },
+        {
+          "runeSlotId": 22,
+          "runeId": 5289
+        },
+        {
+          "runeSlotId": 23,
+          "runeId": 5289
+        },
+        {
+          "runeSlotId": 24,
+          "runeId": 5289
+        },
+        {
+          "runeSlotId": 25,
+          "runeId": 5289
+        },
+        {
+          "runeSlotId": 26,
+          "runeId": 5289
+        },
+        {
+          "runeSlotId": 27,
+          "runeId": 5289
+        },
+        {
+          "runeSlotId": 28,
+          "runeId": 5335
+        },
+        {
+          "runeSlotId": 29,
+          "runeId": 5335
+        },
+        {
+          "runeSlotId": 30,
+          "runeId": 5335
+        }
+      ],
+      "id": 53328588,
+      "name": "AD Top vs AP"
+    },
+    {
+      "current": false,
+      "slots": [
+        {
+          "runeSlotId": 1,
+          "runeId": 5247
+        },
+        {
+          "runeSlotId": 2,
+          "runeId": 5247
+        },
+        {
+          "runeSlotId": 3,
+          "runeId": 5247
+        },
+        {
+          "runeSlotId": 4,
+          "runeId": 5247
+        },
+        {
+          "runeSlotId": 5,
+          "runeId": 5247
+        },
+        {
+          "runeSlotId": 6,
+          "runeId": 5247
+        },
+        {
+          "runeSlotId": 7,
+          "runeId": 5247
+        },
+        {
+          "runeSlotId": 8,
+          "runeId": 5247
+        },
+        {
+          "runeSlotId": 9,
+          "runeId": 5247
+        },
+        {
+          "runeSlotId": 10,
+          "runeId": 5317
+        },
+        {
+          "runeSlotId": 11,
+          "runeId": 5317
+        },
+        {
+          "runeSlotId": 12,
+          "runeId": 5317
+        },
+        {
+          "runeSlotId": 13,
+          "runeId": 5317
+        },
+        {
+          "runeSlotId": 14,
+          "runeId": 5317
+        },
+        {
+          "runeSlotId": 15,
+          "runeId": 5317
+        },
+        {
+          "runeSlotId": 16,
+          "runeId": 5317
+        },
+        {
+          "runeSlotId": 17,
+          "runeId": 5317
+        },
+        {
+          "runeSlotId": 18,
+          "runeId": 5317
+        },
+        {
+          "runeSlotId": 19,
+          "runeId": 5295
+        },
+        {
+          "runeSlotId": 20,
+          "runeId": 5295
+        },
+        {
+          "runeSlotId": 21,
+          "runeId": 5295
+        },
+        {
+          "runeSlotId": 22,
+          "runeId": 5295
+        },
+        {
+          "runeSlotId": 23,
+          "runeId": 5295
+        },
+        {
+          "runeSlotId": 24,
+          "runeId": 5295
+        },
+        {
+          "runeSlotId": 25,
+          "runeId": 5289
+        },
+        {
+          "runeSlotId": 26,
+          "runeId": 5289
+        },
+        {
+          "runeSlotId": 27,
+          "runeId": 5289
+        },
+        {
+          "runeSlotId": 28,
+          "runeId": 5365
+        },
+        {
+          "runeSlotId": 29,
+          "runeId": 5365
+        },
+        {
+          "runeSlotId": 30,
+          "runeId": 5365
+        }
+      ],
+      "id": 77155557,
+      "name": "JG Tank"
+    },
+    {
+      "current": false,
+      "slots": [
+        {
+          "runeSlotId": 1,
+          "runeId": 5402
+        },
+        {
+          "runeSlotId": 2,
+          "runeId": 5402
+        },
+        {
+          "runeSlotId": 3,
+          "runeId": 5402
+        },
+        {
+          "runeSlotId": 4,
+          "runeId": 5402
+        },
+        {
+          "runeSlotId": 5,
+          "runeId": 5402
+        },
+        {
+          "runeSlotId": 6,
+          "runeId": 5402
+        },
+        {
+          "runeSlotId": 7,
+          "runeId": 5402
+        },
+        {
+          "runeSlotId": 8,
+          "runeId": 5402
+        },
+        {
+          "runeSlotId": 9,
+          "runeId": 5402
+        },
+        {
+          "runeSlotId": 10,
+          "runeId": 5317
+        },
+        {
+          "runeSlotId": 11,
+          "runeId": 5317
+        },
+        {
+          "runeSlotId": 12,
+          "runeId": 5317
+        },
+        {
+          "runeSlotId": 13,
+          "runeId": 5317
+        },
+        {
+          "runeSlotId": 14,
+          "runeId": 5317
+        },
+        {
+          "runeSlotId": 15,
+          "runeId": 5317
+        },
+        {
+          "runeSlotId": 16,
+          "runeId": 5317
+        },
+        {
+          "runeSlotId": 17,
+          "runeId": 5317
+        },
+        {
+          "runeSlotId": 18,
+          "runeId": 5317
+        },
+        {
+          "runeSlotId": 19,
+          "runeId": 5289
+        },
+        {
+          "runeSlotId": 20,
+          "runeId": 5289
+        },
+        {
+          "runeSlotId": 21,
+          "runeId": 5289
+        },
+        {
+          "runeSlotId": 22,
+          "runeId": 5297
+        },
+        {
+          "runeSlotId": 23,
+          "runeId": 5297
+        },
+        {
+          "runeSlotId": 24,
+          "runeId": 5297
+        },
+        {
+          "runeSlotId": 25,
+          "runeId": 5297
+        },
+        {
+          "runeSlotId": 26,
+          "runeId": 5297
+        },
+        {
+          "runeSlotId": 27,
+          "runeId": 5297
+        },
+        {
+          "runeSlotId": 28,
+          "runeId": 5357
+        },
+        {
+          "runeSlotId": 29,
+          "runeId": 5357
+        },
+        {
+          "runeSlotId": 30,
+          "runeId": 5357
+        }
+      ],
+      "id": 77155558,
+      "name": "Hybrid JG"
+    }
+  ]
+}
