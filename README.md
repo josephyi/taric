@@ -44,7 +44,7 @@ Or install it yourself as:
 - [x] LOL-STATUS-V3
 - [x] MASTERIES-V3
 - [ ] MATCH-V3
-- [ ] RUNES-V3
+- [x] RUNES-V3
 - [ ] SPECTATOR-V3
 - [ ] STATIC-DATA-V3
 - [x] SUMMONER-V3
