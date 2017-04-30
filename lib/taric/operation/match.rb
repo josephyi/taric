@@ -8,6 +8,7 @@ module Taric
       MATCH_V3 = EndpointTemplate.new(template_url: 'https://{host}/lol/match/v3/matches/{matchId}{?api_key}')
       MATCHLIST_V3 = EndpointTemplate.new(template_url: 'https://{host}/lol/match/v3/matchlists/by-account/{accountId}{?api_key,beginTime,endIndex,season*,champion*,beginIndex,queue*,endTime}')
       MATCHLIST_RECENT_V3 = EndpointTemplate.new(template_url: 'https://{host}/lol/match/v3/matchlists/by-account/{accountId}/recent{?api_key}')
+      MATCH_TIMELINE_V3 = EndpointTemplate.new(template_url: 'https://{host}/lol/match/v3/timelines/by-match/{matchId}{?api_key}')
 
       # Match data for id.
       #
@@ -61,6 +62,14 @@ module Taric
         response_for MATCHLIST_RECENT_V3, {accountId: account_id}
       end
 
+      # Match timeline data
+      #
+      # @see https://developer.riotgames.com/api-methods/#match-v3/GET_getMatchTimeline
+      # @param match_id [Fixnum] id of match
+      # @return [Response] match timeline
+      def match_timeline(match_id: )
+        response_for MATCH_TIMELINE_V3, {matchId: match_id}
+      end
     end
   end
 end
