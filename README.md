@@ -43,7 +43,7 @@ Or install it yourself as:
 - [x] LEAGUE-V2.5
 - [x] LOL-STATUS-V3
 - [x] MASTERIES-V3
-- [ ] MATCH-V3
+- [x] MATCH-V3
 - [x] RUNES-V3
 - [ ] SPECTATOR-V3
 - [ ] STATIC-DATA-V3
