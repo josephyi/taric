@@ -10,12 +10,10 @@ module Taric
 
       LEAGUES_BY_SUMMONER_IDS = EndpointTemplate.new(template_url: "#{BASE_LEAGUE_URL}/by-summoner/{summonerIds}{?api_key}")
       ENTRIES_BY_SUMMONER_IDS = EndpointTemplate.new(template_url: "#{BASE_LEAGUE_URL}/by-summoner/{summonerIds}/entry{?api_key}")
-      LEAGUES_BY_TEAM_IDS = EndpointTemplate.new(template_url: "#{BASE_LEAGUE_URL}/by-team/{teamIds}{?api_key}")
-      ENTRIES_BY_TEAM_IDS = EndpointTemplate.new(template_url: "#{BASE_LEAGUE_URL}/by-team/{teamIds}/entry{?api_key}")
       CHALLENGER = EndpointTemplate.new(template_url: "#{BASE_LEAGUE_URL}/challenger{?api_key,type}")
       MASTER = EndpointTemplate.new(template_url: "#{BASE_LEAGUE_URL}/master{?api_key,type}")
 
-      CHALLENGER_QUEUE_TYPES = ['RANKED_SOLO_5x5'.freeze, 'RANKED_TEAM_3x3'.freeze, 'RANKED_TEAM_5x5'.freeze].freeze
+      CHALLENGER_QUEUE_TYPES = ['RANKED_FLEX_SR'.freeze, 'RANKED_FLEX_TT'.freeze, 'RANKED_SOLO_5x5'.freeze, 'RANKED_TEAM_3x3'.freeze, 'RANKED_TEAM_5x5'.freeze].freeze
       MASTER_QUEUE_TYPES = CHALLENGER_QUEUE_TYPES
 
       # Leagues by summoner IDs.
@@ -48,27 +46,9 @@ module Taric
         response_for ENTRIES_BY_SUMMONER_IDS, {summonerIds: summoner_ids}
       end
 
-      # Leagues by team IDs.
-      #
-      # @see https://developer.riotgames.com/api/methods#!/985/3352
-      # @param team_ids team_ids [String] comma separated list of team ids
-      # @return [Hash] leagues keyed by team_ids
-      def leagues_by_team_ids(team_ids:)
-        response_for LEAGUES_BY_TEAM_IDS, {teamIds: team_ids}
-      end
-
-      # League entries by team IDs.
-      #
-      # @see https://developer.riotgames.com/api/methods#!/985/3355
-      # @param team_ids team_ids [String] comma separated list of team ids
-      # @return [Hash] league entries keyed by team_ids
-      def league_entries_by_team_ids(team_ids:)
-        response_for ENTRIES_BY_TEAM_IDS, {teamIds: team_ids}
-      end
-
       # Challenger league data for queue type.
       #
-      # @param type [String] required, must be RANKED_SOLO_5x5, RANKED_TEAM_3x3, or RANKED_TEAM_5x5
+      # @param type [String] required, must be RANKED_FLEX_SR, RANKED_FLEX_TT, RANKED_SOLO_5x5, RANKED_TEAM_3x3, or RANKED_TEAM_5x5
       # @return [Hash] challenger league data
       # @see https://developer.riotgames.com/api/methods#!/985/3353
       def challenger(type: )
@@ -80,7 +60,7 @@ module Taric
 
       # Master league data for queue type.
       #
-      # @param type [String] required, must be RANKED_SOLO_5x5, RANKED_TEAM_3x3, or RANKED_TEAM_5x5
+      # @param type [String] required, must be RANKED_FLEX_SR, RANKED_FLEX_TT, RANKED_SOLO_5x5, RANKED_TEAM_3x3, or RANKED_TEAM_5x5
       # @return [Hash] master league data
       # https://developer.riotgames.com/api/methods#!/985/3354
       def master(type: )

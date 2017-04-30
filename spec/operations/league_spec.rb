@@ -42,44 +42,6 @@ describe Taric::Operation::League do
     end
   end
 
-  describe '#leagues_by_team_ids' do
-    let(:ids) {'TEAM-fa073ee0-51ca-11e4-82cc-782bcb4d0bb2'}
-
-    let(:url) {expand_template(Taric::Operation::League::LEAGUES_BY_TEAM_IDS.template_url, {teamIds: ids})}
-
-    before {stub_get(url).to_return(body: fixture('leagues_by_team_ids.json'), headers: {content_type: 'application/json; charset=utf-8'})}
-
-    it 'requests the correct resource' do
-      client.leagues_by_team_ids(team_ids: ids)
-      expect(a_get(url)).to have_been_made
-    end
-
-    it 'returns the requested result' do
-      result = client.leagues_by_team_ids(team_ids: ids).body
-      expect(result).to be_a Hash
-      expect(result['TEAM-fa073ee0-51ca-11e4-82cc-782bcb4d0bb2']).to be_an Array
-    end
-  end
-
-  describe '#league_entries_by_team_ids' do
-    let(:ids) {'TEAM-fa073ee0-51ca-11e4-82cc-782bcb4d0bb2'}
-
-    let(:url) {expand_template(Taric::Operation::League::ENTRIES_BY_TEAM_IDS.template_url, {teamIds: ids})}
-
-    before {stub_get(url).to_return(body: fixture('league_entries_by_team_ids.json'), headers: {content_type: 'application/json; charset=utf-8'})}
-
-    it 'requests the correct resource' do
-      client.league_entries_by_team_ids(team_ids: ids)
-      expect(a_get(url)).to have_been_made
-    end
-
-    it 'returns the requested result' do
-      result = client.league_entries_by_team_ids(team_ids: ids).body
-      expect(result).to be_a Hash
-      expect(result['TEAM-fa073ee0-51ca-11e4-82cc-782bcb4d0bb2']).to be_an Array
-    end
-  end
-
   describe '#challenger' do
     context 'solo queue' do
       let(:type) {'RANKED_SOLO_5x5'}

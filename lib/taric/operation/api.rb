@@ -7,10 +7,7 @@ require_relative 'masteries'
 require_relative 'match'
 require_relative 'runes'
 require_relative 'spectator'
-require_relative 'stats'
 require_relative 'summoner'
-require_relative 'team'
-require_relative 'tournament'
 
 # Combines operations of LoL API.
 module Taric
@@ -25,10 +22,7 @@ module Taric
       include Taric::Operation::Match
       include Taric::Operation::Runes
       include Taric::Operation::Spectator
-      include Taric::Operation::Stats
       include Taric::Operation::Summoner
-      include Taric::Operation::Team
-      include Taric::Operation::Tournament
 
       # Template for requesting the url and processing the response.
       #

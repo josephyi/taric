@@ -42,13 +42,13 @@ module Taric
             MATCHLIST_V3,
             {
               accountId: account_id,
-              beginTime: begin_time,
+              beginTime: epoch_milliseconds(begin_time),
               endIndex: end_index,
               season: season,
               champion: champion,
               beginIndex: begin_index,
               queue: queue,
-              endTime: end_time
+              endTime: epoch_milliseconds(end_time)
             }
         )
       end
