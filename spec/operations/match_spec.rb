@@ -5,9 +5,9 @@ describe Taric::Operation::Match do
 
   describe '#match' do
     let(:id) {1733750076}
-    let(:url) {expand_template(Taric::Operation::Match::MATCH.template_url, {matchId: id})}
+    let(:url) {expand_template(Taric::Operation::Match::MATCH_V3.template_url, {matchId: id})}
 
-    before {stub_get(url).to_return(body: fixture('match.json'), headers: {content_type: 'application/json; charset=utf-8'})}
+    before {stub_get(url).to_return(body: fixture('match-v3.json'), headers: {content_type: 'application/json; charset=utf-8'})}
 
     it 'requests the correct resource' do
       client.match(match_id: id)
@@ -17,13 +17,32 @@ describe Taric::Operation::Match do
     it 'returns the requested result' do
       result = client.match(match_id: id).body
       expect(result).to be_a Hash
-      expect(result['matchId']).to eq(id)
+      expect(result['gameId']).to eq(id)
     end
   end
 
-  describe '#match_ids_by_tournament' do
+  describe '#matchlist' do
+    let(:account_id) { 47910 }
+    let(:url) { expand_template(Taric::Operation::Match::MATCHLIST_V3.template_url, {accountId: account_id}) }
 
-    let(:url) {expand_template(Taric::Operation::Match::MATCH_IDS_BY_TOURNAMENT, {tournamentCode: code})}
+    before {stub_get(url).to_return(body: fixture('matchlist-v3.json'), headers: {content_type: 'application/json; charset=utf-8'})}
+
+    it 'requests the correct resource' do
+      client.matchlist(account_id: account_id)
+      expect(a_get(url)).to have_been_made
+    end
+  end
+
+  describe '#matchlist_recent' do
+    let(:account_id) { 47910 }
+    let(:url) { expand_template(Taric::Operation::Match::MATCHLIST_RECENT_V3.template_url, {accountId: account_id}) }
+
+    before {stub_get(url).to_return(body: fixture('matchlist_recent-v3.json'), headers: {content_type: 'application/json; charset=utf-8'})}
+
+    it 'requests the correct resource' do
+      client.matchlist_recent(account_id: account_id)
+      expect(a_get(url)).to have_been_made
+    end
   end
 
 end

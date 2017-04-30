@@ -1,0 +1,37 @@
+{
+  "matches": [
+    {
+      "lane": "BOTTOM",
+      "gameId": 2236684540,
+      "champion": 16,
+      "platformId": "NA1",
+      "timestamp": 1468035097090,
+      "queue": 410,
+      "role": "DUO_SUPPORT",
+      "season": 7
+    },
+    {
+      "lane": "BOTTOM",
+      "gameId": 2235192378,
+      "champion": 16,
+      "platformId": "NA1",
+      "timestamp": 1467872625414,
+      "queue": 410,
+      "role": "DUO_SUPPORT",
+      "season": 7
+    },
+    {
+      "lane": "BOTTOM",
+      "gameId": 2180005695,
+      "champion": 16,
+      "platformId": "NA1",
+      "timestamp": 1462592952187,
+      "queue": 410,
+      "role": "DUO_SUPPORT",
+      "season": 7
+    }
+  ],
+  "endIndex": 3,
+  "startIndex": 0,
+  "totalGames": 3
+}

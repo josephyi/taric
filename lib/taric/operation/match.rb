@@ -5,35 +5,60 @@ module Taric
     module Match
       include Taric::Operation::Base
 
-      MATCH_VERSION = 'v2.2'
-      MATCH = EndpointTemplate.new(template_url: "#{BASE_URL_FN.(MATCH_VERSION)}/match/{matchId}{?api_key,includeTimeline}")
-      MATCH_IDS_BY_TOURNAMENT = EndpointTemplate.new(template_url: "#{BASE_URL_FN.(MATCH_VERSION)}/match/by-tournament/{tournamentCode}/ids{?api_key}")
-      MATCH_FOR_TOURNAMENT = EndpointTemplate.new(template_url: "#{BASE_URL_FN.(MATCH_VERSION)}/match/for-tournament/{matchId}{?api_key,tournamentCode,includeTimeline}")
+      MATCH_V3 = EndpointTemplate.new(template_url: 'https://{host}/lol/match/v3/matches/{matchId}{?api_key}')
+      MATCHLIST_V3 = EndpointTemplate.new(template_url: 'https://{host}/lol/match/v3/matchlists/by-account/{accountId}{?api_key,beginTime,endIndex,season*,champion*,beginIndex,queue*,endTime}')
+      MATCHLIST_RECENT_V3 = EndpointTemplate.new(template_url: 'https://{host}/lol/match/v3/matchlists/by-account/{accountId}/recent{?api_key}')
 
       # Match data for id.
       #
-      # @see https://developer.riotgames.com/api/methods#!/1027/3483
+      # @see https://developer.riotgames.com/api-methods/#match-v3/GET_getMatch
       # @param match_id [Fixnum] id of match
-      # @param include_timeline [Boolean] optional, true includes timestamps on events
       # @return match data for id.
-      def match(match_id:, include_timeline: nil)
-        response_for MATCH, {matchId: match_id, includeTimeline: include_timeline}
+      def match(match_id: )
+        response_for MATCH_V3, {matchId: match_id}
       end
 
-      # Retrieve match IDs by tournament code.
-      # @param tournament_code [String] tournament code
-      # @return match ids by tournament code
-      def match_ids_by_tournament(tournament_code: )
-        response_for MATCH_IDS_BY_TOURNAMENT, tournamentCode: tournament_code
+      # Matchlist data
+      #
+      # @see https://developer.riotgames.com/api-methods/#match-v3/GET_getMatchlist
+      # @param account_id [Fixnum] player's account ID
+      # @param champion [Fixnum, Array<Fixnum>] Optional - Set of champion IDs for which to filtering matchlist.
+      # @param queue [Fixnum, Array<Fixnum>] Optional - Set of queue IDs for which to filtering matchlist.
+      # @param season [Fixnum, Array<Fixnum>] Optional - Set of season IDs for which to filtering matchlist.
+      # @param begin_time [Fixnum] Optional - The begin time to use for filtering matchlist specified as epoch milliseconds.
+      # @param end_time [Fixnum] Optional - The end time to use for filtering matchlist specified as epoch milliseconds.
+      # @param begin_index [Fixnum] Optional - The begin index to use for filtering matchlist.
+      # @param end_index [Fixnum] Optional - The end index to use for filtering matchlist.
+      # @return [Response] list of match data
+      #
+      # @example filtering on single season and single champion
+      #   client.matchlist(account_id: 47910, season: 7, champion: 113).body
+      #
+      # @example filtering on multiple seasons and champions
+      #   client.matchlist(account_id: 47910, season: [6,7,8], champion: [16,37]).body
+      def matchlist(account_id:, begin_time: nil, end_index: nil, season: nil, champion: nil, begin_index: nil, queue: nil, end_time: nil)
+        response_for(
+            MATCHLIST_V3,
+            {
+              accountId: account_id,
+              beginTime: begin_time,
+              endIndex: end_index,
+              season: season,
+              champion: champion,
+              beginIndex: begin_index,
+              queue: queue,
+              endTime: end_time
+            }
+        )
       end
 
-      # Retrieve match by match ID and tournament code.
-      # @param match_id [Fixnum] id of match
-      # @param tournament_code [String] tournament code
-      # @param include_timeline [Boolean] optional, true includes timestamps on events
-      # @return match ids by tournament code
-      def match_for_tournament(match_id:, tournament_code:, include_timeline: false)
-        response_for MATCH_IDS_BY_TOURNAMENT, tournamentCode: tournament_code, matchId: match_id, includeTimeline: include_timeline
+      # Matchlist data for the past 20 matches
+      #
+      # @see https://developer.riotgames.com/api-methods/#match-v3/GET_getRecentMatchlist
+      # @param account_id [Fixnum] player's account ID
+      # @return [Response] list of last 20 matches
+      def matchlist_recent(account_id: )
+        response_for MATCHLIST_RECENT_V3, {accountId: account_id}
       end
 
     end
