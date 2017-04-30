@@ -46,7 +46,7 @@ Or install it yourself as:
 - [x] MATCH-V3
 - [x] RUNES-V3
 - [x] SPECTATOR-V3
-- [ ] STATIC-DATA-V3
+- [x] STATIC-DATA-V3
 - [x] SUMMONER-V3
 - [x] ~~CURRENT-GAME-V1.0~~ replaced by SPECTATOR-V3
 - [x] ~~FEATURED-GAMES-V1.0~~ replaced by SPECTATOR-V3

@@ -73,9 +73,7 @@ module Taric
       # @example
       #   Taric::Client.expand_template(api_key: 'ritokey', region: :na, operation: Taric::Operation::Champion::CHAMPIONS)
       def expand_template(api_key:, region:, operation:, options: {})
-        result = operation.expand(options.merge(operation_values(api_key: api_key, region: region)))
-        puts result
-        result
+        operation.expand(options.merge(operation_values(api_key: api_key, region: region)))
       end
     end
 

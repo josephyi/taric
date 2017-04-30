@@ -138,13 +138,29 @@ describe Taric::Operation::LolStaticData do
     before {stub_get_json(url, 'static_map.json')}
 
     it 'requests the correct resource' do
-      client.static_map
+      client.static_maps
       expect(a_get(url)).to have_been_made
     end
 
     it 'returns the requested result' do
-      result = client.static_map.body
+      result = client.static_maps.body
       expect(result).to be_a Hash
+    end
+  end
+
+  describe '#static_profile_icons' do
+    let (:url) {expand_template(Taric::Operation::LolStaticData::STATIC_PROFILE_ICONS.template_url)}
+    before {stub_get_json(url, 'static_profile_icons.json')}
+
+    it 'requests the correct resource' do
+      client.static_profile_icons
+      expect(a_get(url)).to have_been_made
+    end
+
+    it 'returns the requested result' do
+      result = client.static_profile_icons.body
+      expect(result).to be_a Hash
+      expect(result['data']).to be_a Hash
     end
   end
 
@@ -153,12 +169,12 @@ describe Taric::Operation::LolStaticData do
     before {stub_get_json(url, 'static_realm.json')}
 
     it 'requests the correct resource' do
-      client.static_realm
+      client.static_realms
       expect(a_get(url)).to have_been_made
     end
 
     it 'returns the requested result' do
-      result = client.static_realm.body
+      result = client.static_realms.body
       expect(result).to be_a Hash
       expect(result['n']).to be_a Hash
     end
