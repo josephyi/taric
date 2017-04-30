@@ -1,14 +1,12 @@
 require_relative 'champion'
 require_relative 'champion_mastery'
-require_relative 'current_game'
-require_relative 'featured_games'
-require_relative 'game'
 require_relative 'league'
 require_relative 'lol_static_data'
 require_relative 'lol_status'
 require_relative 'masteries'
 require_relative 'match'
 require_relative 'runes'
+require_relative 'spectator'
 require_relative 'stats'
 require_relative 'summoner'
 require_relative 'team'
@@ -20,15 +18,13 @@ module Taric
     module API
       include Taric::Operation::Champion
       include Taric::Operation::ChampionMastery
-      include Taric::Operation::CurrentGame
-      include Taric::Operation::FeaturedGames
-      include Taric::Operation::Game
       include Taric::Operation::League
       include Taric::Operation::LolStaticData
       include Taric::Operation::LolStatus
       include Taric::Operation::Masteries
       include Taric::Operation::Match
       include Taric::Operation::Runes
+      include Taric::Operation::Spectator
       include Taric::Operation::Stats
       include Taric::Operation::Summoner
       include Taric::Operation::Team

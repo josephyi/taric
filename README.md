@@ -45,7 +45,7 @@ Or install it yourself as:
 - [x] MASTERIES-V3
 - [x] MATCH-V3
 - [x] RUNES-V3
-- [ ] SPECTATOR-V3
+- [x] SPECTATOR-V3
 - [ ] STATIC-DATA-V3
 - [x] SUMMONER-V3
 - [x] ~~CURRENT-GAME-V1.0~~ replaced by SPECTATOR-V3
