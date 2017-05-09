@@ -40,7 +40,7 @@ Or install it yourself as:
 
 - [x] CHAMPION-V3
 - [x] CHAMPION-MASTERY-V3
-- [x] LEAGUE-V2.5
+- [x] LEAGUE-V3
 - [x] LOL-STATUS-V3
 - [x] MASTERIES-V3
 - [x] MATCH-V3
@@ -51,6 +51,7 @@ Or install it yourself as:
 - [x] ~~CURRENT-GAME-V1.0~~ replaced by SPECTATOR-V3
 - [x] ~~FEATURED-GAMES-V1.0~~ replaced by SPECTATOR-V3
 - [x] ~~GAME-V1.3~~ replaced by MATCH-V3
+- [x] ~~LEAGUE-V2.5~~ replaced by LEAGUE-V3
 - [x] ~~LOL-STATIC-DATA-V1.2~~ replaced by STATIC-DATA-V3
 - [x] ~~LOL-STATUS-V1.0~~ replaced by LOL-STATUS-V3
 - [x] ~~MATCH-V2.2~~ replaced by MATCH-V3
@@ -127,25 +128,23 @@ responses = parallel_client.execute!
 ### Champion
 
 ```ruby
-# https://developer.riotgames.com/api/methods#!/958/3289
 client.champion(id: )
+```
 
-# https://developer.riotgames.com/api/methods#!/958/3290
+```ruby
 client.champions
 ```
 
 ### Current Game
 
 ```ruby
-# https://developer.riotgames.com/api/methods#!/956/3287
-client.current_game(summoner_id: )
+response = client.current_game(summoner_id: 21066)
 ```
 
 ### Featured Games
 
 ```ruby
-# https://developer.riotgames.com/api/methods#!/957/3288
-client.featured_games
+response = client.featured_games
 ```
 
 TODO: finish writing this crap :p

@@ -57,8 +57,8 @@ module Taric
       # @param api_key [String] rito api key
       # @param region [Symbol] key for region
       # @return [Hash] of api_key and region info
-      def operation_values(api_key:, region:)
-        {api_key: api_key}.merge!(REGION_ENDPOINT_INFO[region])
+      def operation_values(region:)
+        REGION_ENDPOINT_INFO[region]
       end
       memoize :operation_values
 
@@ -72,8 +72,8 @@ module Taric
       #
       # @example
       #   Taric::Client.expand_template(api_key: 'ritokey', region: :na, operation: Taric::Operation::Champion::CHAMPIONS)
-      def expand_template(api_key:, region:, operation:, options: {})
-        operation.expand(options.merge(operation_values(api_key: api_key, region: region)))
+      def expand_template(region:, operation:, options: {})
+        operation.expand(options.merge(operation_values(region: region)))
       end
     end
 
@@ -81,7 +81,15 @@ module Taric
     def response_for(operation, options = {})
       -> (method, url, body, headers) {
         API_CALL.(method, url, body, headers, @config.requestor.(@conn), @config.response_handler)
-      }.(operation.method, self.class.expand_template(api_key: @api_key, region: @region, operation: operation.template_url, options: options), operation.body, operation.headers)
+      }.(
+          operation.method,
+          self.class.expand_template(
+              region: @region,
+              operation: operation.template_url,
+              options: options
+          ),
+          operation.body,
+          operation.headers.merge('X-Riot-Token' => @api_key))
     end
 
     class ParallelClient
@@ -108,7 +116,7 @@ module Taric
       private
 
       def response_for(operation, options = {})
-        @operations << {url: @parent.class.expand_template(api_key: @parent.api_key, region: @parent.region, operation: operation.template_url, options: options), method: operation.method, body: operation.body, headers: operation.headers}
+        @operations << {url: @parent.class.expand_template(region: @parent.region, operation: operation.template_url, options: options), method: operation.method, body: operation.body, headers: operation.headers}
         self
       end
 

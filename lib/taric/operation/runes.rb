@@ -1,9 +1,10 @@
+# frozen_string_literal: true
 require_relative 'endpoint_template'
 module Taric
   module Operation
     module Runes
 
-      RUNES_V3 = EndpointTemplate.new(template_url: "https://{host}/lol/platform/v3/runes/by-summoner/{summonerId}{?api_key}")
+      RUNES_V3 = EndpointTemplate.new(template_url: 'https://{host}/lol/platform/v3/runes/by-summoner/{summonerId}')
 
       # Runes by summoner ID.
       #

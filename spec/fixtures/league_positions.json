@@ -1,0 +1,23 @@
+[
+  {
+    "queueType": "RANKED_SOLO_5x5",
+    "hotStreak": false,
+    "miniSeries": {
+      "wins": 1,
+      "losses": 0,
+      "target": 2,
+      "progress": "WNN"
+    },
+    "wins": 97,
+    "veteran": false,
+    "losses": 82,
+    "playerOrTeamId": "21066",
+    "tier": "GOLD",
+    "playerOrTeamName": "orlyzomg",
+    "inactive": false,
+    "rank": "V",
+    "freshBlood": false,
+    "leagueName": "Draven's Scouts",
+    "leaguePoints": 100
+  }
+]

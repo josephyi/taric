@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 require_relative 'base'
 require_relative 'endpoint_template'
 module Taric
@@ -5,10 +6,10 @@ module Taric
     module Champion
       include Taric::Operation::Base
 
-      CHAMPION_BASE_URL = "https://{host}/lol/platform/v3/champions"
+      CHAMPION_BASE_URL = 'https://{host}/lol/platform/v3/champions'
 
-      CHAMPIONS =  EndpointTemplate.new(template_url: "#{CHAMPION_BASE_URL}{?api_key,freeToPlay}")
-      CHAMPION_BY_ID = EndpointTemplate.new(template_url: "#{CHAMPION_BASE_URL}/{id}{?api_key}")
+      CHAMPIONS =  EndpointTemplate.new(template_url: "#{CHAMPION_BASE_URL}{?freeToPlay}")
+      CHAMPION_BY_ID = EndpointTemplate.new(template_url: "#{CHAMPION_BASE_URL}/{id}")
 
       # Returns champion data.
       #

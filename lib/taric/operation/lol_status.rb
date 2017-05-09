@@ -1,8 +1,9 @@
+# frozen_string_literal: true
 require_relative 'endpoint_template'
 module Taric
   module Operation
     module LolStatus
-      SHARD =  EndpointTemplate.new(template_url: 'https://{host}/lol/status/v3/shard-data{?api_key}')
+      SHARD =  EndpointTemplate.new(template_url: 'https://{host}/lol/status/v3/shard-data')
 
       # Region metadata, implicitly uses endpoint host to determine which region.
       #
