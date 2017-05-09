@@ -7,7 +7,7 @@ describe Taric::Operation::Champion do
     let (:url) {expand_template(Taric::Operation::Champion::CHAMPIONS.template_url)}
 
     it 'expanded template correctly' do
-      expect(url).to eq('https://na1.api.riotgames.com/lol/platform/v3/champions?api_key=test')
+      expect(url).to eq('https://na1.api.riotgames.com/lol/platform/v3/champions')
     end
 
     context 'with no arguments' do

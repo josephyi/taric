@@ -1,9 +1,10 @@
+# frozen_string_literal: true
 require_relative 'endpoint_template'
 module Taric
   module Operation
     module Masteries
 
-      MASTERIES = EndpointTemplate.new(template_url: "https://{host}/lol/platform/v3/masteries/by-summoner/{summonerId}{?api_key}")
+      MASTERIES = EndpointTemplate.new(template_url: 'https://{host}/lol/platform/v3/masteries/by-summoner/{summonerId}')
 
       # Masteries by summoner ID.
       #

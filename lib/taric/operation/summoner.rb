@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 require_relative 'base'
 require_relative 'endpoint_template'
 module Taric
@@ -5,10 +6,10 @@ module Taric
     module Summoner
       include Taric::Operation::Base
 
-      BASE_SUMMONER_URL = "https://{host}/lol/summoner/v3/summoners"
-      SUMMONER_BY_ID = EndpointTemplate.new(template_url: "#{BASE_SUMMONER_URL}/{summonerId}{?api_key}")
-      SUMMONER_BY_NAME = EndpointTemplate.new(template_url: "#{BASE_SUMMONER_URL}/by-name/{summonerName}{?api_key}")
-      SUMMONER_BY_ACCOUNT_ID = EndpointTemplate.new(template_url: "#{BASE_SUMMONER_URL}/by-account/{accountId}{?api_key}")
+      BASE_SUMMONER_URL = 'https://{host}/lol/summoner/v3/summoners'
+      SUMMONER_BY_ID = EndpointTemplate.new(template_url: "#{BASE_SUMMONER_URL}/{summonerId}")
+      SUMMONER_BY_NAME = EndpointTemplate.new(template_url: "#{BASE_SUMMONER_URL}/by-name/{summonerName}")
+      SUMMONER_BY_ACCOUNT_ID = EndpointTemplate.new(template_url: "#{BASE_SUMMONER_URL}/by-account/{accountId}")
 
       def summoner_by_id(summoner_id:)
         response_for SUMMONER_BY_ID, {summonerId: summoner_id}

@@ -3,23 +3,22 @@ require 'spec_helper'
 describe Taric::Client do
   describe '.operation_values' do
     it 'returns a hash with api_key and region' do
-      hash = Taric::Client.operation_values(api_key: 'test', region: :na)
-      expect(hash[:api_key]).to eq('test')
+      hash = Taric::Client.operation_values(region: :na)
       expect(hash[:region]).to eq('na')
     end
 
     it 'returns memoized values' do
-      hash = Taric::Client.operation_values(api_key: 'test', region: :na)
-      hash2 = Taric::Client.operation_values(api_key: 'test', region: :na)
+      hash = Taric::Client.operation_values(region: :na)
+      hash2 = Taric::Client.operation_values(region: :na)
       expect(hash.object_id).to eq(hash2.object_id)
     end
   end
 
   describe '.expand_template' do
     it 'returns an expanded Addressable template' do
-      template = Taric::Client.expand_template(api_key: 'test', region: :na, operation: Taric::Operation::Champion::CHAMPIONS.template_url)
+      template = Taric::Client.expand_template(region: :na, operation: Taric::Operation::Champion::CHAMPIONS.template_url)
       expect(template).to be_an Addressable::URI
-      expect(template.to_s).to eq('https://na1.api.riotgames.com/lol/platform/v3/champions?api_key=test')
+      expect(template.to_s).to eq('https://na1.api.riotgames.com/lol/platform/v3/champions')
     end
   end
 

@@ -5,9 +5,9 @@ module Taric
       include Taric::Operation::Base
 
       BASE_MASTERY_URL = "https://{host}/lol/champion-mastery/v3"
-      MASTERY_ALL_CHAMPIONS = EndpointTemplate.new(template_url: "#{BASE_MASTERY_URL}/champion-masteries/by-summoner/{summonerId}{?api_key}")
-      MASTERY_BY_CHAMPION_ID = EndpointTemplate.new(template_url: "#{BASE_MASTERY_URL}/champion-masteries/by-summoner/{summonerId}/by-champion/{championId}{?api_key}")
-      MASTERY_SCORE = EndpointTemplate.new(template_url: "#{BASE_MASTERY_URL}/scores/by-summoner/{summonerId}{?api_key}")
+      MASTERY_ALL_CHAMPIONS = EndpointTemplate.new(template_url: "#{BASE_MASTERY_URL}/champion-masteries/by-summoner/{summonerId}")
+      MASTERY_BY_CHAMPION_ID = EndpointTemplate.new(template_url: "#{BASE_MASTERY_URL}/champion-masteries/by-summoner/{summonerId}/by-champion/{championId}")
+      MASTERY_SCORE = EndpointTemplate.new(template_url: "#{BASE_MASTERY_URL}/scores/by-summoner/{summonerId}")
 
       def champion_mastery(summoner_id: , champion_id:)
         response_for MASTERY_BY_CHAMPION_ID, {summonerId: summoner_id, championId: champion_id}
