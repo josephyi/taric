@@ -41,27 +41,27 @@ describe Taric::Client do
     describe '#execute!' do
       let (:url) {expand_template(Taric::Operation::LolStatus::SHARD.template_url, region: 'na')}
       before {stub_get(url).to_return(body: fixture('shard.json'), headers: {content_type: 'application/json; charset=utf-8'})}
-      let (:url2) {expand_template(Taric::Operation::LolStaticData::STATIC_VERSIONS.template_url)}
-      before {stub_get_json(url2, 'static_versions.json')}
+      let (:url2) {expand_template(Taric::Operation::Champion::CHAMPIONS.template_url, region: 'na')}
+      before {stub_get(url2).to_return(body: fixture('champions.json'), headers: {content_type: 'application/json; charset=utf-8'})}
 
       it 'returns empty array for no operations' do
         expect(parallel_client.execute!).to eq []
       end
 
       it 'makes multiple calls' do
-        parallel_client.shard_data.static_versions.execute!
+        parallel_client.shard_data.champions.execute!
         expect(a_get(url)).to have_been_made
         expect(a_get(url2)).to have_been_made
       end
 
       it 'returns an array of hashes' do
-        responses = parallel_client.shard_data.static_versions.execute!
+        responses = parallel_client.shard_data.shard_data.execute!
         expect(responses).to be_an Array
         expect(responses.first.body).to be_a Hash
       end
 
       it 'clears operations after being called' do
-        parallel_client.shard_data.static_versions.execute!
+        parallel_client.shard_data.shard_data.execute!
         expect(parallel_client.execute!).to eq []
       end
     end

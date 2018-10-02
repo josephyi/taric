@@ -1,7 +1,6 @@
 require_relative 'champion'
 require_relative 'champion_mastery'
 require_relative 'league'
-require_relative 'lol_static_data'
 require_relative 'lol_status'
 require_relative 'masteries'
 require_relative 'match'
@@ -16,7 +15,6 @@ module Taric
       include Taric::Operation::Champion
       include Taric::Operation::ChampionMastery
       include Taric::Operation::League
-      include Taric::Operation::LolStaticData
       include Taric::Operation::LolStatus
       include Taric::Operation::Masteries
       include Taric::Operation::Match

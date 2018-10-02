@@ -46,21 +46,8 @@ Or install it yourself as:
 - [x] MATCH-V3
 - [x] RUNES-V3
 - [x] SPECTATOR-V3
-- [x] STATIC-DATA-V3
+- [x] ~~STATIC-DATA-V3~~ removed by Riot
 - [x] SUMMONER-V3
-- [x] ~~CURRENT-GAME-V1.0~~ replaced by SPECTATOR-V3
-- [x] ~~FEATURED-GAMES-V1.0~~ replaced by SPECTATOR-V3
-- [x] ~~GAME-V1.3~~ replaced by MATCH-V3
-- [x] ~~LEAGUE-V2.5~~ replaced by LEAGUE-V3
-- [x] ~~LOL-STATIC-DATA-V1.2~~ replaced by STATIC-DATA-V3
-- [x] ~~LOL-STATUS-V1.0~~ replaced by LOL-STATUS-V3
-- [x] ~~MATCH-V2.2~~ replaced by MATCH-V3
-- [x] ~~MATCHLIST-V2.2~~ replaced by MATCH-V3
-- [x] ~~RUNES-MASTERIES-V1.4~~ replaced by RUNES-V3 AND MASTERIES-V3
-- [x] ~~CHAMPION-V1.2~~ replaced by CHAMPION-V3
-- [x] ~~CHAMPIONMASTERY~~ replaced by CHAMPION-MASTERY-V3
-- [x] ~~STATS-V1.3~~ no replacement
-- [x] ~~SUMMONER-V1.4~~ replaced by SUMMONER-V3
 
 ## Configuration
 
@@ -124,6 +111,14 @@ parallel_client = client.in_parallel.match(id: 1).match(id: 42)
 # and body e.g. {status: 200, body: [1778689691]}
 responses = parallel_client.execute!
 ```
+
+### CHAMPION-MASTERY-V3
+```ruby
+champion_masteries_for_summoner = client.champion_masteries(summoner_id: 21066).body
+champion_mastery_for_summoner = client.champion_mastery(summoner_id:21066, champion_id:89).body
+mastery_score_for_summoner = client.champion_mastery_score(summoner_id: 21066).body
+```
+
 
 ### Champion
 
