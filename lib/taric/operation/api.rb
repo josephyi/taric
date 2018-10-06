@@ -4,7 +4,6 @@ require_relative 'league'
 require_relative 'lol_status'
 require_relative 'masteries'
 require_relative 'match'
-require_relative 'runes'
 require_relative 'spectator'
 require_relative 'summoner'
 
@@ -18,7 +17,6 @@ module Taric
       include Taric::Operation::LolStatus
       include Taric::Operation::Masteries
       include Taric::Operation::Match
-      include Taric::Operation::Runes
       include Taric::Operation::Spectator
       include Taric::Operation::Summoner
 
