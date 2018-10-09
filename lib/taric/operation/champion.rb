@@ -6,35 +6,20 @@ module Taric
     module Champion
       include Taric::Operation::Base
 
-      CHAMPION_BASE_URL = 'https://{host}/lol/platform/v3/champions'
+      CHAMPION_ROTATIONS = EndpointTemplate.new(template_url: "https://{host}/lol/platform/v3/champion-rotations")
 
-      CHAMPIONS =  EndpointTemplate.new(template_url: "#{CHAMPION_BASE_URL}{?freeToPlay}")
-      CHAMPION_BY_ID = EndpointTemplate.new(template_url: "#{CHAMPION_BASE_URL}/{id}")
-
-      # Returns champion data.
+      # Returns champion rotations, including free-to-play and low-level free-to-play rotations
       #
-      # @see https://developer.riotgames.com/api/methods#!/958/3290
-      # @param free_to_play [Boolean] optional, nil returns all, true or false to filter if they're free to play or not
-      # @return [Hash] embedding [Array] of champions keyed off of "champions"
+      # @see https://developer.riotgames.com/api-methods/#champion-v3/GET_getChampionInfo Champion Rotations
+      # @return [Hash] of free champion ids, free new player champion ids, and new player max level
       #
       # @example
-      #   all_champions = client.champions["champions"]
-      #   free_champions = client.champions(free_to_play: true)["champions"]
-      #   nonfree_champions = client.champions(free_to_play: false)["champions"]
-      def champions(free_to_play: nil)
-        response_for CHAMPIONS, freeToPlay: free_to_play
-      end
-
-      # Returns champion data by id.
-      #
-      # @see https://developer.riotgames.com/api/methods#!/958/3289
-      # @param id [Fixnum] id of champion
-      # @return [Hash] of champion data
-      #
-      # @example
-      #   champion = client.champion(id: 266)
-      def champion(id:)
-        response_for CHAMPION_BY_ID, id: id
+      #   champion_rotations = client.champion_rotations.body
+      #   free_champion_ids = champion_rotations['freeChampionIds']
+      #   new_player_champion_ids = champion_rotations['freeChampionIdsForNewPlayers']
+      #   max_new_player_level = champion_rotations['maxNewPlayerLevel']
+      def champion_rotations
+        response_for CHAMPION_ROTATIONS
       end
     end
   end
