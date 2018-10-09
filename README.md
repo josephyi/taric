@@ -44,9 +44,7 @@ Or install it yourself as:
 - [x] LOL-STATUS-V3
 - [x] MASTERIES-V3
 - [x] MATCH-V3
-- [x] RUNES-V3
 - [x] SPECTATOR-V3
-- [x] ~~STATIC-DATA-V3~~ removed by Riot
 - [x] SUMMONER-V3
 
 ## Configuration
@@ -71,7 +69,7 @@ There are a couple of ways to set the API key:
     require 'typhoeus/adapters/faraday'
 
     Taric.configure! do |config|
-      config.api_key = 'whatever_key_rito_assigned_you'
+      config.api_key = 'RGAPI-858c3371-e85d-4036-95ff-1427224cd1f2'
       config.adapter = :typhoeus # default is Faraday.default_adapter
     end
     ```
@@ -119,21 +117,16 @@ champion_mastery_for_summoner = client.champion_mastery(summoner_id:21066, champ
 mastery_score_for_summoner = client.champion_mastery_score(summoner_id: 21066).body
 ```
 
-
 ### Champion
 
 ```ruby
-client.champion(id: )
-```
-
-```ruby
-client.champions
+client.champion.champion_rotations.body
 ```
 
 ### Current Game
 
 ```ruby
-response = client.current_game(summoner_id: 21066)
+response = client.current_game(summoner_id: 21066).body
 ```
 
 ### Featured Games
